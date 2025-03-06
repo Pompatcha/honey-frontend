@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .account-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .account-container h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .user-details {
+            font-size: 16px;
+            margin: 20px 0;
+        }
+
+        .user-details span {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .shopping-btn, .edit-profile-btn, .logout-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4e5bd3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .shopping-btn:hover, .edit-profile-btn:hover, .logout-btn:hover {
+            background-color: #3a47a0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="account-container">
+        <h2>Customer Account</h2>
+        <div class="user-details">
+            <p><span>Username:</span> <span id="username-display">Loading...</span></p>
+            <p><span>Email:</span> <span id="email-display">Loading...</span></p>
+            <p><span>Contact Number:</span> <span id="contact-display">Loading...</span></p>
+        </div>
+
+        <button class="shopping-btn" onclick="goToShoppingPage()">Go to Shopping</button>
+        <button class="edit-profile-btn" onclick="editProfile()">Edit Profile</button>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        // Simulate customer data (this would come from a backend in a real application)
+        var customerData = {
+            username: localStorage.getItem("username"),
+            email: "john.doe@example.com",  // Example email
+            contactNumber: "+1234567890"  // Example contact
+        };
+
+        // Display customer details
+        function loadCustomerData() {
+            document.getElementById("username-display").textContent = customerData.username;
+            document.getElementById("email-display").textContent = customerData.email;
+            document.getElementById("contact-display").textContent = customerData.contactNumber;
+        }
+
+        // Go to shopping page and pass username
+        function goToShoppingPage() {
+            window.location.href = "shopping-page.html?username=" + encodeURIComponent(customerData.username);
+        }
+
+        // Edit Profile (just a placeholder for now)
+        function editProfile() {
+            alert("Edit Profile functionality will be added here!");
+        }
+
+        // Logout (clear session and redirect to login)
+        function logout() {
+            localStorage.removeItem("username"); // Clear username from localStorage
+            window.location.href = "login.html"; // Redirect to login page
+        }
+
+        // Load customer data when page loads
+        window.onload = loadCustomerData;
+    </script>
+
+</body>
+</html>
