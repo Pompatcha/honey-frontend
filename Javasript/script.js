@@ -3,8 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
       button.addEventListener('click', function (e) {
           e.preventDefault();
 
-          const a = 5;
-
           const productDiv = this.closest('.right');
           const productName = productDiv.querySelector('.product-name').textContent;
           const priceText = productDiv.querySelector('.price').textContent;
