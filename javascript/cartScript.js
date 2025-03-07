@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalPriceElement = document.getElementById("totalPrice");
 
   function calculateTotalPrice(cart) {
-    return cart.reduce((total, item) => total + parseFloat(item.totalPrice), 0).toFixed(2);
+    return cart
+      .reduce((total, item) => total + parseFloat(item.totalPrice), 0)
+      .toFixed(2);
   }
 
   function renderCartTable(cart) {
@@ -43,7 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
       cart[index].quantity -= 1;
     }
 
-    cart[index].totalPrice = (cart[index].quantity * cart[index].price).toFixed(2);
+    cart[index].totalPrice = (cart[index].quantity * cart[index].price).toFixed(
+      2
+    );
     localStorage.setItem("cart", JSON.stringify(cart));
     renderCartTable(cart);
   }
