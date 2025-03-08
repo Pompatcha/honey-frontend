@@ -96,44 +96,6 @@
                 transform: translateY(0);
             }
         }
-    /* Login Container */
-    .login-container {
-        display: flex;
-        align-items: center;
-        width: 40%;  /* Adjust width to fill the container */
-        height: 10vh; /* Full height */
-        color: white;
-        gap: 20px;
-    
-        /* Flexbox for row layout */
-        .body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Full height */
-            background-color: #000000;
-        }
-        /* Button Styling */
-        .btn {
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            text-decoration: none; /* Remove underline from link */
-        }
-        /* Button Hover Effect */
-        .btn:hover {
-            background-color: #4e5bd3;
-        }
-
-        /* Register Link Styling */
-        .register-link {
-            
-
-        
 		/* Slider Container middle text */
         .slider-container {
             position: relative;
@@ -223,7 +185,8 @@
 	     /* About our product.conteainer head */
         .center-flex {
             display: flex;
-            justify-content: center; /* Centers horizontally */
+            width: 100%;
+            justify-content: flex-start; /* Align content to the left */
             align-items: center; /* Centers vertically */
             height: auto; /* Makes the container fill the entire viewport height */
 	        background-color: #2B2B2B; /* Choose your background color */
@@ -249,52 +212,141 @@
 		    background-color: white;
 		    padding: 10px;
 	    }
-	/* Colume wine paring>> Responsive hight Columns */
-		  .container {
-            display: flex;
-            gap: 20px;  /* Adds space between columns */
-        }
-        .column {
-            height: 350px;  /* Set fixed height for each column */
-            width: 350px;  /* Set a width for the column */
-            background-color: lightgray;
-            padding: 20px;
-            border: 1px solid #ccc;
-        }  
-        table {
-            width: 100%;
-            margin: 0;
-            border-collapse: collapse;
-            background: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        th{
-            text-align:right; 
-        }
-        td{
-            text-align:right;
-        }
-        .td-productlist{
-          border-bottom: 1px solid #f0f0f0;
-          color: #333;
-          text-align: center;
-        }
-        tr:last-child td {
-            border-bottom: none;
-        }
-        tr:nth-child(even) {
-            background: #f8f8f8;
-        }
-        tr:hover {
-            background: #f1f1f1;
-        }
-        button{
-          size: 8px;
-          width: 90px;
-        }  
+         /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        height: fit-content;
+        background-image: url("https://i.ibb.co/gbKVdHvg/Designer-3.jpg");
+        background-size: cover;
+        background-position: center;
+        height: fit-content; /* Adjusts the height to fit its content */
+      }
+      /* Grid container with two columns */
+      .grid-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* Left: products, Right: login */
+        gap: 20px;
+        align-items: start;
+        margin-top: 3%;        
+      }
+      /* Left box for products */
+      .left-box {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      /* Right box for login with reduced width */
+      .right-box {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 300px;
+        width: 100%;
+      }
+      /* Flex container for products with wrap style */
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+      /* Product item: 4 items per row */
+      .product {
+        background: #f8f1e1;
+        border: 1px solid #d4b483;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        flex: 1 1 calc(25% - 20px);
+        box-sizing: border-box;
+        max-width: 300px;
+      }
+      .product img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      /* Login container styles */
+      .login-container h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      .social-login {
+        margin-bottom: 20px;
+      }
+      .instagram-btn,
+      .facebook-btn,
+      .tiktok-btn {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        background-color: #db4437;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .facebook-btn {
+        background-color: #3b5998;
+      }
+      .instagram-btn {
+        background-color: #c13584;
+      }
+      .tiktok-btn {
+        background-color: #000000;
+        color: white;
+      }
+      .instagram-btn:hover,
+      .facebook-btn:hover,
+      .tiktok-btn:hover {
+        opacity: 0.9;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input:focus {
+        outline: none;
+        border-color: #6c757d;
+      }
+      .login-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .login-btn:hover {
+        background-color: #218838;
+      }
+      .links {
+        margin-top: 20px;
+      }
+      .links a {
+        display: block;
+        color: #007bff;
+        text-decoration: none;
+        margin: 5px 0;
+      }
+      .links a:hover {
+        text-decoration: underline;
+      }
+	
     </style>
 <body>    
 	  <!-- Language Dropdown -->
@@ -307,12 +359,6 @@
             <a href="cn.html" onclick="changeLanguage('cn')">🇨🇳 中国</a>
         </div> 
     </div>
-
-    <div class="login-container">
-       <div><a href="login.html" class="btn">Log In</a></div>
-       <div><a href="register.html" class="btn">New Register</a></div>
-    </div>
-    
     <!-- Hight Light  -->
     <style>
         .highlight-frame {
@@ -329,8 +375,6 @@
 	<div class="highlight-frame">
     <p>"🍷Wine and honey🐝 is the gold of nature—pure, natural, and filled with life-enhancing properties."</p>
 </div>
-
-
     <style>
         /* Slider container */
         .slider {
@@ -505,123 +549,22 @@
             font-size: 5.5em;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
-        .section {
-            padding: 20px;
-        }
-        .products {
-        display: flex;
-        justify-content: center; /* Center the items */
-        flex-direction: start;
-        gap: 10px; /* Increase gap for better spacing */
-        color: #333;
-        border-color: burlywood;
-        }
-
-        .product {
-        background: #f8f1e1;
-        border: 1px solid #d4b483;
-        padding: 15px;
-        border-radius: 8px;
-        text-align: center;
-        flex: 1 1 calc(25% - 40px); /* 4 items per row */
-        max-width: 300px;
-        box-sizing: border-box;
-        }
-       
-        .product img {
-        width: 180px; /* Ensures full width */
-        height: 150px; /* Fixed height for equal sizing */
-        object-fit: cover; /* Ensures images maintain aspect ratio */
-        border-radius: 10px;
-    }
-    
-		
+        
 		h2 {
 			text-align: center;
             justify-content: center;
             align-items: center;
 		}
-		
         section {
-            margin-bottom: 5px;
-            padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
             background-color: #f9f9f9;
-        }
-		 /* footer */
-         footer {
-            background: #e2b007;
-            color: #fff;
-            align-items: center;
-            padding: 1rem 0;
-            display: flex;
-            justify-content: center;
-            height: 20vh;
-            margin: 0;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-            text-align: center; /* Ensures text inside is centered */
-        }
-
-        .footer-container {
-            display: flex;
-            flex-direction: row; /* Stack items vertically */
-            justify-content: center;
-            align-items: center; /* Center horizontally */
-            max-width: 1200px;
-            margin: 0px auto;
-            font-size: medium;
-            text-align: center; /* Ensures text is centered */
-            font-size: 16px;
-        }
-        .footer-section {
-                margin: 0;
-                padding: 1px 0;  /* Reduced padding to make it more compact */
-            }
-        .footer-section h3 {
-            font-size: 18px;
-			color: #000000;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #e2b007;
-            padding-bottom: 5px;
-        }
-        .footer-section p, .footer-section a {
-            font-size: 14px;
-            line-height: 1.8;
-            color: #000000;
-            text-decoration: none;
-        }
-        .social-icons a {
-            display: inline-block;
-            margin-right: 10px;
-            color: #000000;
-            font-size: 18px;
-        }
-       
-        /* Button */
-        .buy-now {
-            display: block; /* Forces button to start on a new line */
+            justify-content: space-between;
             width: fit-content;
-            height: 20px;
-            padding: 10px 15px;
-            margin-top: 10px;
-            background-color: #2F4F4F;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            font-size: medium;
-            align-items: center;
-            margin: 10px auto;
-        }
-        .buy-now:hover {
-			   background-color: #2F4F4F;
-        }  
-		.center-image {
-            display: block;         /* Makes the image a block element */
-            margin: 0 auto;         /* Centers the image horizontally */
-		
+            
+        } 
+        /* Button */
+        
 		}
     </style>
 </head>
@@ -777,238 +720,247 @@
     </nav>
 	</header>
 	<main>
-    <div class="center-flex">
-      <h3><marquee direction="left">Dear customer, we are acceptable an order via Line offcial and What's app (add) me +6689 693 1668 ;Payment Online development is on proces. acceptable by credit card.<a href="https://lin.ee/RBnKOuz">Click Here</a></marquee></h3>
-  </div>
-  <section style="text-align: center;">
-    <marquee direction="left"><img src="https://static.vecteezy.com/system/resources/previews/018/904/113/non_2x/popular-online-payment-methods-logo-with-white-background-transparent-with-logotype-gateway-icon-set-for-website-free-vector.jpg" width="490px" height="200px" alt="Paymet acceptable"></marquee>
-  </section>
-  <p style="text-align: center;">Wine and honey is the gold of nature—pure, natural, and filled with life-enhancing properties.</p>
-      
-		<section id="wines" class="section">
-  <div class="center-flex">
-        <h2>Mediterranean Premium Wine</h2>
-	  </div>
-      <!-- Product 1 -->
-    <div class="products">
-        <div class="product">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkvhjQYjXOOnzJv-kND9xBIqF00HbTqcWqCw&s" alt="red wine" height="50">
-            <h3>Red Wine</h3>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <p style="text-align: center;">Mediterranean Grape</p>
-                    <a href="redwine.html">See more</a></p>
-                
-    </div>
-      <!-- Product 2 -->
-      <div class="products">
-        <div class="product">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkvhjQYjXOOnzJv-kND9xBIqF00HbTqcWqCw&s" alt="red wine" height="50">
-            <h3>Red Wine</h3>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <p style="text-align: center;">Mediterranean Grape</p>
-                    <a href="redwine.html">Read More</a></p>
-        </div>
-    </div>
-    
-    <!-- Product 3 -->
-    <div class="products">
-        <div class="product">
-            <img src="https://www.bhg.com/thmb/JrzRu1jCDQ_6o6wEUH9uG-n_YjE=/6628x0/filters:no_upscale():strip_icc()/bhg-honey-wine-7569412-a5beac5f00cb420e89e0050662fe71c0.jpg" alt="yellow Wine">
-            <h3>Honey Wine</h3>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star"></span>
-        <p style="text-align: center;">Oke Honey bitter taste</p>
-            <a href="honeywine.html">Read More</a></p>
-</div>
-      <!-- Product 4 -->
-      <div class="products">
-        <div class="product">
-            <img src="https://thebrandsmen.com/wp-content/uploads/2022/03/benefits-of-rose-wine.jpg" alt="Rosé Wine">
-            <h3>Rosé Wine</h3>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-            <p style="text-align: center;">Sweetest and romantics styles</p>
-                <a href="rosewine.html">Read More</a></p>
-			
-    </div>
-</section>
-<section id="honey" class="section">
-    <div class="center-flex">
-        <h2>Mediterranean Golden honey</h2>
-</div>
-<!-- Product 5 -->
-<div class="products">
-    <div class="product">
-        <img src="https://th.bing.com/th/id/OIP.hj5tX-zAtZfhTE10clRe8gHaE8?w=304&h=203&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Orange Honey">
-        <h3>Orange</h3>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-        <p style="text-align: center;">Vittamin C Plus</p>
-            <a href="orange.html">Read More</a></p>
-</div>
-        <!-- Product 6 -->
-        <div class="products">
-            <div class="product">
-            <img src="https://www.terra-greca.be/wp-content/uploads/2017/05/miel-toutes-fleurs-1024x678-1.jpg" alt="Flower Honey">
-            <h3>Flower Honey</h3>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-            <p style="text-align: center;">Natrual refreshing aroma</p>
-            <a href="flower.html">Read More</a></p>
-        </div>
-        
-        
-        <!-- Product 7 -->
-        <div class="products">
-            <div class="product">
-            <img src="https://cdn.tridge.com/attachment-file/a8/a4/a8/a8a4a847ba37de52506edeaa785d03a3ad974e51/1_puqyyzWF-P1s52UE24tohg.jpeg" alt="THYME HONEY">
-            <h3>Thyme Honey</h3>
-            <p style="text-align: center;">Herbal taste</p>
-            <a href="thyme.html">Read More</a></p>
-			
-        </div>
-        <!-- Product 8 -->
-	    <div class="products">
-            <div class="product">
-          <img src="https://static.wixstatic.com/media/e0f5fb_9e3cc79757a140d8a9f2d437d8ba858c~mv2.jpg/v1/fit/w_2500,h_1330,al_c/e0f5fb_9e3cc79757a140d8a9f2d437d8ba858c~mv2.jpg" alt="Oak Honey">
-            <h3>Oak and Forest</h3>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star"></span>
-            <p style="text-align: center;">Oak tree honey</p>
-            <a href="oak.html">Read More</a></p>
-</section>
+        <div class="center-flex" style="background-color: white;">
+            <h3>
+              <marquee direction="left">
+                Dear customer, we are acceptable an order via Line offcial and What's app (add) me +6689 693 1668 ;Payment Online development is on proces. acceptable by credit card.
+                <a href="https://lin.ee/RBnKOuz">Click Here</a>
+              </marquee>
+            </h3>
+          </div>
+          <p style="text-align: center; background-color: blue; color: white; font-size: 24px;">
+            Wine and honey is the gold of nature—pure, natural, and filled with life-enhancing properties.
+          </p>
 
-<section id="honey" class="section">
-    <div class="center-flex">
-        <h2>Green forest pure honey</h2>
-</div>
-        <!-- Product 9 -->
-    <div class="products">
+<div class="grid-container">
+    <!-- Left Box: Products (4 items per row, wrap style) -->
+    <div class="left-box">
+      <h2>Mediterranean Premium Wine</h2>
+      <div class="products">
+        <!-- Product 1 -->
         <div class="product">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnGyqVdQJy7q-0ymBNjbtbJUWr8P-m56dEQ&s" alt="Pine Honey">
-            <h3>Pine Honey</h3>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-            <p style="text-align: center;">Sweet bread</p>
-            <a href="pine.html">Read More</a></p>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkvhjQYjXOOnzJv-kND9xBIqF00HbTqcWqCw&s"
+            alt="Red Wine"
+            height="50"
+          />
+          <h3>Red Wine</h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <p style="text-align: center;">Mediterranean Grape</p>
+          <a href="redwine.html">See more</a>
         </div>
-         <!-- Product 10 -->
-    <div class="products">
+        <!-- Product 2 -->
         <div class="product">
-          <img src="https://th.bing.com/th/id/OIP.r_mzPoK0AtyW1h3KGMZknAHaEK?rs=1&pid=ImgDetMain" alt="Villina Honey">
-            <h3>Villina Honey</h3>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-            <p style="text-align: center;">Villina taste</p>
-            <a href="vanilla.html">Read More</a></p>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkvhjQYjXOOnzJv-kND9xBIqF00HbTqcWqCw&s"
+            alt="Red Wine"
+            height="50"
+          />
+          <h3>Red Wine</h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <p style="text-align: center;">Mediterranean Grape</p>
+          <a href="redwine.html">Read More</a>
+        </div>
+        <!-- Product 3 -->
+        <div class="product">
+          <img
+            src="https://www.bhg.com/thmb/JrzRu1jCDQ_6o6wEUH9uG-n_YjE=/6628x0/filters:no_upscale():strip_icc()/bhg-honey-wine-7569412-a5beac5f00cb420e89e0050662fe71c0.jpg"
+            alt="Honey Wine"
+          />
+          <h3>Honey Wine</h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <p style="text-align: center;">Oke Honey bitter taste</p>
+          <a href="honeywine.html">Read More</a>
+        </div>
+        <!-- Product 4 -->
+        <div class="product">
+          <img
+            src="https://thebrandsmen.com/wp-content/uploads/2022/03/benefits-of-rose-wine.jpg"
+            alt="Rosé Wine"
+          />
+          <h3>Rosé Wine</h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <p style="text-align: center;">Sweetest and romantic style</p>
+          <a href="rosewine.html">Read More</a>
+        </div>
+        <!-- Product 5 -->
+    <div class="product">
+        <img src="https://th.bing.com/th/id/OIP.hj5tX-zAtZfhTE10clRe8gHaE8?w=304&h=203&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Orange Honey" />
+        <h3>Orange Honey</h3>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <p style="text-align: center;">Vittamin C Plu</p>
+        <a href="orange.html">See more</a>
+      </div>
+      <!-- Product 6 -->
+    <div class="product">
+        <img src="https://www.terra-greca.be/wp-content/uploads/2017/05/miel-toutes-fleurs-1024x678-1.jpg" alt="Flower Honey" />
+        <h3>Flower Honey</h3>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <p style="text-align: center;">Description for Product 5</p>
+        <a href="flower.html">See more</a>
+      </div>
+      <!-- Product 7 -->
+    <div class="product">
+        <img src="https://cdn.tridge.com/attachment-file/a8/a4/a8/a8a4a847ba37de52506edeaa785d03a3ad974e51/1_puqyyzWF-P1s52UE24tohg.jpeg" alt="Thyme Honey" />
+        <h3>Thyme Honey</h3>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <p style="text-align: center;">Description for Product 5</p>
+        <a href="thyme.html">See more</a>
+      </div>
+      <!-- Product 8 -->
+    <div class="product">
+        <img src="https://static.wixstatic.com/media/e0f5fb_9e3cc79757a140d8a9f2d437d8ba858c~mv2.jpg/v1/fit/w_2500,h_1330,al_c/e0f5fb_9e3cc79757a140d8a9f2d437d8ba858c~mv2.jpg" alt=Oak Honey" />
+        <h3>Oak Honey</h3>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <p style="text-align: center;">Description for Product 5</p>
+        <a href="oak.html">See more</a>
+      </div>
+          <!-- Product 9 -->
+          <div class="product">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnGyqVdQJy7q-0ymBNjbtbJUWr8P-m56dEQ&s"
+              alt="Pine Honey"
+            />
+            <h3>Pine Honey</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <p style="text-align: center;">Sweetest and romantic style</p>
+            <a href="rosewine.html">Read More</a>
+          </div>
+          <!-- Product 10 -->
+      <div class="product">
+          <img 
+          src="https://th.bing.com/th/id/OIP.hj5tX-zAtZfhTE10clRe8gHaE8?w=304&h=203&c=7&r=0&o=5&dpr=1.3&pid=1.7" 
+          alt="Villina Honey" />
+          <h3>Villina Honey</h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <p style="text-align: center;">Villina taste</p>
+          <a href="vanilla.html">See more</a>
         </div>
         <!-- Product 11 -->
-        <div class="products">
-            <div class="product">
-            <img src="https://www.terra-greca.be/wp-content/uploads/2017/05/miel-toutes-fleurs-1024x678-1.jpg" alt="Flower Honey">
-            <h3>Flower Honey</h3>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-            <p style="text-align: center;">Natural floewr taste</p>
-            <a href="flower.html">Read More</a></p>
+      <div class="product">
+          <img src="https://www.terra-greca.be/wp-content/uploads/2017/05/miel-toutes-fleurs-1024x678-1.jpg" alt="Flower Honey" />
+          <h3>Flower Honey</h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <p style="text-align: center;">Description for Product 5</p>
+          <a href="flower.html">See more</a>
         </div>
         <!-- Product 12 -->
-	    <div class="products">
-            <div class="product">
-                <img src="https://www.vanillapura.com/cdn/shop/articles/shutterstock_764193367_1.jpg?v=1633471657&width=1024" alt="Vanilia Honey">
-                <h3>"Pearl" Fir Honey</h3>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star checked"></span>
-		<span class="fa fa-star"></span>
-            <p style="text-align: center;">Ocean paradise</p>
-            <a href="fir.html">Read More</a></p>
-</section>
-</div>
-</section>
-<!-- Link to external JavaScript file -->
-<script src="script.js"></script>
-
-
-<!-- Customer log in -->
-<script>
-    // Get the username from localStorage (assuming user logged in previously)
-    const username = localStorage.getItem("username");
-
-    // Display the username
-    if (username) {
-        document.getElementById("username-display").textContent = username;
-    } else {
-        document.getElementById("username-display").textContent = "Guest";
-    }
-
-    // Function to go to the shopping page
-    function goToShoppingPage() {
-        if (username) {
-            window.location.href = "shopping-page.html?username=" + encodeURIComponent(username);
-        } else {
-            alert("Please log in to access the shopping page.");
+      <div class="product">
+          <img 
+          src="https://www.vanillapura.com/cdn/shop/articles/shutterstock_764193367_1.jpg?v=1633471657&width=1024" 
+          alt=""Pearl" Fir Honey" />
+          <h3>"Pearl" Fir Honey</h3>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <p style="text-align: center;">Description for Product 5</p>
+          <a href="fir.html">See more</a>
+        </div>
+      </div>
+      
+    </div>
+    <!-- Right Box: Reduced-width Login Form -->
+    <div class="right-box">
+      <div class="login-container">
+        <form class="login-form" id="loginForm">
+          <h2>Login to Siam10 Winery</h2>
+          <div class="social-login">
+            <a href="https://www.instagram.com/YOUR_INSTAGRAM" target="_blank">
+              <button class="instagram-btn">Google</button>
+            </a>
+            <a href="https://www.facebook.com/YOUR_FACEBOOK" target="_blank">
+              <button class="facebook-btn">Facebook</button>
+            </a>
+            <a href="https://www.tiktok.com/@YOUR_TIKTOK" target="_blank">
+              <button class="tiktok-btn">Visit our TikTok</button>
+            </a>
+          </div>
+          <!-- Username Input -->
+          <label for="username">Enter Email:</label>
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="password" id="password" placeholder="Password" required />
+          <button type="submit" class="login-btn">Login</button>
+          <div class="links">
+            <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
+            <a href="register.html" class="register">Register New Member</a>
+            <a href="index.html" class="register">Back to Home page</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="module">
+    import { backendUrl } from "./utils/index.js";
+    document.getElementById("loginForm").addEventListener("submit", async function (event) {
+      event.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      try {
+        const response = await fetch(`${backendUrl}/login`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        });
+        const data = await response.json();
+        if (!response.ok) {
+          throw new Error(data.error || "Login failed. Please check your credentials.");
         }
-    }
-</script>
-</section>
-<section>
-    <footer>
-        <!-- Social Media Links -->
-        <div class="footer">
-            <h4>Follow Us</h4>
-            <p>  253 Anavill Suvarnaphumi Village Chalongkrung Road Lampatiew Ladkrabang Bangkok 10520,Thailand</p>
-            <div class="footer-container">
-                <a href="https://www.facebook.com/profile.php?id=61569136800046" target="_blank">🌐 Facebook</a>
-                <a href="https://www.instagram.com/siam10winery/profilecard/?igsh=cW5remt1NnA1dTdv" target="_blank">📸 Instagram</a>
-                <a href="#" target="_blank">🐦 Twitter</a>
-                <a href="#" target="https://www.tiktok.com/@siam10winery?_t=ZS-8u4XwBjRA9a&_r=1" target="_blank">🔗"Tikkok</a>
-            </div>
-        </div>
-        
-    </footer>
-</section>
-    <section>
-        <h2>Contact us</h2>
-        
-        <div class="center-flex">
-            <p style="text-align: center;">I© 2024 Pure Healthy Living. <br>All rights reserved.<br>Read our Privacy Policy.<br>
-                <a href="https://lin.ee/RBnKOuz">Line Official
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE Official Account" width="30"></a>.</p>   
-        </div>
-    </section>		    
+        document.cookie = `session=${data.token}; path=/`;
+        alert("Login page is under development.");
+        window.location.href = "/pine.html";
+      } catch (error) {
+        alert(`Error: ${error.message}`);
+      }
+    });
+  </script>
+  
 </body>
 </html>
