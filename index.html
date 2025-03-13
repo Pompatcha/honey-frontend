@@ -61,82 +61,6 @@
       .goog-te-banner-frame img {
     transform: scale(1.5); /* Adjust the scaling factor as needed */
       }
-
-
-        /* Language Dropdown Container */
-        .language-dropdown {
-            position: absolute;
-            display: inline-block;
-            z-index: 500;
-            top: 15px;
-            right: 10px;
-        }
-
-        /* Button Styling */
-        .dropdown-btn {
-            background-color: #39393a;
-            color: white;
-            padding: 12px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            width: 260px;
-            transition: background 0.3s ease-in-out;
-        }
-
-        .dropdown-btn:hover {
-            background-color: #2980b9;
-        }
-
-        /* Dropdown Content Styling */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: rgb(49, 47, 47);
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-            min-width: 200px;
-            text-align: left;
-            padding: 10px 0;
-            cursor: pointer;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        /* Show dropdown on hover */
-        .language-dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Dropdown List */
-        .dropdown-content a {
-            color: rgb(255, 245, 245);
-            padding: 12px 20px;
-            display: block;
-            text-decoration: none;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-
-        /* Hover Effect */
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-            color: #3498db;
-        }
-
-        /* Fade-in animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
 		/* Slider Container middle text */
         .slider-container {
             position: relative;
@@ -458,22 +382,46 @@
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </div>
 
-    <!-- Hight Light  -->
-    <style>
-        .highlight-frame {
-        background: linear-gradient(to right, #fff5db, #f9f1c2);
-        border: 2px solid #e2b007;
-        padding: 5px;
-        border-radius: 8px;
-        font-style: italic;
-        color: #333;
-        text-align: center;
-        margin: 10px 0;
-    </style>
+<!-- Highlight Title -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+  .highlight-frame {
+      background: linear-gradient(to right, #f9e6b3, #f3d27a);
+      border: 3px solid #c9a227; /* Premium gold */
+      padding: 15px 25px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 20px auto;
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .highlight-text {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: #8b0000; /* Deep red wine color */
+      font-style: normal;
+  }
+
+  .sub-text {
+      font-size: 18px;
+      font-style: italic;
+      color: #4a2c00; /* Warm brown tone */
+  }
+</style>
+
+<div class="highlight-frame">
+  <p class="sub-text">🍷 Wine and honey 🐝 are the gold of nature—pure, natural, and filled with life-enhancing properties.</p>
+  <p class="highlight-text">Natural Product ECO-System 100% by Siam10</p>
+  <p class="sub-text">(Healthy & Wellness)</p>
 </div>
-	<div class="highlight-frame">
-    <p>"🍷Wine and honey🐝 is the gold of nature—pure, natural, and filled with life-enhancing properties."</p>
-</div>
+
     <style>
         /* Slider container */
         .slider {
@@ -698,8 +646,6 @@
     </style>
 </head>
 <body>
-
-    <h2> Natrual Product-ECO-System 100% by Siam10 (Healthy and Wellness)</h2>
 	 <div class="slider">
     <!-- Slides container -->
     <div class="slides">
