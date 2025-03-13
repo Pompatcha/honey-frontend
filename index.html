@@ -28,8 +28,40 @@
       margin-bottom: 10px;
       text-align: left; /* Align text to the left */
       font-size: 1.5rem; /* Adjust font size as needed */
-      height: 80px;               /* Adjust height as needed */
+      height: 50px;               /* Adjust height as needed */
       }
+
+      /* Styling the Google Translate container */
+      #google_translate_element {
+          display: flex;
+          justify-content: flex-end; /* Aligns to the right */
+          margin: 10px 20px;
+         
+      }
+
+      /* Customizing the dropdown */
+      .goog-te-gadget {
+          font-family: Arial, sans-serif;
+          font-size: 26px;
+      }
+
+      /* Hide the Google logo */
+      .goog-logo-link, .goog-te-gadget span {
+          display: none !important;
+      }
+
+      /* Style the dropdown select */
+      .goog-te-combo {
+          padding: 5px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          background-color: white;
+          font-size: 14px;
+      }
+      .goog-te-banner-frame img {
+    transform: scale(1.5); /* Adjust the scaling factor as needed */
+      }
+
 
         /* Language Dropdown Container */
         .language-dropdown {
@@ -410,19 +442,22 @@
         text-decoration: underline;
       }
     </style>
+    <!-- google translation -->
 <body>    
-    <div class="head-body">
-	  <!-- Language Dropdown -->
-     <div class="language-dropdown">
-        <button class="dropdown-btn">🌍 Select Language</button>
-        <div class="dropdown-content">
-            <a href="index.html" onclick="changeLanguage('en')">🇺🇸 English</a>
-            <a href="th.html" onclick="changeLanguage('th')">🇹🇭 ภาษาไทย</a>
-            <a href="jp.html" onclick="changeLanguage('jp')">🇯🇵 日本語</a>
-            <a href="cn.html" onclick="changeLanguage('cn')">🇨🇳 中国</a>
-        </div> 
-    </div>
+  <div class="head-body">
+    <div id="google_translate_element"></div>
+
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'en', includedLanguages: 'th,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 
+            'google_translate_element'
+        );
+    }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </div>
+
     <!-- Hight Light  -->
     <style>
         .highlight-frame {
