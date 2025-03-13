@@ -994,20 +994,20 @@
         <form class="login-form" id="loginForm">
           <h2>Login to Siam10 Winery</h2>
           <div class="social-login">
-            <a href="https://accounts.google.com" target="_blank">
-                <button class="google-btn">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google Logo">
-                    Google
-                </button>
+            <a id="google-login" href="#" target="_self">
+              <button class="google-btn" type="button">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google Logo">
+                Google
+              </button>
             </a>
-            <a href="https://www.facebook.com/YOUR_FACEBOOK" target="_blank">
-                <button class="facebook-btn">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook Logo">
-                    Facebook
-                </button>
+            <a id="facebook-login" href="#" target="_self">
+              <button class="facebook-btn" type="button">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook Logo">
+                Facebook
+              </button>
             </a>
             <a href="https://www.tiktok.com/@YOUR_TIKTOK" target="_blank">
-                <button class="tiktok-btn">
+                <button class="tiktok-btn" type="button">
                     <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok Logo">
                     Visit our TikTok
                 </button>
@@ -1065,6 +1065,12 @@
 
   <script type="module">
     import { backendUrl } from "./utils/index.js";
+
+     document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("google-login").href = `${backendUrl}/auth/google`;
+    document.getElementById("facebook-login").href = `${backendUrl}/auth/facebook`;
+  });
+
     document.getElementById("loginForm").addEventListener("submit", async function (event) {
       event.preventDefault();
       const email = document.getElementById("email").value;
