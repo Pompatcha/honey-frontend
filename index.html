@@ -122,7 +122,7 @@
             position: relative;
             box-sizing: border-box;
         }
-		.slide img {
+		    .slide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -137,10 +137,10 @@
             font-size: 35px;
             font-weight: bold;
             text-align: center;
-			padding: 40px 40px;
-			padding-top: 400px;
-			height: 10vh;
-			text-shadow: 2px 2px 4px Black;
+            padding: 40px 40px;
+            padding-top: 400px;
+            height: 10vh;
+            text-shadow: 2px 2px 4px Black;
         }
         /* Navigation Arrows */
         .arrow {
@@ -189,12 +189,12 @@
             justify-content: flex-start; /* Align content to the left */
             align-items: center; /* Centers vertically */
             height: auto; /* Makes the container fill the entire viewport height */
-	        background-color: #2B2B2B; /* Choose your background color */
+	          background-color: #2B2B2B; /* Choose your background color */
             color: white;  /* Text color inside the header */
-			padding-top: 5px;
-		    padding-bottom: 5px;
+			      padding-top: 5px;
+		        padding-bottom: 5px;
             text-align: center;
-			margin: 20px 0; 
+			      margin: 20px 0; 
         }
 	   
 	/* content <p> */
@@ -204,21 +204,20 @@
 		    padding: 10px;
             justify-content: start;
             align-items: center;
-    
-	    }
+	       }
         
         .center-align {
 		    text-align: center;
 		    background-color: white;
 		    padding: 10px;
-	    }
+	      }
          /* General Reset */
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-      }
-      body {
+        }
+        body {
         font-family: Arial, sans-serif;
         padding: 20px;
         height: fit-content;
@@ -226,22 +225,23 @@
         background-size: cover;
         background-position: center;
         height: fit-content; /* Adjusts the height to fit its content */
-      }
+        }
       /* Grid container with two columns */
       .grid-container {
         display: grid;
-        grid-template-columns: 2fr 1fr; /* Left: products, Right: login */
+        grid-template-columns: 2fr 1fr; /* Left: products, Right: login and add new colume */
+        grid-template-rows: auto auto; /* Adds a second row below the first */
         gap: 20px;
         align-items: start;
         margin-top: 3%;        
-      }
+         }
       /* Left box for products */
       .left-box {
         background: rgba(255, 255, 255, 0.9);
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      }
+        }
       /* Right box for login with reduced width */
       .right-box {
         background: rgba(255, 255, 255, 0.8);
@@ -251,7 +251,51 @@
         text-align: center;
         max-width: 300px;
         width: 100%;
+        }
+      /* Additional boxes under login */
+      .box {
+          background: rgba(255, 255, 255, 0.8);
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          }
+      /* Styling for ISO Logo */
+      .adv-logo {
+          width: 140px;  /* Adjust image width */
+          height: auto;  /* Maintain aspect ratio */
+          margin-top: 10px;
+          transition: transform 0.3s ease-in-out;
+         }
+
+      /* Hover effect on ISO Logo */
+      .iso-logo:hover {
+          transform: scale(1.1);
+          }
+      /* New row box */
+      .new-row-box {
+        display: flex;               /* Enable flexbox layout */
+        flex-direction: row;      /* Stack content vertically (default) */
+        justify-content: center; /* Align items to the left */
+        align-items: center;         /* Center content horizontally */
+        padding: 10px;
+        text-align: center;
+        height: 150px;               /* Adjust height as needed */
+        row-gap: 40px;
+        
+          }
+      /* Optional: Styling for the heading */
+      .new-row-boxh3 {
+        width: 100%;  /* Ensures heading takes full width */
+        margin-bottom: 10px;
       }
+      /* Styling for ISO Logo */
+      .iso-logo {
+          width: 140px;  /* Adjust image width */
+          height: auto;  /* Maintain aspect ratio */
+          margin-top: 10px;
+          transition: transform 0.3s ease-in-out;
+         }
       /* Flex container for products with wrap style */
       .products {
         display: flex;
@@ -284,9 +328,9 @@
       .social-login {
         margin-bottom: 20px;
       }
-      .instagram-btn,
+      .google-btn,
       .facebook-btn,
-      .tiktok-btn {
+      .tiktok-btn  {
         width: 100%;
         padding: 10px;
         margin: 5px 0;
@@ -295,6 +339,11 @@
         border: none;
         border-radius: 4px;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 16p
       }
       .facebook-btn {
         background-color: #3b5998;
@@ -306,10 +355,15 @@
         background-color: #000000;
         color: white;
       }
-      .instagram-btn:hover,
+      .google-btn:hover,
       .facebook-btn:hover,
       .tiktok-btn:hover {
-        opacity: 0.9;
+          opacity: 0.9;
+      }
+
+      button img {
+          width: 20px;
+          height: 20px;
       }
       input {
         width: 100%;
@@ -346,7 +400,6 @@
       .links a:hover {
         text-decoration: underline;
       }
-	
     </style>
 <body>    
 	  <!-- Language Dropdown -->
@@ -484,8 +537,8 @@
             margin: 0;
             padding: 5px 10px;
             display: flex;
-			text-align: center;
-			font-size: 18px;
+			      text-align: center;
+			      font-size: 18px;
             justify-content: start; /* Centers horizontally */
            
         }
@@ -498,8 +551,8 @@
             text-decoration: none;
             padding: 3px 30px;
             display: block;
-			font-size: 18px;
-			text-align: center;
+			      font-size: 18px;
+			      text-align: center;
         }
 
         nav ul li a:hover {
@@ -577,13 +630,12 @@
         height: 150px; /* Fixed height for equal sizing */
         object-fit: cover; /* Ensures images maintain aspect ratio */
         border-radius: 10px;
-    }
-        
-		main {
-            padding: 20px;
-           
         }
-		h2 {
+        
+		    main {
+            padding: 20px;
+        }
+	    	h2 {
 			text-align: center;
             justify-content: center;
             align-items: center;
@@ -594,10 +646,8 @@
             background-color: #f9f9f9;
             justify-content: space-between;
             width: fit-content;
-            
         } 
         /* Button */
-        
 		}
     </style>
 </head>
@@ -944,16 +994,25 @@
         <form class="login-form" id="loginForm">
           <h2>Login to Siam10 Winery</h2>
           <div class="social-login">
-            <a href="https://www.instagram.com/YOUR_INSTAGRAM" target="_blank">
-              <button class="instagram-btn">Google</button>
+            <a href="https://accounts.google.com" target="_blank">
+                <button class="google-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google Logo">
+                    Google
+                </button>
             </a>
             <a href="https://www.facebook.com/YOUR_FACEBOOK" target="_blank">
-              <button class="facebook-btn">Facebook</button>
+                <button class="facebook-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook Logo">
+                    Facebook
+                </button>
             </a>
             <a href="https://www.tiktok.com/@YOUR_TIKTOK" target="_blank">
-              <button class="tiktok-btn">Visit our TikTok</button>
+                <button class="tiktok-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok Logo">
+                    Visit our TikTok
+                </button>
             </a>
-          </div>
+        </div>
           <!-- Username Input -->
           <label for="username">Enter Email:</label>
           <input type="email" id="email" placeholder="Email" required />
@@ -964,10 +1023,46 @@
             <a href="register.html" class="register">Register New Member</a>
             <a href="index.html" class="register">Back to Home page</a>
           </div>
-        </form>
+        <!-- Additional Boxes -->
+        <div class="box">
+          <h3>ISO Certification</h3>
+              <img src="https://seajoy.com/images/company-news/AB_eurofeuille.png" 
+                   alt="ISO Certified" 
+                   class="adv-logo">
       </div>
+      <div class="box">
+            <img src="https://1.bp.blogspot.com/-lofZ1ZddkjA/VrRvD8Y24KI/AAAAAAAACpM/QsG8-zh5pY8/s1600/iso_icon.png" 
+                 alt="ISO Certified" class="adv-logo">
+      </div>
+    </form>
+</div>
+  </div>
     </div>
   </div>
+  <!-- Second row (New row box under the first row) -->
+  <div class="new-row-box">
+    <!-- First ISO image -->
+    <img src="https://seajoy.com/images/company-news/AB_eurofeuille.png" 
+         alt="ISO Certification Image 1" 
+         class="iso-logo">
+
+    <!-- Second ISO image (e.g., ISO icon) -->
+    <img src="https://1.bp.blogspot.com/-lofZ1ZddkjA/VrRvD8Y24KI/AAAAAAAACpM/QsG8-zh5pY8/s1600/iso_icon.png" 
+         alt="ISO Certification Icon" 
+         class="iso-logo">
+    
+    <!-- Third ISO image (e.g., ISO icon) -->
+    <img src="https://vectorseek.com/wp-content/uploads/2023/09/Bio-nach-EG-Oko-Verordnung-Logo-Vector.svg-.png" 
+    alt="ISO Certification Icon" 
+    class="iso-logo">
+
+    <!-- Fourth ISO image (e.g., ISO icon) -->
+    <img src="https://iasiso-australia.com/wp-content/uploads/2023/02/HACCP-Training-705x662.png" 
+    alt="ISO Certification Icon" 
+    class="iso-logo">
+         
+</div>
+
   <script type="module">
     import { backendUrl } from "./utils/index.js";
     document.getElementById("loginForm").addEventListener("submit", async function (event) {
@@ -994,6 +1089,7 @@
       }
     });
   </script>
+  
 		<footer style="background-color: blue; color: white; font-size: 20px;text-align: center;height: fit-content;margin-top: 3%;
   ">
     Siam10Winery is a member of Product-ECO-System community promote wellness and heathly; Harb Medical Copy Right@2024. 
