@@ -171,17 +171,38 @@
     transform: scale(1.5); /* Adjust the scaling factor as needed */
       }
  
-	    .highlight-frame {
-            background: linear-gradient(to right, #fff5db, #f9f1c2);
-            border: 2px solid #e2b007;
-            padding: 5px;
-            border-radius: 8px;
-            font-style: italic;
-            color: #333;
-            text-align: center;
-			margin: 10px 20px;
-            margin-top: 5%;
-		}
+        .highlight-frame {
+        background: linear-gradient(to right, #f9e6b3, #f3d27a);
+        border: 3px solid #c9a227; /* Premium gold */
+        padding: 10px 20px; /* Reduced padding */
+        border-radius: 12px;
+        text-align: center;
+        margin: 15px auto; /* Reduced margin */
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .highlight-text {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-size: 26px; /* Slightly reduced font size */
+        color: #8b0000; /* Deep red wine color */
+        font-style: normal;
+        margin: 5px 0; /* Reduce gap */
+    }
+
+    .sub-text {
+        font-size: 16px; /* Slightly reduced font size */
+        font-style: italic;
+        color: #4a2c00; /* Warm brown tone */
+        margin: 3px 0; /* Reduce gap */
+        line-height: 1.2; /* Adjust line height */
+    }
+
 	    /* content <p> */
 	    .left-align {
 		    text-align: left;
@@ -222,9 +243,11 @@
     </script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
       </div>
-	<div class="highlight-frame">
-    <p>"Wine and honey is the gold of nature—pure, natural, and filled with life-enhancing properties."</p>
-</div>
+      <div class="highlight-frame">
+        <p class="sub-text">🍷 Wine and honey 🐝 are the gold of nature—pure, natural, and filled with life-enhancing properties.</p>
+        <p class="highlight-text">Natural Product ECO-System 100% by Siam10</p>
+        <p class="sub-text">(Healthy & Wellness)</p>
+      </div>
 </body>
 <head>
     <style>
