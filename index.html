@@ -246,8 +246,9 @@
         padding: 10px;
         text-align: center;
         height: 150px;               /* Adjust height as needed */
-        row-gap: 40px;
-        
+        row-gap: 60px;
+        background: #ccc;
+        border-radius: 10px;
           }
       /* Optional: Styling for the heading */
       .new-row-boxh3 {
@@ -370,11 +371,10 @@
 <body>    
   <div class="head-body">
     <div id="google_translate_element"></div>
-
 <script>
     function googleTranslateElementInit() {
         new google.translate.TranslateElement(
-            {pageLanguage: 'en', includedLanguages: 'th,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 
+            {pageLanguage: 'en', includedLanguages: 'en,th,zh-CN,ja,fr,de,es,gk,it,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 
             'google_translate_element'
         );
     }
