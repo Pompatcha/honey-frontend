@@ -259,13 +259,9 @@
             padding: 8px 12px;
         }
         /* Improve spacing for payment method fields */
-        #credit-card-form, #cash-transfer-info, #paypal-info, #wise-info {
-            margin-top: 15px;
-            padding: 10px;
-            border: 1px solid #d4b483;
-            border-radius: 5px;
-            background: #fedb89;
-        }
+            #credit-card-fields {
+            display: none;
+            }
         .highlight-frame {
             width: 100%;
             align-items: center;
@@ -584,16 +580,6 @@
     <option value="wise">Wise</option>
 </select>
 
-<!-- Credit Card Form -->
-<div id="credit-card-form" class="hidden">
-    <h3>Credit Card Details</h3>
-    <label for="card-number">Card Number</label>
-    <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
-    <label for="expiry-date">Expiry Date</label>
-    <input type="month" id="expiry-date" required>
-    <label for="cvv">CVV</label>
-    <input type="text" id="cvv" placeholder="123" required>
-</div>
 
 <!-- Cash Transfer Info -->
 <div id="cash-transfer-info" class="hidden">
@@ -601,7 +587,7 @@
     <p><strong>Bank Name:</strong> Kasikorn Thai</p>
     <p><strong>Account Number:</strong> 720-21495-84</p>
     <p><strong>SWIFT Code:</strong> KASITHBKXXX</p>
-    <p>*Important*<br>Attach transfer Slip after transferred <br>to confirm your order for develivery</p>
+    <p>*Important*<br>Attach transfer Slip after transferring <br>to confirm your order for delivery.</p>
 </div>
 
 <!-- PayPal Payment -->
@@ -615,55 +601,66 @@
     <h3>Pay with Wise</h3>
     <a href="https://wise.com" target="_blank" class="payment-link">Pay with Wise</a>
 </div>
-<div><button>Submited</button></div>
+
+<!-- Submit and Other Buttons -->
+<div><button onclick="submitForm()">Submit</button></div>
 <div>
     <button onclick="printForm()">Print</button>
     <button onclick="downloadPDF()">Download as PDF</button>
 </div>
 
+<script>
+    function togglePaymentFields() {
+        var paymentMethod = document.getElementById("payment-method").value;
+
+        // Hide all payment sections first
+        document.getElementById("cash-transfer-info").classList.add("hidden");
+        document.getElementById("paypal-info").classList.add("hidden");
+        document.getElementById("wise-info").classList.add("hidden");
+
+        // Show the selected payment section
+        if (paymentMethod === "credit-card") {
+            document.getElementById("credit-card-form").classList.remove("hidden");
+        } else if (paymentMethod === "cash-transfer") {
+            document.getElementById("cash-transfer-info").classList.remove("hidden");
+        } else if (paymentMethod === "paypal") {
+            document.getElementById("paypal-info").classList.remove("hidden");
+        } else if (paymentMethod === "wise") {
+            document.getElementById("wise-info").classList.remove("hidden");
+        }
+    }
+
+    function submitForm() {
+        var paymentMethod = document.getElementById("payment-method").value;
+
+        // Check if the selected payment method is 'credit-card'
+        if (paymentMethod === "credit-card") {
+            // Redirect to the Stripe Dashboard page after submitting the form
+            window.location.href = "https://www.tiktok.com/@siam10winery?_t=ZS-8ug1hoVeiJE&_r=1";
+        } else {
+            // Handle other payment methods (you can show a success message, or redirect as needed)
+            alert("Payment method selected: " + paymentMethod);
+        }
+    }
+
+    function printForm() {
+        window.print(); // Print the current page
+    }
+
+    function downloadPDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        
+        html2canvas(document.querySelector(".container")).then(canvas => {
+            const imgData = canvas.toDataURL("image/png");
+            const imgWidth = 190;
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+            doc.addImage(imgData, "PNG", 10, 10, imgWidth, imgHeight);
+            doc.save("payment_form.pdf");
+        });
+    }
+</script>
 </div>
-
-
-<script>
-function togglePaymentFields() {
-var paymentMethod = document.getElementById("payment-method").value;
-
-// Hide all payment sections first
-document.getElementById("credit-card-form").classList.add("hidden");
-document.getElementById("cash-transfer-info").classList.add("hidden");
-document.getElementById("paypal-info").classList.add("hidden");
-document.getElementById("wise-info").classList.add("hidden");
-
-// Show the selected payment section
-if (paymentMethod === "credit-card") {
-    document.getElementById("credit-card-form").classList.remove("hidden");
-} else if (paymentMethod === "cash-transfer") {
-    document.getElementById("cash-transfer-info").classList.remove("hidden");
-} else if (paymentMethod === "paypal") {
-    document.getElementById("paypal-info").classList.remove("hidden");
-} else if (paymentMethod === "wise") {
-    document.getElementById("wise-info").classList.remove("hidden");
-}
-}
-</script>
-<script>
-function printForm() {
-    window.print(); // Print the current page
-}
-
-function downloadPDF() {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-    
-    html2canvas(document.querySelector(".container")).then(canvas => {
-        const imgData = canvas.toDataURL("image/png");
-        const imgWidth = 190;
-        const imgHeight = (canvas.height * imgWidth) / canvas.width;
-        doc.addImage(imgData, "PNG", 10, 10, imgWidth, imgHeight);
-        doc.save("payment_form.pdf");
-    });
-}
-</script>
 <!-- Right Column: Cart -->
 <div class="flex-item">
     <h2>Your Cart</h2>
@@ -672,6 +669,8 @@ function downloadPDF() {
         <thead>
             <tr>
                 <th>Product Name</th>
+                <th>Picture</th>
+                </th>
                 <th>Qty</th>
                 <th>Size</th>
                 <th>Price</th>
