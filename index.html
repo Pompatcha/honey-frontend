@@ -161,7 +161,6 @@
         .active {
             background-color: #FFD700; /* Golden color for active dot */
         }
-        position: relative;
 
 	     /* About our product.conteainer head */
         .center-flex {
@@ -1019,15 +1018,15 @@
     <div class="right-box">
       <div class="login-container">
         <form class="login-form" id="loginForm">
-          <h2>Login to Siam10 Winery</h2>
+          <h2 id="social-login-header">Login to Siam10 Winery</h2>
           <div class="social-login">
-            <a id="google-login" href="#" target="_blank">
+            <a id="social-login-google" href="#" target="_self">
               <button class="google-btn" type="button">
                 <img src="https://developers.google.com/static/identity/images/branding_guideline_sample_lt_rd_sl.svg" alt="Google Logo">
                 Google
               </button>
             </a>
-            <a id="facebook-login" href="#" target="_blank">
+            <a id="social-login-facebook" href="#" target="_self">
               <button class="facebook-btn" type="button">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook Logo">
                 Facebook
@@ -1065,15 +1064,17 @@
         </a>
         </div>
           <!-- Username Input -->
-          <label for="username">Enter Email:</label>
-          <input type="email" id="email" placeholder="Email" required />
-          <input type="password" id="password" placeholder="Password" required />
-          <button type="submit" class="login-btn">Login</button>
-          <div class="links">
-            <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
-            <a href="register.html" class="register">Register New Member</a>
-            <a href="index.html" class="register">Back to Home page</a>
-          </div>
+           <div id="social-login-form">
+            <label for="username">Enter Email:</label>
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" id="password" placeholder="Password" required />
+            <button type="submit" class="login-btn">Login</button>
+            <div class="links">
+              <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
+              <a href="register.html" class="register">Register New Member</a>
+              <a href="index.html" class="register">Back to Home page</a>
+            </div>
+           </div>
         <!-- Additional Boxes -->
         <div class="box">
           <h3>ISO Certification</h3>
@@ -1114,38 +1115,99 @@
          
 </div>
 
-  <script type="module">
-    import { backendUrl } from "./utils/index.js";
+<script type="module">
+  import { backendUrl, getQueryVariable, setCookie, parseJwt, getCookie } from "./utils/index.js";
 
-    document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("google-login").href = `${backendUrl}/auth/google`;
-    document.getElementById("facebook-login").href = `${backendUrl}/auth/facebook`;
-  });
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("social-login-google").href = `${backendUrl}/auth/google`;
+    document.getElementById("social-login-facebook").href = `${backendUrl}/auth/facebook`;
 
-    document.getElementById("loginForm").addEventListener("submit", async function (event) {
-      event.preventDefault();
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
-      try {
-        const response = await fetch(`${backendUrl}/login`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email, password }),
-        });
-        const data = await response.json();
-        if (!response.ok) {
-          throw new Error(data.error || "Login failed. Please check your credentials.");
+    // ตรวจสอบว่ามี token จาก Query หรือไม่
+    const token = getQueryVariable("token");
+    const emailCookie = getCookie("email");
+    const nameCookie = getCookie("name");
+    const socialLoginHeader = document.getElementById("social-login-header");
+    const socialLoginGoogle = document.getElementById("social-login-google");
+    const socialLoginFacebook = document.getElementById("social-login-facebook");
+    const socialLoginForm = document.getElementById("social-login-form");
+    if (token) {
+        setCookie("session", token); // บันทึก Token ลง Cookie
+        const jwtPayload = parseJwt(token);
+        console.log(jwtPayload);
+        
+        if (jwtPayload) {
+            setCookie("userId", jwtPayload._id); // บันทึก user_id (จาก JWT Payload)
+            setCookie("email", jwtPayload.email); // บันทึก email (หากมี)
+            setCookie("name", jwtPayload.name); // บันทึก name (หากมี)
         }
-        document.cookie = `session=${data.token}; path=/`;
-        alert("Login page is under development.");
-        window.location.href = "/pine.html";
+
+        // Remove the token from the URL query string after saving it in cookies
+        if (window.history.pushState) {
+            // Remove the token from the URL query string
+            const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            window.history.replaceState({ path: newUrl }, '', newUrl);
+
+            window.location.reload();
+        }
+    }
+
+    if (emailCookie) {
+      socialLoginHeader.innerHTML = `Welcome back, ${nameCookie} ${emailCookie}! <span id="logout" style="color: red; cursor: pointer; margin-left: 10px;">(Logout)</span>`;
+
+      [socialLoginGoogle, socialLoginFacebook, socialLoginForm].forEach(element => {
+      if (element) {
+        element.style.display = "none"; // ซ่อนองค์ประกอบ
+      }
+    });
+    }
+
+    document.getElementById("logout").addEventListener("click", async () => {
+      try {
+        const response = await fetch(`${backendUrl}/logout`, { method: "GET", credentials: "include" });
+        if (!response.ok) throw new Error("Logout failed");
+
+        // ล้าง Cookie
+        ["session", "email", "userId", "name"].forEach(cookieName => setCookie(cookieName, "", -1));
+
+        // รีโหลดหน้าเว็บ
+        window.location.reload();
       } catch (error) {
         alert(`Error: ${error.message}`);
       }
     });
-  </script>
+  });
+
+  // Login Form Handler
+  document.getElementById("loginForm").addEventListener("submit", async function (event) {
+      event.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      try {
+          const response = await fetch(`${backendUrl}/login`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ email, password }),
+          });
+
+          const data = await response.json();
+          if (!response.ok) throw new Error(data.error || "Login failed. Please check your credentials.");
+
+          setCookie("session", data.token);
+          const jwtPayload = parseJwt(data.token);
+          if (jwtPayload) {
+              setCookie("user_id", jwtPayload.sub);
+              setCookie("email", jwtPayload.email);
+          }
+
+          alert("Login successful.");
+          window.location.href = "/pine.html";
+      } catch (error) {
+          alert(`Error: ${error.message}`);
+      }
+  });
+</script>
+
   
 		<footer style="background-color: blue; color: white; font-size: 20px;text-align: center;height: fit-content;margin-top: 3%;
   ">
