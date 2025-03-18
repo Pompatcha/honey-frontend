@@ -1,1243 +1,1461 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="This is a premium honey collection website offering the finest quality honey.">
-        <meta name="keywords" content="premium honey, natural honey, pure honey, honey collection, coffee bean Thailand, honey wine">
-        <meta name="keywords" content="Wellness">
-        <meta name="author" content="Patcharin Chanaphukdee">
-        <!-- Open Graph Meta Tags (for social sharing) -->
-        <meta property="og:title" content="Premium Honey Collection">
-        <meta property="og:description" content="Explore our premium honey collection, made from nature's finest sources.">
-        <title>Premium Wine and Honey | Red Wine | Organic Honey</title>
-        <!-- Google Fonts - Roboto -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-        <!-- External Stylesheets -->
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="styles/shared/general.css">
-        <link rel="stylesheet" href="olive.css">
-        <link rel="stylesheet" href="css/dropdownmenu.css">
-    </head>
 
-    <style>
-      /* Styling for the heading */
-      .head-body{
-      width: 100%;   /* Ensure heading takes full width */
-      margin-bottom: 10px;
-      text-align: left; /* Align text to the left */
-      font-size: 1.5rem; /* Adjust font size as needed */
-      height: 50px;               /* Adjust height as needed */
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="This is a premium honey collection website offering the finest quality honey.">
+  <meta name="keywords"
+    content="premium honey, natural honey, pure honey, honey collection, coffee bean Thailand, honey wine">
+  <meta name="keywords" content="Wellness">
+  <meta name="author" content="Patcharin Chanaphukdee">
+  <!-- Open Graph Meta Tags (for social sharing) -->
+  <meta property="og:title" content="Premium Honey Collection">
+  <meta property="og:description" content="Explore our premium honey collection, made from nature's finest sources.">
+  <title>Premium Wine and Honey | Red Wine | Organic Honey</title>
+  <!-- Google Fonts - Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/shared/general.css">
+  <link rel="stylesheet" href="olive.css">
+  <link rel="stylesheet" href="css/dropdownmenu.css">
+</head>
 
-      /* Styling the Google Translate container */
-      .p-slect-language {
+<style>
+  /* Styling for the heading */
+  .head-body {
+    padding: 10px;
+    width: 100%;
+    /* Ensure heading takes full width */
+    margin-bottom: 10px;
+    text-align: left;
+    /* Align text to the left */
+    font-size: 1.5rem;
+    /* Adjust font size as needed */
+    height: 50px;
+    /* Adjust height as needed */
+  }
+
+  /* Styling the Google Translate container */
+  .p-slect-language {
     display: flex;
     justify-content: flex-end;
-    align-items: center; /* Aligns items (text + Google Translate) vertically */
-    position: absolute; /* Use fixed if you want it to stay on screen */
-    top: 10px;
-    right: 10px;
-    font-size: 18px; /* Reduced font size for better fit */
-    background-color: #0f0b01; 
+    align-items: center;
+    /* Aligns items (text + Google Translate) vertically */
+    /* position: absolute; */
+    /* Use fixed if you want it to stay on screen */
+    /* top: 10px;
+    right: 10px; */
+    font-size: 18px;
+    /* Reduced font size for better fit */
+    background-color: #0f0b01;
     color: #f4f1f1;
     font-family: 'Poppins', sans-serif;
-    padding: 8px 15px; /* Padding for better spacing */
+    padding: 8px 15px;
+    /* Padding for better spacing */
     border-radius: 5px;
-    gap: 10px; /* Adds space between text and Google Translate */
-}
+    gap: 10px;
+    /* Adds space between text and Google Translate */
+  }
 
-    #google_translate_element {
+  #google_translate_element {
     display: flex;
-    justify-content: flex-end; /* Align to the right */
-}
+    justify-content: flex-end;
+    /* Align to the right */
+  }
 
 
-      /* Customizing the dropdown */
-      .goog-te-gadget {
-          font-family: Arial, sans-serif;
-          font-size: 26px;
-      }
+  /* Customizing the dropdown */
+  .goog-te-gadget {
+    font-family: Arial, sans-serif;
+    font-size: 26px;
+  }
 
-      /* Hide the Google logo */
-      .goog-logo-link, .goog-te-gadget span {
-          display: none !important;
-      }
+  /* Hide the Google logo */
+  .goog-logo-link,
+  .goog-te-gadget span {
+    display: none !important;
+  }
 
-      /* Style the dropdown select */
-      .goog-te-combo {
-          padding: 5px;
-          border-radius: 5px;
-          border: 1px solid #ccc;
-          background-color: white;
-          font-size: 14px;
-      }
-      .goog-te-banner-frame img {
-    transform: scale(1.5); /* Adjust the scaling factor as needed */
-      }
-      
-		/* Slider Container middle text */
-        .slider-container {
-            position: relative;
-            width: 100%;
-            height: 410px;  /* Adjust the height to fit your design */
-            overflow: hidden;
-            max-width: 1215px;
-            height: 250px;
-            margin: auto;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-        .slider {
-            display: flex;
-            transition: transform 1s ease;
-            width: 100%;
-        }
-		/* Each slide */
-        .slide {
-            min-width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            box-sizing: border-box;
-        }
-		    .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        /* Text Overlay for Honey Slides */
-        .slide .text-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            font-size: 35px;
-            font-weight: bold;
-            text-align: center;
-            padding: 40px 40px;
-            padding-top: 400px;
-            height: 10vh;
-            text-shadow: 2px 2px 4px Black;
-        }
-        /* Navigation Arrows */
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            font-size: 30px;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 1;
-        }
-        .arrow-left {
-            left: 10px;
-        }
-        .arrow-right {
-            right: 10px;
-        }
-        /* Dots for Navigation */
-        .dots {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-        }
-        .dot {
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background-color: white;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-        .active {
-            background-color: #FFD700; /* Golden color for active dot */
-        }
+  /* Style the dropdown select */
+  .goog-te-combo {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-size: 14px;
+  }
 
-	     /* About our product.conteainer head */
-        .center-flex {
-            display: flex;
-            width: 100%;
-            justify-content: flex-start; /* Align content to the left */
-            align-items: center; /* Centers vertically */
-            height: auto; /* Makes the container fill the entire viewport height */
-	          background-color: #2B2B2B; /* Choose your background color */
-            color: white;  /* Text color inside the header */
-			      padding-top: 5px;
-		        padding-bottom: 5px;
-            text-align: center;
-			      margin: 20px 0; 
-        }
-	   
-	/* content <p> */
-	    .left-align {
-		    text-align: center;
-		    background-color: white;
-		    padding: 10px;
-            justify-content: start;
-            align-items: center;
-	       }
-        
-        .center-align {
-		    text-align: center;
-		    background-color: white;
-		    padding: 10px;
-	      }
-         /* General Reset */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        }
-        body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-        height: fit-content;
-        background-image: url("https://i.ibb.co/gbKVdHvg/Designer-3.jpg");
-        background-size: cover;
-        background-position: center;
-        height: fit-content; /* Adjusts the height to fit its content */
-        }
-      /* Grid container with two columns */
-      .grid-container {
-        display: grid;
-        grid-template-columns: 2fr 1fr; /* Left: products, Right: login and add new colume */
-        grid-template-rows: auto auto; /* Adds a second row below the first */
-        gap: 20px;
-        align-items: start;
-        margin-top: 3%;        
-         }
-      /* Left box for products */
-      .left-box {
-        background: rgba(255, 255, 255, 0.9);
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-      /* Right box for login with reduced width */
-      .right-box {
-        background: rgba(255, 255, 255, 0.8);
-        padding: 40px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        max-width: 300px;
-        width: 100%;
-        }
-      /* Additional boxes under login */
-      .box {
-          background: rgba(255, 255, 255, 0.8);
-          padding: 20px;
-          border-radius: 8px;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-          text-align: center;
-          }
-      /* Styling for ISO Logo */
-      .adv-logo {
-          width: 140px;  /* Adjust image width */
-          height: auto;  /* Maintain aspect ratio */
-          margin-top: 10px;
-          transition: transform 0.3s ease-in-out;
-         }
+  .goog-te-banner-frame img {
+    transform: scale(1.5);
+    /* Adjust the scaling factor as needed */
+  }
 
-      /* Hover effect on ISO Logo */
-      .iso-logo:hover {
-          transform: scale(1.1);
-          }
-      /* New row box */
-      .new-row-box {
-        display: flex;               /* Enable flexbox layout */
-        flex-direction: row;      /* Stack content vertically (default) */
-        justify-content: center; /* Align items to the left */
-        align-items: center;         /* Center content horizontally */
-        padding: 10px;
-        text-align: center;
-        height: 150px;               /* Adjust height as needed */
-        row-gap: 60px;
-        background: #ccc;
-        border-radius: 10px;
-        
-          }
-      /* Optional: Styling for the heading */
-      .new-row-boxh3 {
-        width: 100%;  /* Ensures heading takes full width */
-        margin-bottom: 10px;
-      }
-      /* Styling for ISO Logo */
-      .iso-logo {
-          width: 140px;  /* Adjust image width */
-          height: auto;  /* Maintain aspect ratio */
-          margin-top: 10px;
-          transition: transform 0.3s ease-in-out;
-         }
-      /* Flex container for products with wrap style */
-      .products {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-      }
-      /* Product item: 4 items per row */
-      .product {
-        background: #f8f1e1;
-        border: 1px solid #d4b483;
-        padding: 15px;
-        border-radius: 8px;
-        text-align: center;
-        flex: 1 1 calc(25% - 20px);
-        box-sizing: border-box;
-        max-width: 300px;
-      }
-      .product img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 10px;
-      }
-      /* Login container styles */
-      .login-container h2 {
-        font-size: 24px;
-        margin-bottom: 20px;
-      }
-      .social-login {
-        margin-bottom: 20px;
-      }
-      .google-btn,
-      .facebook-btn,
-      .tiktok-btn,
-      .Lazada-btn,
-      .Shopee  {
-        width: 100%;
-        padding: 10px;
-        margin: 5px 0;
-        background-color: #db4437;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        font-size: 16p
-      }
-      .facebook-btn {
-        background-color: #3b5998;
-      }
-      .instagram-btn {
-        background-color: #c13584;
-      }
-      .tiktok-btn {
-        background-color: #000000;
-        color: white;
-      }
-      .Lazada-btn {
-        background-color: #2703a9;
-        color: white;
-      }
-      .shoppee-btn {
-        background-color: #000000;
-        color: white;
-      }
-      .google-btn:hover,
-      .facebook-btn:hover,
-      .tiktok-btn:hover,
-      .Lazada-btn:hover,
-      .shoppee-btn:hover {
-          opacity: 0.9;
-      }
+  /* Slider Container middle text */
+  .slider-container {
+    position: relative;
+    width: 100%;
+    height: 410px;
+    /* Adjust the height to fit your design */
+    overflow: hidden;
+    max-width: 1215px;
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+  }
 
-      button img {
-          width: 20px;
-          height: 20px;
-      }
-      input {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      input:focus {
-        outline: none;
-        border-color: #6c757d;
-      }
-      .login-btn {
-        width: 100%;
-        padding: 10px;
-        background-color: #28a745;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      .login-btn:hover {
-        background-color: #218838;
-      }
-      .links {
-        margin-top: 20px;
-      }
-      .links a {
-        display: block;
-        color: #007bff;
-        text-decoration: none;
-        margin: 5px 0;
-      }
-      .links a:hover {
-        text-decoration: underline;
-      }
-    </style>
-    <!-- google translation -->
-<body>    
+  .slider {
+    display: flex;
+    transition: transform 1s ease;
+    width: 100%;
+  }
+
+  /* Each slide */
+  .slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Text Overlay for Honey Slides */
+  .slide .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px 40px;
+    padding-top: 400px;
+    height: 10vh;
+    text-shadow: 2px 2px 4px Black;
+  }
+
+  /* Navigation Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .arrow-left {
+    left: 10px;
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+
+  /* Dots for Navigation */
+  .dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+
+  .dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .active {
+    background-color: #FFD700;
+    /* Golden color for active dot */
+  }
+
+  /* About our product.conteainer head */
+  .center-flex {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    /* Align content to the left */
+    align-items: center;
+    /* Centers vertically */
+    height: auto;
+    /* Makes the container fill the entire viewport height */
+    background-color: #2B2B2B;
+    /* Choose your background color */
+    color: white;
+    /* Text color inside the header */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  /* content <p> */
+  .left-align {
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .center-align {
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+  }
+
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    height: fit-content;
+    background-image: url("https://i.ibb.co/gbKVdHvg/Designer-3.jpg");
+    background-size: cover;
+    background-position: center;
+    height: fit-content;
+    /* Adjusts the height to fit its content */
+  }
+
+  /* Grid container with two columns */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* Left: products, Right: login and add new colume */
+    grid-template-rows: auto auto;
+    /* Adds a second row below the first */
+    gap: 20px;
+    align-items: start;
+    margin-top: 3%;
+  }
+
+  /* Left box for products */
+  .left-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Right box for login with reduced width */
+  .right-box {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  /* Additional boxes under login */
+  .box {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  /* Styling for ISO Logo */
+  .adv-logo {
+    width: 140px;
+    /* Adjust image width */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Hover effect on ISO Logo */
+  .iso-logo:hover {
+    transform: scale(1.1);
+  }
+
+  /* New row box */
+  .new-row-box {
+    display: flex;
+    /* Enable flexbox layout */
+    flex-direction: row;
+    /* Stack content vertically (default) */
+    justify-content: center;
+    /* Align items to the left */
+    align-items: center;
+    /* Center content horizontally */
+    padding: 10px;
+    text-align: center;
+    height: 150px;
+    /* Adjust height as needed */
+    row-gap: 60px;
+    background: #ccc;
+    border-radius: 10px;
+
+  }
+
+  /* Optional: Styling for the heading */
+  .new-row-boxh3 {
+    width: 100%;
+    /* Ensures heading takes full width */
+    margin-bottom: 10px;
+  }
+
+  /* Styling for ISO Logo */
+  .iso-logo {
+    width: 140px;
+    /* Adjust image width */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Flex container for products with wrap style */
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  /* Product item: 4 items per row */
+  .product {
+    background: #f8f1e1;
+    border: 1px solid #d4b483;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box;
+    max-width: 300px;
+  }
+
+  .product img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  /* Login container styles */
+  .login-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .social-login {
+    margin-bottom: 20px;
+  }
+
+  .google-btn,
+  .facebook-btn,
+  .tiktok-btn,
+  .Lazada-btn,
+  .Shopee {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #db4437;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16p
+  }
+
+  .facebook-btn {
+    background-color: #3b5998;
+  }
+
+  .instagram-btn {
+    background-color: #c13584;
+  }
+
+  .tiktok-btn {
+    background-color: #000000;
+    color: white;
+  }
+
+  .Lazada-btn {
+    background-color: #2703a9;
+    color: white;
+  }
+
+  .shoppee-btn {
+    background-color: #000000;
+    color: white;
+  }
+
+  .google-btn:hover,
+  .facebook-btn:hover,
+  .tiktok-btn:hover,
+  .Lazada-btn:hover,
+  .shoppee-btn:hover {
+    opacity: 0.9;
+  }
+
+  button img {
+    width: 20px;
+    height: 20px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #6c757d;
+  }
+
+  .login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .login-btn:hover {
+    background-color: #218838;
+  }
+
+  .links {
+    margin-top: 20px;
+  }
+
+  .links a {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    margin: 5px 0;
+  }
+
+  .links a:hover {
+    text-decoration: underline;
+  }
+
+  .profile {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+  }
+
+  .role {
+    font-size: 12px;
+    color: gray;
+  }
+
+  .auth-box {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .cart-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .cart-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 50%;
+    min-width: 18px;
+    text-align: center;
+  }
+</style>
+<!-- google translation -->
+
+<body>
   <div class="head-body">
-    <div class="p-slect-language">
+    <div class="auth-box">
+      <div class="profile" id="profile-box">
+        <img class="avatar" src="https://sitepow.s3.ap-southeast-1.amazonaws.com/BiazfanxmamNRoxxVxka.png">
+        <div class="info">
+          <p class="name" id="name-auth"></p>
+          <p class="role" id="email-auth"></p>
+        </div>
+
+        <div class="cart-container">
+          <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Cart" class="cart-icon">
+          <span class="cart-count">3</span>
+        </div>
+      </div>
+
+      <div class="p-slect-language">
         <span>Select Language:</span>
         <div id="google_translate_element"></div>
+      </div>
     </div>
-  </di>
-
-<script>
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-            {pageLanguage: 'en', includedLanguages: 'en,th,zh-CN,ja,fr,de,es,gk,it,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 
-            'google_translate_element'
-        );
-    }
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </div>
 
-<!-- Highlight Title -->
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'en', includedLanguages: 'en,th,zh-CN,ja,fr,de,es,gk,it,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </div>
 
-  .highlight-frame {
+  <!-- Highlight Title -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+    .highlight-frame {
       background: linear-gradient(to right, #f9e6b3, #f3d27a);
-      border: 3px solid #c9a227; /* Premium gold */
+      border: 3px solid #c9a227;
+      /* Premium gold */
       padding: 15px 25px;
       border-radius: 12px;
       text-align: center;
-      margin: 20px auto;
+      margin: 35px auto;
       width: fit-content;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  }
+    }
 
-  .highlight-text {
+    .highlight-text {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
       font-size: 28px;
-      color: #8b0000; /* Deep red wine color */
+      color: #8b0000;
+      /* Deep red wine color */
       font-style: normal;
-  }
+    }
 
-  .sub-text {
+    .sub-text {
       font-size: 18px;
       font-style: italic;
-      color: #4a2c00; /* Warm brown tone */
-  }
-</style>
+      color: #4a2c00;
+      /* Warm brown tone */
+    }
+  </style>
 
-<div class="highlight-frame">
-  <p class="sub-text">🍷 Wine and honey 🐝 are the gold of nature—pure, natural, and filled with life-enhancing properties.</p>
-  <p class="highlight-text">Natural Product ECO-System 100% by Siam10</p>
-  <p class="sub-text">(Healthy & Wellness)</p>
-</div>
+  <div class="highlight-frame">
+    <p class="sub-text">🍷 Wine and honey 🐝 are the gold of nature—pure,
+      natural, and filled with life-enhancing
+      properties.</p>
+    <p class="highlight-text">Natural Product ECO-System 100% by Siam10</p>
+    <p class="sub-text">(Healthy & Wellness)</p>
+  </div>
 
-    <style>
-        /* Slider container */
-        .slider {
-            position: relative;
-            width: 100%;
-            max-width: 1215px;
-            height: 550px;
-            margin: auto;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-        /* Slides */
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: 100%;
-        }
-        /* Each slide */
-        .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        /* Navigation buttons */
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 2;
-        }
-        .prev {
-            left: 10px;
-        }
+  <style>
+    /* Slider container */
+    .slider {
+      position: relative;
+      width: 100%;
+      max-width: 1215px;
+      height: 550px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
 
-        .next {
-            right: 10px;
-        }
+    /* Slides */
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
 
-        /* Dots navigation */
-        .dots {
-            text-align: center;
-            position: absolute;
-            bottom: 10px;
-            width: 100%;
-        }
-        .dot {
-            display: inline-block;
-            height: 10px;
-            width: 10px;
-            margin: 0 5px;
-            background-color: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        .dot.active {
-            background-color: white;
-        }
-        /* Basic Styling */
-        body 
-		{
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-		/* blackground colors header */
-        header {
-            background-color: #2B2B2B;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-			padding-top: 10px;
-            width: 100%;
-        }
-        nav {
-            background: #e2b007;
-            padding: 10px;
-            text-align: center; /* Fallback for non-flex environments */
-            font-size: 18px;
-            display: flex;
-            justify-content: center; /* Centers text horizontally */
-            align-items: center; /* Centers items vertically */
-            height: 60px; /* Optional: Adjust height for better alignment */
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-            background-color: #6e2c00; /* Highlight on hover */
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 5px 10px;
-            display: flex;
-			      text-align: center;
-			      font-size: 18px;
-            justify-content: start; /* Centers horizontally */
-           
-        }
-        nav ul li {
-            position: relative; /* Required for dropdown positioning */
-        }
+    /* Each slide */
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 3px 30px;
-            display: block;
-			      font-size: 18px;
-			      text-align: center;
-        }
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        nav ul li a:hover {
-            background-color: #575757;
-        }
+    /* Navigation buttons */
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 2;
+    }
 
-        /* Dropdown Menu Styling */
-        nav ul li ul {
-            display: none; /* Hide dropdown by default */
-            position: absolute;
-            top: 100%; /* Position below the parent menu item */
-            left: 0;
-            background-color: #444;
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            min-width: 150px;
-            z-index: 1000;
-            
-        }
-        nav ul li ul li {
-            border-bottom: 1px solid #555;
-        }
+    .prev {
+      left: 10px;
+    }
 
-        nav ul li ul li a {
-            padding: 10px;
-        }
+    .next {
+      right: 10px;
+    }
 
-        nav ul li ul li a:hover {
-            background-color: #575757;
-        }
-        /* Show dropdown on hover */
-        nav ul li:hover > ul {
-            display: block;
-        }
-		/* Catalog Container */
-        .hero {
-            background: url('wine-honey-hero.jpg') no-repeat center center/cover;
-            height: 200px;
-            color: black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 5.5em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-        .section {
-            padding: 20px;
-        }
-        .products {
-        display: flex;
-        justify-content: center; /* Center the items */
-        flex-direction: start;
-        gap: 10px; /* Increase gap for better spacing */
-        color: #333;
-        border-color: burlywood;
-        }
+    /* Dots navigation */
+    .dots {
+      text-align: center;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+    }
 
-        .product {
-        background: #f8f1e1;
-        border: 1px solid #d4b483;
-        padding: 15px;
-        border-radius: 8px;
-        text-align: center;
-        flex: 1 1 calc(25% - 40px); /* 4 items per row */
-        max-width: 300px;
-        box-sizing: border-box;
-        }
-       
-        .product img {
-        width: 180px; /* Ensures full width */
-        height: 150px; /* Fixed height for equal sizing */
-        object-fit: cover; /* Ensures images maintain aspect ratio */
-        border-radius: 10px;
-        }
-        
-		    main {
-            padding: 20px;
-        }
-	    	h2 {
-			text-align: center;
-            justify-content: center;
-            align-items: center;
-		}
-        section {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            justify-content: space-between;
-            width: fit-content;
-        } 
-        /* Button */
+    .dot {
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+    }
 
-    </style>
-</head>
-<body>
-	 <div class="slider">
-    <!-- Slides container -->
-    <div class="slides">
+    .dot.active {
+      background-color: white;
+    }
+
+    /* Basic Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* blackground colors header */
+    header {
+      background-color: #2B2B2B;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      padding-top: 10px;
+      width: 100%;
+    }
+
+    nav {
+      background: #e2b007;
+      padding: 10px;
+      text-align: center;
+      /* Fallback for non-flex environments */
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      /* Centers text horizontally */
+      align-items: center;
+      /* Centers items vertically */
+      height: 60px;
+      /* Optional: Adjust height for better alignment */
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      background-color: #6e2c00;
+      /* Highlight on hover */
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 5px 10px;
+      display: flex;
+      text-align: center;
+      font-size: 18px;
+      justify-content: start;
+      /* Centers horizontally */
+
+    }
+
+    nav ul li {
+      position: relative;
+      /* Required for dropdown positioning */
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 3px 30px;
+      display: block;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    nav ul li a:hover {
+      background-color: #575757;
+    }
+
+    /* Dropdown Menu Styling */
+    nav ul li ul {
+      display: none;
+      /* Hide dropdown by default */
+      position: absolute;
+      top: 100%;
+      /* Position below the parent menu item */
+      left: 0;
+      background-color: #444;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      min-width: 150px;
+      z-index: 1000;
+
+    }
+
+    nav ul li ul li {
+      border-bottom: 1px solid #555;
+    }
+
+    nav ul li ul li a {
+      padding: 10px;
+    }
+
+    nav ul li ul li a:hover {
+      background-color: #575757;
+    }
+
+    /* Show dropdown on hover */
+    nav ul li:hover>ul {
+      display: block;
+    }
+
+    /* Catalog Container */
+    .hero {
+      background: url('wine-honey-hero.jpg') no-repeat center center/cover;
+      height: 200px;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 5.5em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .section {
+      padding: 20px;
+    }
+
+    .products {
+      display: flex;
+      justify-content: center;
+      /* Center the items */
+      flex-direction: start;
+      gap: 10px;
+      /* Increase gap for better spacing */
+      color: #333;
+      border-color: burlywood;
+    }
+
+    .product {
+      background: #f8f1e1;
+      border: 1px solid #d4b483;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      flex: 1 1 calc(25% - 40px);
+      /* 4 items per row */
+      max-width: 300px;
+      box-sizing: border-box;
+    }
+
+    .product img {
+      width: 180px;
+      /* Ensures full width */
+      height: 150px;
+      /* Fixed height for equal sizing */
+      object-fit: cover;
+      /* Ensures images maintain aspect ratio */
+      border-radius: 10px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    section {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      justify-content: space-between;
+      width: fit-content;
+    }
+
+    /* Button */
+  </style>
+  </head>
+
+  <body>
+    <div class="slider">
+      <!-- Slides container -->
+      <div class="slides">
         <div class="slide">
-            <img src="https://lakechelanwinevalley.com/wp-content/uploads/2021/11/Wine-grapes-in-a-vineyard-at-Lake-Chelan.jpg">
+          <img
+            src="https://lakechelanwinevalley.com/wp-content/uploads/2021/11/Wine-grapes-in-a-vineyard-at-Lake-Chelan.jpg">
         </div>
         <div class="slide">
-            <img src="https://honey.com/images/default/Celebrating-Beekeeping-Around-the-World-Apimondia.jpg">
+          <img src="https://honey.com/images/default/Celebrating-Beekeeping-Around-the-World-Apimondia.jpg">
         </div>
         <div class="slide">
-            <img src="https://traynorvineyard.com/cdn/shop/articles/htb_traynor_w-2.jpg?v=1611006329">
-			</div>
-		<div class="slide">
-            <img src="https://killroy.com/wp-content/uploads/2023/02/Mature-Olive-Trees.jpg">
+          <img src="https://traynorvineyard.com/cdn/shop/articles/htb_traynor_w-2.jpg?v=1611006329">
         </div>
-		 <div class="slide">
-            <img src="https://images.squarespace-cdn.com/content/v1/5ab15305f2e6b1848781c80f/1589223943856-X0XWNCJ5S5Z55UUN9A4L/Do+You+Prefer+Red+Or+White+Wine%3F+Why+We+Tend+To+Like+One+Better?format=2500w">
+        <div class="slide">
+          <img src="https://killroy.com/wp-content/uploads/2023/02/Mature-Olive-Trees.jpg">
         </div>
-		<div class="slide">
-            <img src="https://kandrafoods.com/wp-content/uploads/2021/03/honey-varieties-with-comb-and-pollen.jpg">
+        <div class="slide">
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/5ab15305f2e6b1848781c80f/1589223943856-X0XWNCJ5S5Z55UUN9A4L/Do+You+Prefer+Red+Or+White+Wine%3F+Why+We+Tend+To+Like+One+Better?format=2500w">
         </div>
-		<div class="slide">
-            <img src="https://i2.wp.com/www.holar.com.tw/wp-content/uploads/Holar-Blog-Safely-Cooking-with-Olive-Oil-The-Dos-and-Donts-You-Need-to-Know-Consider-the-smoke-point-of-your-olive-oil.jpg?resize=600%2C338&ssl=1">
+        <div class="slide">
+          <img src="https://kandrafoods.com/wp-content/uploads/2021/03/honey-varieties-with-comb-and-pollen.jpg">
         </div>
-		<div class="slide">
-            <img src="https://www.piedmont.org/media/BlogImages/Healthiest%20cooking%20oils.jpg">
+        <div class="slide">
+          <img
+            src="https://i2.wp.com/www.holar.com.tw/wp-content/uploads/Holar-Blog-Safely-Cooking-with-Olive-Oil-The-Dos-and-Donts-You-Need-to-Know-Consider-the-smoke-point-of-your-olive-oil.jpg?resize=600%2C338&ssl=1">
         </div>
+        <div class="slide">
+          <img src="https://www.piedmont.org/media/BlogImages/Healthiest%20cooking%20oils.jpg">
+        </div>
+      </div>
+      <!-- Navigation buttons -->
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+
+      <!-- Dots navigation -->
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
     </div>
-    <!-- Navigation buttons -->
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
+    <script>
+      const slides = document.querySelector('.slides');
+      const slide = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+      let currentIndex = 0;
 
-    <!-- Dots navigation -->
-    <div class="dots">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
-</div>
-<script>
-    const slides = document.querySelector('.slides');
-    const slide = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
-    let currentIndex = 0;
-
-    // Update the slider
-    function updateSlider(index) {
+      // Update the slider
+      function updateSlider(index) {
         slides.style.transform = `translateX(-${index * 100}%)`;
         dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
+          dot.classList.toggle('active', i === index);
         });
-    }
+      }
 
-    // Navigate to the next slide
-    function nextSlide() {
+      // Navigate to the next slide
+      function nextSlide() {
         currentIndex = (currentIndex + 1) % slide.length;
         updateSlider(currentIndex);
-    }
+      }
 
-    // Navigate to the previous slide
-    function prevSlide() {
+      // Navigate to the previous slide
+      function prevSlide() {
         currentIndex = (currentIndex - 1 + slide.length) % slide.length;
         updateSlider(currentIndex);
-    }
+      }
 
-    // Automatic sliding
-    let autoSlide = setInterval(nextSlide, 3000);
+      // Automatic sliding
+      let autoSlide = setInterval(nextSlide, 3000);
 
-    // Pause auto sliding on user interaction
-    function resetAutoSlide() {
+      // Pause auto sliding on user interaction
+      function resetAutoSlide() {
         clearInterval(autoSlide);
         autoSlide = setInterval(nextSlide, 3000);
-    }
+      }
 
-    // Event listeners for buttons
-    nextBtn.addEventListener('click', () => {
+      // Event listeners for buttons
+      nextBtn.addEventListener('click', () => {
         nextSlide();
         resetAutoSlide();
-    });
+      });
 
-    prevBtn.addEventListener('click', () => {
+      prevBtn.addEventListener('click', () => {
         prevSlide();
         resetAutoSlide();
-    });
+      });
 
-    // Event listeners for dots
-    dots.forEach((dot, index) => {
+      // Event listeners for dots
+      dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
-            currentIndex = index;
-            updateSlider(index);
-            resetAutoSlide();
+          currentIndex = index;
+          updateSlider(index);
+          resetAutoSlide();
         });
-    });
-    // Initialize
-    updateSlider(currentIndex);
-</script>
-</header>
-<header>
-	<nav>
+      });
+      // Initialize
+      updateSlider(currentIndex);
+    </script>
+    </header>
+    <header>
+      <nav>
         <ul>
-			<li><a href="index.html">Home</a></li>
-            <li>
-                <a href="wine.html">Wine</a>
-                <ul>
-                    <li><a href="buywine.html">Buy Wine</a></li>
-                    <li><a href="wineclass.html">Wine Class</a></li>
-                    <li><a href="winebenefit.html">Wine Benefit</a></li>
-                </ul>
-            </li>
-			<li>
-                <a href="pine.html">Honey</a>
-                <ul>
-                    <li><a href="pine.html">Pine</a></li>
-                    <li><a href="flower.html">Flower</a></li>
-                    <li><a href="thyme.html">Thyme</a></li>
-					<li><a href="oak.html">Oak and Forest</a></li>
-					<li><a href="orange.html">Orange</a></li>
-                    <li><a href="fir.html">Fir</a></li>
-					<li><a href="vanilla.html">Vanilla</a></li>
-                </ul>
-            </li>
-            
-            <li>
-                <a href="Olive.html">Olive oil</a>
-                <ul>
-                    <li><a href="skincare.html">Skin Care</a></li>
-                </ul>
-                <li>
-                    <a href="ourshop.html">Our Shop</a>
-                    <ul>
-                        <li><a href="ourshop.html">Bangkok</a></li>
-                        <li><a href="ourshop.html">Pattaya</a></li>
-                        <li><a href="ourshop.html">Chaing Mai</a></li>
-                        <li><a href="ourshop.html">Phuket</a></li>
-                        <li><a href="ourshop.html">Krabi</a></li>
-                        <li><a href="ourshop.html">Prachinburi</a></li>
-                        <li><a href="ourshop.html">Hua Hin</a></li>
-                    </ul>
-                </li>           
-            <li>
-                <a href="aboutus.html">Contact</a>
-                <ul>
-                    <li><a href="aboutus.html">About us</a></li>
-                    <li><a href="ourshop.html">International Shipping</a></li>
-                </ul>
-    </nav>
-	</header>
-	<main>
-        <div class="center-flex" style="background-color: white;">
-            <h3>
-              <marquee direction="left">
-                Dear customer, we are acceptable an order via Line offcial and What's app (add) me +6689 693 1668 ;Payment Online development is on proces. acceptable by credit card.
-                <a href="https://lin.ee/RBnKOuz">Click Here</a>
-              </marquee>
-            </h3>
-          </div>
-          <p style="text-align: center; background-color: blue; color: white; font-size: 24px;">
-            Wine and honey is the gold of nature—pure, natural, and filled with life-enhancing properties.
-          </p>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="wine.html">Wine</a>
+            <ul>
+              <li><a href="buywine.html">Buy Wine</a></li>
+              <li><a href="wineclass.html">Wine Class</a></li>
+              <li><a href="winebenefit.html">Wine Benefit</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="pine.html">Honey</a>
+            <ul>
+              <li><a href="pine.html">Pine</a></li>
+              <li><a href="flower.html">Flower</a></li>
+              <li><a href="thyme.html">Thyme</a></li>
+              <li><a href="oak.html">Oak and Forest</a></li>
+              <li><a href="orange.html">Orange</a></li>
+              <li><a href="fir.html">Fir</a></li>
+              <li><a href="vanilla.html">Vanilla</a></li>
+            </ul>
+          </li>
 
-<div class="grid-container">
-    <!-- Left Box: Products (4 items per row, wrap style) -->
-    <div class="left-box">
-      <h2>Mediterranean Premium Wine</h2>
-      <div class="products">
-        <!-- Product 1 -->
-        <div class="product">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkvhjQYjXOOnzJv-kND9xBIqF00HbTqcWqCw&s"
-            alt="Red Wine"
-            height="50"
-          />
-          <h3>Red Wine</h3>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <p style="text-align: center;">Mediterranean Grape</p>
-          <a href="redwine.html">See more</a>
-        </div>
-        <!-- Product 2 -->
-        <div class="product">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkvhjQYjXOOnzJv-kND9xBIqF00HbTqcWqCw&s"
-            alt="Red Wine"
-            height="50"
-          />
-          <h3>Red Wine</h3>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <p style="text-align: center;">Mediterranean Grape</p>
-          <a href="redwine.html">Read More</a>
-        </div>
-        <!-- Product 3 -->
-        <div class="product">
-          <img
-            src="https://www.bhg.com/thmb/JrzRu1jCDQ_6o6wEUH9uG-n_YjE=/6628x0/filters:no_upscale():strip_icc()/bhg-honey-wine-7569412-a5beac5f00cb420e89e0050662fe71c0.jpg"
-            alt="Honey Wine"
-          />
-          <h3>Honey Wine</h3>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          <p style="text-align: center;">Oke Honey bitter taste</p>
-          <a href="honeywine.html">Read More</a>
-        </div>
-        <!-- Product 4 -->
-        <div class="product">
-          <img
-            src="https://thebrandsmen.com/wp-content/uploads/2022/03/benefits-of-rose-wine.jpg"
-            alt="Rosé Wine"
-          />
-          <h3>Rosé Wine</h3>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <p style="text-align: center;">Sweetest and romantic style</p>
-          <a href="rosewine.html">Read More</a>
-        </div>
-        <!-- Product 5 -->
-    <div class="product">
-        <img src="https://th.bing.com/th/id/OIP.hj5tX-zAtZfhTE10clRe8gHaE8?w=304&h=203&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Orange Honey" />
-        <h3>Orange Honey</h3>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
-        <p style="text-align: center;">Vittamin C Plu</p>
-        <a href="orange.html">See more</a>
+          <li>
+            <a href="Olive.html">Olive oil</a>
+            <ul>
+              <li><a href="skincare.html">Skin Care</a></li>
+            </ul>
+          <li>
+            <a href="ourshop.html">Our Shop</a>
+            <ul>
+              <li><a href="ourshop.html">Bangkok</a></li>
+              <li><a href="ourshop.html">Pattaya</a></li>
+              <li><a href="ourshop.html">Chaing Mai</a></li>
+              <li><a href="ourshop.html">Phuket</a></li>
+              <li><a href="ourshop.html">Krabi</a></li>
+              <li><a href="ourshop.html">Prachinburi</a></li>
+              <li><a href="ourshop.html">Hua Hin</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="aboutus.html">Contact</a>
+            <ul>
+              <li><a href="aboutus.html">About us</a></li>
+              <li><a href="ourshop.html">International Shipping</a></li>
+            </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="center-flex" style="background-color: white;">
+        <h3>
+          <marquee direction="left">
+            Dear customer, we are acceptable an order via Line offcial and
+            What's app (add) me +6689 693 1668 ;Payment
+            Online development is on proces. acceptable by credit card.
+            <a href="https://lin.ee/RBnKOuz">Click Here</a>
+          </marquee>
+        </h3>
       </div>
-      <!-- Product 6 -->
-    <div class="product">
-        <img src="https://www.terra-greca.be/wp-content/uploads/2017/05/miel-toutes-fleurs-1024x678-1.jpg" alt="Flower Honey" />
-        <h3>Flower Honey</h3>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
-        <p style="text-align: center;">Description for Product 5</p>
-        <a href="flower.html">See more</a>
-      </div>
-      <!-- Product 7 -->
-    <div class="product">
-        <img src="https://cdn.tridge.com/attachment-file/a8/a4/a8/a8a4a847ba37de52506edeaa785d03a3ad974e51/1_puqyyzWF-P1s52UE24tohg.jpeg" alt="Thyme Honey" />
-        <h3>Thyme Honey</h3>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
-        <p style="text-align: center;">Description for Product 5</p>
-        <a href="thyme.html">See more</a>
-      </div>
-      <!-- Product 8 -->
-    <div class="product">
-        <img src="https://static.wixstatic.com/media/e0f5fb_9e3cc79757a140d8a9f2d437d8ba858c~mv2.jpg/v1/fit/w_2500,h_1330,al_c/e0f5fb_9e3cc79757a140d8a9f2d437d8ba858c~mv2.jpg" alt=Oak Honey" />
-        <h3>Oak Honey</h3>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
-        <p style="text-align: center;">Description for Product 5</p>
-        <a href="oak.html">See more</a>
-      </div>
-          <!-- Product 9 -->
-          <div class="product">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnGyqVdQJy7q-0ymBNjbtbJUWr8P-m56dEQ&s"
-              alt="Pine Honey"
-            />
-            <h3>Pine Honey</h3>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <p style="text-align: center;">Sweetest and romantic style</p>
-            <a href="rosewine.html">Read More</a>
-          </div>
-          <!-- Product 10 -->
-      <div class="product">
-          <img 
-          src="https://th.bing.com/th/id/OIP.hj5tX-zAtZfhTE10clRe8gHaE8?w=304&h=203&c=7&r=0&o=5&dpr=1.3&pid=1.7" 
-          alt="Villina Honey" />
-          <h3>Villina Honey</h3>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
-          <p style="text-align: center;">Villina taste</p>
-          <a href="vanilla.html">See more</a>
-        </div>
-        <!-- Product 11 -->
-      <div class="product">
-          <img src="https://www.terra-greca.be/wp-content/uploads/2017/05/miel-toutes-fleurs-1024x678-1.jpg" alt="Flower Honey" />
-          <h3>Flower Honey</h3>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
-          <p style="text-align: center;">Description for Product 5</p>
-          <a href="flower.html">See more</a>
-        </div>
-        <!-- Product 12 -->
-      <div class="product">
-          <img 
-          src="https://www.vanillapura.com/cdn/shop/articles/shutterstock_764193367_1.jpg?v=1633471657&width=1024" 
-          alt=""Pearl" Fir Honey" />
-          <h3>"Pearl" Fir Honey</h3>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
-          <p style="text-align: center;">Description for Product 5</p>
-          <a href="fir.html">See more</a>
-        </div>
-      </div>
-      
-    </div>
-    <!-- Right Box: Reduced-width Login Form -->
-    <div class="right-box">
-      <div class="login-container">
-        <form class="login-form" id="loginForm">
-          <h2 id="social-login-header">Login to Siam10 Winery</h2>
-          <div class="social-login">
-            <a id="social-login-google" href="#" target="_self">
-              <button class="google-btn" type="button">
-                <img src="https://developers.google.com/static/identity/images/branding_guideline_sample_lt_rd_sl.svg" alt="Google Logo">
-                Google
-              </button>
-            </a>
-            <a id="social-login-facebook" href="#" target="_self">
-              <button class="facebook-btn" type="button">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook Logo">
-                Facebook
-              </button>
-            </a>
-            <a href="https://www.tiktok.com/@siam10winery?_t=ZS-8ug1hoVeiJE&_r=1" target="_blank">
-                <button class="tiktok-btn" type="button">
-                    <img src="https://th.bing.com/th/id/OIP.6YpUFmcFyTEYcQyNzFkI1gHaIC?w=158&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="TikTok Logo">
-                    Tiktok Shop
-                </button>
-            </a>
-            <a href="https://www.tiktok.com/@siam10winery?_t=ZS-8ug1hoVeiJE&_r=1" target="_blank">
-              <button class="tiktok-btn" type="button">
-                  <img src="https://www.lazada.co.th/shop/beurer" alt="Lazada Logo">
-                  Lazada
-              </button>
-          </a>
-          <a href="https://www.tiktok.com/@siam10winery?_t=ZS-8ug1hoVeiJE&_r=1" target="_blank">
-            <button class="tiktok-btn" type="button">
-                <img src="https://th.bing.com/th/id/OIP.6YpUFmcFyTEYcQyNzFkI1gHaIC?w=158&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="TikTok Logo">
-                Shopee
-            </button>
-            <a href="https://www.tiktok.com/@siam10winery?_t=ZS-8ug1hoVeiJE&_r=1" target="_blank">
-              <button class="tiktok-btn" type="button">
-                  <img src="https://th.bing.com/th/id/OIP.6YpUFmcFyTEYcQyNzFkI1gHaIC?w=158&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="TikTok Logo">
-                  Alibaba
-              </button>
-          </a>
-          <a href="https://www.tiktok.com/@siam10winery?_t=ZS-8ug1hoVeiJE&_r=1" target="_blank">
-            <button class="tiktok-btn" type="button">
-                <img src="https://th.bing.com/th/id/OIP.6YpUFmcFyTEYcQyNzFkI1gHaIC?w=158&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="TikTok Logo">
-                Line my Shop
-            </button>
-        </a>
-        </a>
-        </div>
-          <!-- Username Input -->
-           <div id="social-login-form">
-            <label for="username">Enter Email:</label>
-            <input type="email" id="email" placeholder="Email" required />
-            <input type="password" id="password" placeholder="Password" required />
-            <button type="submit" class="login-btn">Login</button>
-            <div class="links">
-              <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
-              <a href="register.html" class="register">Register New Member</a>
-              <a href="index.html" class="register">Back to Home page</a>
+      <p style="text-align: center; background-color: blue; color: white; font-size: 24px;">
+        Wine and honey is the gold of nature—pure, natural, and filled with
+        life-enhancing properties.
+      </p>
+
+      <div class="grid-container">
+        <!-- Left Box: Products (4 items per row, wrap style) -->
+        <div class="left-box">
+          <h2>Mediterranean Premium Wine</h2>
+          <div class="products">
+            <!-- Product 1 -->
+            <div class="product">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkvhjQYjXOOnzJv-kND9xBIqF00HbTqcWqCw&s"
+                alt="Red Wine" height="50" />
+              <h3>Red Wine</h3>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <p style="text-align: center;">Mediterranean Grape</p>
+              <a href="redwine.html">See more</a>
             </div>
-           </div>
-        <!-- Additional Boxes -->
-        <div class="box">
-          <h3>Cooking Wine</h3>
-              <img src="https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2021/02/Cooking-with-wine-920x609.jpg" 
-                   alt="CookingWine" 
-                   class="adv-logo">
+            <!-- Product 2 -->
+            <div class="product">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkvhjQYjXOOnzJv-kND9xBIqF00HbTqcWqCw&s"
+                alt="Red Wine" height="50" />
+              <h3>Red Wine</h3>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <p style="text-align: center;">Mediterranean Grape</p>
+              <a href="redwine.html">Read More</a>
+            </div>
+            <!-- Product 3 -->
+            <div class="product">
+              <img
+                src="https://www.bhg.com/thmb/JrzRu1jCDQ_6o6wEUH9uG-n_YjE=/6628x0/filters:no_upscale():strip_icc()/bhg-honey-wine-7569412-a5beac5f00cb420e89e0050662fe71c0.jpg"
+                alt="Honey Wine" />
+              <h3>Honey Wine</h3>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <p style="text-align: center;">Oke Honey bitter taste</p>
+              <a href="honeywine.html">Read More</a>
+            </div>
+            <!-- Product 4 -->
+            <div class="product">
+              <img src="https://thebrandsmen.com/wp-content/uploads/2022/03/benefits-of-rose-wine.jpg"
+                alt="Rosé Wine" />
+              <h3>Rosé Wine</h3>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <p style="text-align: center;">Sweetest and romantic style</p>
+              <a href="rosewine.html">Read More</a>
+            </div>
+            <!-- Product 5 -->
+            <div class="product">
+              <img
+                src="https://th.bing.com/th/id/OIP.hj5tX-zAtZfhTE10clRe8gHaE8?w=304&h=203&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                alt="Orange Honey" />
+              <h3>Orange Honey</h3>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <p style="text-align: center;">Vittamin C Plu</p>
+              <a href="orange.html">See more</a>
+            </div>
+            <!-- Product 6 -->
+            <div class="product">
+              <img src="https://www.terra-greca.be/wp-content/uploads/2017/05/miel-toutes-fleurs-1024x678-1.jpg"
+                alt="Flower Honey" />
+              <h3>Flower Honey</h3>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <p style="text-align: center;">Description for Product 5</p>
+              <a href="flower.html">See more</a>
+            </div>
+            <!-- Product 7 -->
+            <div class="product">
+              <img
+                src="https://cdn.tridge.com/attachment-file/a8/a4/a8/a8a4a847ba37de52506edeaa785d03a3ad974e51/1_puqyyzWF-P1s52UE24tohg.jpeg"
+                alt="Thyme Honey" />
+              <h3>Thyme Honey</h3>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <p style="text-align: center;">Description for Product 5</p>
+              <a href="thyme.html">See more</a>
+            </div>
+            <!-- Product 8 -->
+            <div class="product">
+              <img
+                src="https://static.wixstatic.com/media/e0f5fb_9e3cc79757a140d8a9f2d437d8ba858c~mv2.jpg/v1/fit/w_2500,h_1330,al_c/e0f5fb_9e3cc79757a140d8a9f2d437d8ba858c~mv2.jpg"
+                alt=Oak Honey" />
+              <h3>Oak Honey</h3>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <p style="text-align: center;">Description for Product 5</p>
+              <a href="oak.html">See more</a>
+            </div>
+            <!-- Product 9 -->
+            <div class="product">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnGyqVdQJy7q-0ymBNjbtbJUWr8P-m56dEQ&s"
+                alt="Pine Honey" />
+              <h3>Pine Honey</h3>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <p style="text-align: center;">Sweetest and romantic style</p>
+              <a href="rosewine.html">Read More</a>
+            </div>
+            <!-- Product 10 -->
+            <div class="product">
+              <img
+                src="https://th.bing.com/th/id/OIP.hj5tX-zAtZfhTE10clRe8gHaE8?w=304&h=203&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                alt="Villina Honey" />
+              <h3>Villina Honey</h3>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <p style="text-align: center;">Villina taste</p>
+              <a href="vanilla.html">See more</a>
+            </div>
+            <!-- Product 11 -->
+            <div class="product">
+              <img src="https://www.terra-greca.be/wp-content/uploads/2017/05/miel-toutes-fleurs-1024x678-1.jpg"
+                alt="Flower Honey" />
+              <h3>Flower Honey</h3>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <p style="text-align: center;">Description for Product 5</p>
+              <a href="flower.html">See more</a>
+            </div>
+            <!-- Product 12 -->
+            <div class="product">
+              <img
+                src="https://www.vanillapura.com/cdn/shop/articles/shutterstock_764193367_1.jpg?v=1633471657&width=1024"
+                alt Pearl" Fir Honey" />
+              <h3>"Pearl" Fir Honey</h3>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <p style="text-align: center;">Description for Product 5</p>
+              <a href="fir.html">See more</a>
+            </div>
+          </div>
+
+        </div>
+        <!-- Right Box: Reduced-width Login Form -->
+        <div class="right-box">
+          <div class="login-container">
+            <form class="login-form" id="loginForm">
+              <h2 id="social-login-header">Login to Siam10 Winery</h2>
+              <div class="social-login">
+                <a id="social-login-google" href="#" target="_self">
+                  <button class="google-btn" type="button">
+                    <img
+                      src="https://developers.google.com/static/identity/images/branding_guideline_sample_lt_rd_sl.svg"
+                      alt="Google Logo">
+                    Google
+                  </button>
+                </a>
+                <a id="social-login-facebook" href="#" target="_self">
+                  <button class="facebook-btn" type="button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
+                      alt="Facebook Logo">
+                    Facebook
+                  </button>
+                </a>
+                <a href="https://www.tiktok.com/@siam10winery?_t=ZS-8ug1hoVeiJE&_r=1" target="_blank">
+                  <button class="tiktok-btn" type="button">
+                    <img
+                      src="https://th.bing.com/th/id/OIP.6YpUFmcFyTEYcQyNzFkI1gHaIC?w=158&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                      alt="TikTok Logo">
+                    Tiktok Shop
+                  </button>
+                </a>
+                <a href="https://www.tiktok.com/@siam10winery?_t=ZS-8ug1hoVeiJE&_r=1" target="_blank">
+                  <button class="tiktok-btn" type="button">
+                    <img src="https://www.lazada.co.th/shop/beurer" alt="Lazada Logo">
+                    Lazada
+                  </button>
+                </a>
+                <a href="https://www.tiktok.com/@siam10winery?_t=ZS-8ug1hoVeiJE&_r=1" target="_blank">
+                  <button class="tiktok-btn" type="button">
+                    <img
+                      src="https://th.bing.com/th/id/OIP.6YpUFmcFyTEYcQyNzFkI1gHaIC?w=158&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                      alt="TikTok Logo">
+                    Shopee
+                  </button>
+                  <a href="https://www.tiktok.com/@siam10winery?_t=ZS-8ug1hoVeiJE&_r=1" target="_blank">
+                    <button class="tiktok-btn" type="button">
+                      <img
+                        src="https://th.bing.com/th/id/OIP.6YpUFmcFyTEYcQyNzFkI1gHaIC?w=158&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                        alt="TikTok Logo">
+                      Alibaba
+                    </button>
+                  </a>
+                  <a href="https://www.tiktok.com/@siam10winery?_t=ZS-8ug1hoVeiJE&_r=1" target="_blank">
+                    <button class="tiktok-btn" type="button">
+                      <img
+                        src="https://th.bing.com/th/id/OIP.6YpUFmcFyTEYcQyNzFkI1gHaIC?w=158&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                        alt="TikTok Logo">
+                      Line my Shop
+                    </button>
+                  </a>
+                </a>
+              </div>
+              <!-- Username Input -->
+              <div id="social-login-form">
+                <label for="username">Enter Email:</label>
+                <input type="email" id="email" placeholder="Email" required />
+                <input type="password" id="password" placeholder="Password" required />
+                <button type="submit" class="login-btn">Login</button>
+                <div class="links">
+                  <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
+                  <a href="register.html" class="register">Register New
+                    Member</a>
+                  <a href="index.html" class="register">Back to Home page</a>
+                </div>
+              </div>
+              <!-- Additional Boxes -->
+              <div class="box">
+                <h3>Cooking Wine</h3>
+                <img
+                  src="https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2021/02/Cooking-with-wine-920x609.jpg"
+                  alt="CookingWine" class="adv-logo">
+              </div>
+              <div class="box">
+                <img src="https://1.bp.blogspot.com/-lofZ1ZddkjA/VrRvD8Y24KI/AAAAAAAACpM/QsG8-zh5pY8/s1600/iso_icon.png"
+                  alt="ISO Certified" class="adv-logo">
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-      <div class="box">
-            <img src="https://1.bp.blogspot.com/-lofZ1ZddkjA/VrRvD8Y24KI/AAAAAAAACpM/QsG8-zh5pY8/s1600/iso_icon.png" 
-                 alt="ISO Certified" class="adv-logo">
       </div>
-    </form>
-</div>
-  </div>
-    </div>
-  </div>
-  <!-- Second row (New row box under the first row) -->
-  <div class="new-row-box">
-    <!-- First ISO image -->
-    <img src="https://seajoy.com/images/company-news/AB_eurofeuille.png" 
-         alt="ISO Certification Image 1" 
-         class="iso-logo">
+      <!-- Second row (New row box under the first row) -->
+      <div class="new-row-box">
+        <!-- First ISO image -->
+        <img src="https://seajoy.com/images/company-news/AB_eurofeuille.png" alt="ISO Certification Image 1"
+          class="iso-logo">
 
-    <!-- Second ISO image (e.g., ISO icon) -->
-    <img src="https://1.bp.blogspot.com/-lofZ1ZddkjA/VrRvD8Y24KI/AAAAAAAACpM/QsG8-zh5pY8/s1600/iso_icon.png" 
-         alt="ISO Certification Icon" 
-         class="iso-logo">
-    
-    <!-- Third ISO image (e.g., ISO icon) -->
-    <img src="https://vectorseek.com/wp-content/uploads/2023/09/Bio-nach-EG-Oko-Verordnung-Logo-Vector.svg-.png" 
-    alt="ISO Certification Icon" 
-    class="iso-logo">
+        <!-- Second ISO image (e.g., ISO icon) -->
+        <img src="https://1.bp.blogspot.com/-lofZ1ZddkjA/VrRvD8Y24KI/AAAAAAAACpM/QsG8-zh5pY8/s1600/iso_icon.png"
+          alt="ISO Certification Icon" class="iso-logo">
 
-    <!-- Fourth ISO image (e.g., ISO icon) -->
-    <img src="https://iasiso-australia.com/wp-content/uploads/2023/02/HACCP-Training-705x662.png" 
-    alt="ISO Certification Icon" 
-    class="iso-logo">
-         
-</div>
+        <!-- Third ISO image (e.g., ISO icon) -->
+        <img src="https://vectorseek.com/wp-content/uploads/2023/09/Bio-nach-EG-Oko-Verordnung-Logo-Vector.svg-.png"
+          alt="ISO Certification Icon" class="iso-logo">
 
-<script type="module">
-  import { backendUrl, getQueryVariable, setCookie, parseJwt, getCookie } from "./utils/index.js";
+        <!-- Fourth ISO image (e.g., ISO icon) -->
+        <img src="https://iasiso-australia.com/wp-content/uploads/2023/02/HACCP-Training-705x662.png"
+          alt="ISO Certification Icon" class="iso-logo">
 
-  document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("social-login-google").href = `${backendUrl}/auth/google`;
-    document.getElementById("social-login-facebook").href = `${backendUrl}/auth/facebook`;
+      </div>
 
-    // ตรวจสอบว่ามี token จาก Query หรือไม่
-    const token = getQueryVariable("token");
-    const emailCookie = getCookie("email");
-    const nameCookie = getCookie("name");
-    const socialLoginHeader = document.getElementById("social-login-header");
-    const socialLoginGoogle = document.getElementById("social-login-google");
-    const socialLoginFacebook = document.getElementById("social-login-facebook");
-    const socialLoginForm = document.getElementById("social-login-form");
-    if (token) {
-        setCookie("session", token); // บันทึก Token ลง Cookie
-        const jwtPayload = parseJwt(token);
-        console.log(jwtPayload);
-        
-        if (jwtPayload) {
-            setCookie("userId", jwtPayload._id); // บันทึก user_id (จาก JWT Payload)
-            setCookie("email", jwtPayload.email); // บันทึก email (หากมี)
-            setCookie("name", jwtPayload.name); // บันทึก name (หากมี)
-        }
+      <script type="module">
+        import { backendUrl, getQueryVariable, setCookie, parseJwt, getCookie } from "./utils/index.js";
 
-        // Remove the token from the URL query string after saving it in cookies
-        if (window.history.pushState) {
-            // Remove the token from the URL query string
-            const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
-            window.history.replaceState({ path: newUrl }, '', newUrl);
+        document.addEventListener("DOMContentLoaded", () => {
+          document.getElementById("social-login-google").href = `${backendUrl}/auth/google`;
+          document.getElementById("social-login-facebook").href = `${backendUrl}/auth/facebook`;
 
-            window.location.reload();
-        }
-    }
+          // ตรวจสอบว่ามี token จาก Query หรือไม่
+          const token = getQueryVariable("token");
+          const emailCookie = getCookie("email");
+          const nameCookie = getCookie("name");
+          const socialLoginHeader = document.getElementById("social-login-header");
+          const socialLoginGoogle = document.getElementById("social-login-google");
+          const socialLoginFacebook = document.getElementById("social-login-facebook");
+          const socialLoginForm = document.getElementById("social-login-form");
+          const profileBox = document.getElementById('profile-box');
+          const nameAuth = document.getElementById('name-auth');
+          const emailAuth = document.getElementById('email-auth');
+          if (token) {
+            setCookie("session", token); // บันทึก Token ลง Cookie
+            const jwtPayload = parseJwt(token);
+            console.log(jwtPayload);
 
-    if (emailCookie) {
-      socialLoginHeader.innerHTML = `Welcome back, ${nameCookie} ${emailCookie}! <span id="logout" style="color: red; cursor: pointer; margin-left: 10px;">(Logout)</span>`;
+            if (jwtPayload) {
+              setCookie("userId", jwtPayload._id); // บันทึก user_id (จาก JWT Payload)
+              setCookie("email", jwtPayload.email); // บันทึก email (หากมี)
+              setCookie("name", jwtPayload.name); // บันทึก name (หากมี)
+            }
 
-      [socialLoginGoogle, socialLoginFacebook, socialLoginForm].forEach(element => {
-      if (element) {
-        element.style.display = "none"; // ซ่อนองค์ประกอบ
-      }
-    });
-    }
+            // Remove the token from the URL query string after saving it in cookies
+            if (window.history.pushState) {
+              // Remove the token from the URL query string
+              const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+              window.history.replaceState({ path: newUrl }, '', newUrl);
 
-    document.getElementById("logout").addEventListener("click", async () => {
-      try {
-        const response = await fetch(`${backendUrl}/logout`, { method: "GET", credentials: "include" });
-        if (!response.ok) throw new Error("Logout failed");
+              window.location.reload();
+            }
+          }
 
-        // ล้าง Cookie
-        ["session", "email", "userId", "name"].forEach(cookieName => setCookie(cookieName, "", -1));
+          if (emailCookie) {
+            socialLoginHeader.innerHTML = `Welcome back, ${nameCookie} ${emailCookie}! <span id="logout" style="color: red; cursor: pointer; margin-left: 10px;">(Logout)</span>`;
 
-        // รีโหลดหน้าเว็บ
-        window.location.reload();
-      } catch (error) {
-        alert(`Error: ${error.message}`);
-      }
-    });
-  });
+            profileBox.style.display = 'flex';
+            nameAuth.innerHTML = nameCookie;
+            emailAuth.innerHTML = emailCookie;
+            [socialLoginGoogle, socialLoginFacebook, socialLoginForm].forEach(element => {
+              if (element) {
+                element.style.display = "none"; // ซ่อนองค์ประกอบ
+              }
+            });
+          }
 
-  // Login Form Handler
-  document.getElementById("loginForm").addEventListener("submit", async function (event) {
-      event.preventDefault();
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
+          document.getElementById("logout").addEventListener("click", async () => {
+            try {
+              const response = await fetch(`${backendUrl}/logout`, { method: "GET", credentials: "include" });
+              if (!response.ok) throw new Error("Logout failed");
 
-      try {
-          const response = await fetch(`${backendUrl}/login`, {
+              // ล้าง Cookie
+              ["session", "email", "userId", "name"].forEach(cookieName => setCookie(cookieName, "", -1));
+
+              // รีโหลดหน้าเว็บ
+              window.location.reload();
+            } catch (error) {
+              alert(`Error: ${error.message}`);
+            }
+          });
+        });
+
+        // Login Form Handler
+        document.getElementById("loginForm").addEventListener("submit", async function (event) {
+          event.preventDefault();
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          try {
+            const response = await fetch(`${backendUrl}/login`, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({ email, password }),
-          });
+            });
 
-          const data = await response.json();
-          if (!response.ok) throw new Error(data.error || "Login failed. Please check your credentials.");
+            const data = await response.json();
+            if (!response.ok) throw new Error(data.error || "Login failed. Please check your credentials.");
 
-          setCookie("session", data.token);
-          const jwtPayload = parseJwt(data.token);
-          if (jwtPayload) {
+            setCookie("session", data.token);
+            const jwtPayload = parseJwt(data.token);
+            if (jwtPayload) {
               setCookie("user_id", jwtPayload.sub);
               setCookie("email", jwtPayload.email);
+            }
+
+            alert("Login successful.");
+            window.location.href = "/pine.html";
+          } catch (error) {
+            alert(`Error: ${error.message}`);
           }
+        });
+      </script>
 
-          alert("Login successful.");
-          window.location.href = "/pine.html";
-      } catch (error) {
-          alert(`Error: ${error.message}`);
-      }
-  });
-</script>
-
-  
-		<footer style="background-color: blue; color: white; font-size: 20px;text-align: center;height: fit-content;margin-top: 3%;
+      <footer style="background-color: blue; color: white; font-size: 20px;text-align: center;height: fit-content;margin-top: 3%;
   ">
-    Siam10Winery is a member of Product-ECO-System community promote wellness and heathly; Harb Medical Copy Right@2024. 
+        Siam10Winery is a member of Product-ECO-System community promote
+        wellness and heathly; Harb Medical Copy
+        Right@2024.
 
-  </footer>"
-<!--Start of Tawk.to Script-->
+      </footer>"
+      <!--Start of Tawk.to Script-->
 
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    
-    (function(){
-    
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    
-    s1.async=true;
-    
-    s1.src='https://embed.tawk.to/5eb0fd1da1bad90e54a1bc86/default';
-    
-    s1.charset='UTF-8';
-    
-    s1.setAttribute('crossorigin','*');
-    
-    s0.parentNode.insertBefore(s1,s0);
-    
-    })();
-    
-    </script>
-    
-    <!--End of Tawk.to Script-->  
-  
-</body>
+      <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+
+        (function () {
+
+          var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+
+          s1.async = true;
+
+          s1.src = 'https://embed.tawk.to/5eb0fd1da1bad90e54a1bc86/default';
+
+          s1.charset = 'UTF-8';
+
+          s1.setAttribute('crossorigin', '*');
+
+          s0.parentNode.insertBefore(s1, s0);
+
+        })();
+
+      </script>
+
+      <!--End of Tawk.to Script-->
+
+  </body>
+
 </html>
