@@ -597,6 +597,7 @@
       border-radius: 12px;
       text-align: center;
       margin: 35px auto;
+      margin-top: 65px;
       width: fit-content;
       display: flex;
       flex-direction: column;
@@ -1340,7 +1341,6 @@
           document.getElementById("social-login-google").href = `${backendUrl}/auth/google`;
           document.getElementById("social-login-facebook").href = `${backendUrl}/auth/facebook`;
 
-          // ตรวจสอบว่ามี token จาก Query หรือไม่
           const token = getQueryVariable("token");
           const emailCookie = getCookie("email");
           const nameCookie = getCookie("name");
@@ -1352,19 +1352,17 @@
           const nameAuth = document.getElementById('name-auth');
           const emailAuth = document.getElementById('email-auth');
           if (token) {
-            setCookie("session", token); // บันทึก Token ลง Cookie
+            setCookie("session", token);
             const jwtPayload = parseJwt(token);
             console.log(jwtPayload);
 
             if (jwtPayload) {
-              setCookie("userId", jwtPayload._id); // บันทึก user_id (จาก JWT Payload)
-              setCookie("email", jwtPayload.email); // บันทึก email (หากมี)
-              setCookie("name", jwtPayload.name); // บันทึก name (หากมี)
+              setCookie("userId", jwtPayload._id);
+              setCookie("email", jwtPayload.email);
+              setCookie("name", jwtPayload.name);
             }
 
-            // Remove the token from the URL query string after saving it in cookies
             if (window.history.pushState) {
-              // Remove the token from the URL query string
               const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
               window.history.replaceState({ path: newUrl }, '', newUrl);
 
@@ -1380,13 +1378,13 @@
             emailAuth.innerHTML = emailCookie;
             [socialLoginGoogle, socialLoginFacebook, socialLoginForm].forEach(element => {
               if (element) {
-                element.style.display = "none"; // ซ่อนองค์ประกอบ
+                element.style.display = "none";
               }
             });
           }
 
           document.getElementById('cart').addEventListener('click', async () => {
-            window.open('/shoppingcart.html');
+            window.open('/shoppingcart.html', "_self");
           })
 
           document.getElementById("logout-text").addEventListener("click", async () => {
@@ -1394,10 +1392,8 @@
               const response = await fetch(`${backendUrl}/logout`, { method: "GET", credentials: "include" });
               if (!response.ok) throw new Error("Logout failed");
 
-              // ล้าง Cookie
               ["session", "email", "userId", "name"].forEach(cookieName => setCookie(cookieName, "", -1));
 
-              // รีโหลดหน้าเว็บ
               window.location.reload();
             } catch (error) {
               alert(`Error: ${error.message}`);
@@ -1410,17 +1406,14 @@
             const response = await fetch(`${backendUrl}/logout`, { method: "GET", credentials: "include" });
             if (!response.ok) throw new Error("Logout failed");
 
-            // ล้าง Cookie
             ["session", "email", "userId", "name"].forEach(cookieName => setCookie(cookieName, "", -1));
 
-            // รีโหลดหน้าเว็บ
             window.location.reload();
           } catch (error) {
             alert(`Error: ${error.message}`);
           }
         });
 
-        // Login Form Handler
         document.getElementById("loginForm").addEventListener("submit", async function (event) {
           event.preventDefault();
           const email = document.getElementById("email").value;

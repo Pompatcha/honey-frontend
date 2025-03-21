@@ -852,27 +852,31 @@
 
 <body>
     <div class="language-selector-container">
-        <a href="index.html" onclick="changeLanguage('en')">English🇺🇸</a>|
-        <a href="th.html" onclick="changeLanguage('th')">ภาษาไทย🇹🇭</a>|
-        　　　<a href="th.html" onclick="changeLanguage('th')">日本語🇯🇵</a>|
-        　　　<a href="th.html" onclick="changeLanguage('th')">中国🇨🇳</a>|
-        <div id="content">
-            <!-- Content will change based on the selected language -->
-            Welcome to our website!
-        </div>
+        <div style="width: 100%; display: flex; justify-content: end; gap: 15px;">
+            <div class="auth-box" id="auth-box">
+                <div class="profile" id="profile-box">
+                    <img class="avatar" src="./image/avartar.jpg" alt="Avatar">
+                    <div class="info">
+                        <p class="name" id="name-auth">John Doe</p>
+                        <p class="role" id="email-auth" style="margin-top: -15px;">johndoe@example.com</p>
+                        <span id="logout-text" class="logout-text">Logout</span>
+                    </div>
 
-        <div class="auth-box" id="auth-box">
-            <div class="profile" id="profile-box">
-                <img class="avatar" src="./image/avartar.jpg" alt="Avatar">
-                <div class="info">
-                    <p class="name" id="name-auth">John Doe</p>
-                    <p class="role" id="email-auth" style="margin-top: -15px;">johndoe@example.com</p>
-                    <span id="logout-text" class="logout-text">Logout</span>
+                    <div class="cart-container">
+                        <i class="fa fa-shopping-cart cart-icon" alt="Cart" id="cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
                 </div>
+            </div>
 
-                <div class="cart-container">
-                    <i class="fa fa-shopping-cart cart-icon" alt="Cart" id="cart"></i>
-                    <span class="cart-count">0</span>
+            <div style="display: flex; align-items: center;">
+                <a href="index.html" onclick="changeLanguage('en')">English🇺🇸</a>|
+                <a href="th.html" onclick="changeLanguage('th')">ภาษาไทย🇹🇭</a>|
+                　　　<a href="th.html" onclick="changeLanguage('th')">日本語🇯🇵</a>|
+                　　　<a href="th.html" onclick="changeLanguage('th')">中国🇨🇳</a>|
+                <div id="content">
+                    <!-- Content will change based on the selected language -->
+                    Welcome to our website!
                 </div>
             </div>
         </div>
@@ -980,15 +984,13 @@
             </tbody>
         </table>
         <p class="total-text">Total Price: $<span id="totalPrice">0.00</span></p>
-        <a href="index.html">Back to Home</a>
 
-        <div class="center-flex-">
-            <div class="button-container">
-                <a href="Payment.html" class="btn"><span>Confirm order</span></a>
-            </div>
-            </section>
-
+        <div
+            style="width: 100%; display: flex; justify-content: center; flex-direction: column; align-items: center; gap: 10px;">
+            <a href="index.html">Back to Home</a>
+            <a href="Payment.html" class="btn"><span>Confirm order</span></a>
         </div>
+
         <h4 style="text-align: center;">Contact us</h4>
         <p style="text-align: center;">I© 2024 Pure Healthy Living. All rights reserved. Read our Privacy Policy. <a
                 href="#">get in touch</a>.</p>
@@ -1004,10 +1006,8 @@
                 const response = await fetch(`${backendUrl}/logout`, { method: "GET", credentials: "include" });
                 if (!response.ok) throw new Error("Logout failed");
 
-                // ล้าง Cookie
                 ["session", "email", "userId", "name"].forEach(cookieName => setCookie(cookieName, "", -1));
 
-                // รีโหลดหน้าเว็บ
                 window.location.reload();
             } catch (error) {
                 alert(`Error: ${error.message}`);
