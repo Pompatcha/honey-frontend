@@ -16,6 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- External Stylesheets -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="styles/shared/general.css">
@@ -478,7 +479,6 @@
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
   }
 
   .avatar {
@@ -491,6 +491,8 @@
   .info {
     display: flex;
     flex-direction: column;
+    align-items: start;
+    gap: 2.5px;
   }
 
   .name {
@@ -534,22 +536,34 @@
     min-width: 18px;
     text-align: center;
   }
+
+  .logout-text {
+    text-align: start;
+    font-size: 14px;
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+    display: inline-block;
+  }
 </style>
 <!-- google translation -->
 
 <body>
   <div class="head-body">
+
+    <!-- This is the verification box. When you successfully login, it will show your name, email, and shopping cart from cookies. -->
     <div class="auth-box">
       <div class="profile" id="profile-box">
-        <img class="avatar" src="https://sitepow.s3.ap-southeast-1.amazonaws.com/BiazfanxmamNRoxxVxka.png">
+        <img class="avatar" src="./image/avartar.jpg">
         <div class="info">
           <p class="name" id="name-auth"></p>
           <p class="role" id="email-auth"></p>
+          <span id="logout-text" class="logout-text">Logout</span>
         </div>
 
         <div class="cart-container">
-          <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Cart" class="cart-icon">
-          <span class="cart-count">3</span>
+          <i class="fa fa-shopping-cart" alt="Cart" id="cart" class="cart-icon"></i>
+          <span class="cart-count">0</span>
         </div>
       </div>
 
@@ -882,8 +896,7 @@
       <!-- Slides container -->
       <div class="slides">
         <div class="slide">
-          <img
-            src="https://i.ibb.co/S49GSx5Q/2.png">
+          <img src="https://i.ibb.co/S49GSx5Q/2.png">
         </div>
         <div class="slide">
           <img src="https://honey.com/images/default/Celebrating-Beekeeping-Around-the-World-Apimondia.jpg">
@@ -1029,7 +1042,7 @@
     <main>
       <div class="center-flex" style="background-color: white;">
         <h3>
-          <marquee direction="left">
+          <marquee direction="left" style="color: #000000;">
             Dear customer, we are acceptable an order via Line offcial and
             What's app (add) me +6689 693 1668 ;Payment
             Online development is on proces. acceptable by credit card.
@@ -1049,8 +1062,7 @@
           <div class="products">
             <!-- Product 1 -->
             <div class="product">
-              <img src="https://i.ibb.co/zH53T1c1/Designer-5.jpg"
-                alt="Red Wine" height="50" />
+              <img src="https://i.ibb.co/zH53T1c1/Designer-5.jpg" alt="Red Wine" height="50" />
               <h3>Red Wine</h3>
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
@@ -1373,7 +1385,11 @@
             });
           }
 
-          document.getElementById("logout").addEventListener("click", async () => {
+          document.getElementById('cart').addEventListener('click', async () => {
+            window.open('/shoppingcart.html');
+          })
+
+          document.getElementById("logout-text").addEventListener("click", async () => {
             try {
               const response = await fetch(`${backendUrl}/logout`, { method: "GET", credentials: "include" });
               if (!response.ok) throw new Error("Logout failed");
@@ -1387,6 +1403,21 @@
               alert(`Error: ${error.message}`);
             }
           });
+        });
+
+        document.getElementById("logout").addEventListener("click", async () => {
+          try {
+            const response = await fetch(`${backendUrl}/logout`, { method: "GET", credentials: "include" });
+            if (!response.ok) throw new Error("Logout failed");
+
+            // ล้าง Cookie
+            ["session", "email", "userId", "name"].forEach(cookieName => setCookie(cookieName, "", -1));
+
+            // รีโหลดหน้าเว็บ
+            window.location.reload();
+          } catch (error) {
+            alert(`Error: ${error.message}`);
+          }
         });
 
         // Login Form Handler

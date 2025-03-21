@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="This is a premium honey collection website offering the finest quality honey.">
@@ -10,37 +11,448 @@
     <meta property="og:description" content="Explore our premium honey collection, made from nature's finest sources.">
     <meta property="og:image" content="https://example.com/honey-image.jpg">
     <title>Premium Wine and Honey,Red wine, Honey organics</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Load a font called Roboto from Google Fonts. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-	</head>
-  
-</html>
 
     <style>
-		/* Slider Container middle text */
+        /* Slider container */
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 1215px;
+            height: 550px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            padding: 2px, 2px, 2px, 2px;
+        }
+
+        /* Slides */
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        /* Each slide */
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            padding: 5px, 5px, 5px, 5px;
+        }
+
+        /* Navigation buttons */
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Dots navigation */
+        .dots {
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+
+        .dot {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: white;
+        }
+
+        /* Basic Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* blackground colors header */
+        header {
+            background-color: #2B2B2B;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            padding-top: 10px;
+            width: 100%;
+        }
+
+        nav {
+            background: #e2b007;
+            padding: 10px;
+            text-align: center;
+            /* Fallback for non-flex environments */
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            /* Centers text horizontally */
+            align-items: center;
+            /* Centers items vertically */
+            height: 60px;
+            /* Optional: Adjust height for better alignment */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            background-color: #6e2c00;
+            /* Highlight on hover */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            text-align: center;
+            font-size: 18px;
+            justify-content: center;
+            /* Centers horizontally */
+
+        }
+
+        nav ul li {
+            position: relative;
+            /* Required for dropdown positioning */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 3px 30px;
+            display: block;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        /* Dropdown Menu Styling */
+        nav ul li ul {
+            display: none;
+            /* Hide dropdown by default */
+            position: absolute;
+            top: 100%;
+            /* Position below the parent menu item */
+            left: 0;
+            background-color: #444;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            min-width: 150px;
+            z-index: 1000;
+
+        }
+
+        nav ul li ul li {
+            border-bottom: 1px solid #555;
+        }
+
+        nav ul li ul li a {
+            padding: 10px;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #575757;
+        }
+
+        /* Show dropdown on hover */
+        nav ul li:hover>ul {
+            display: block;
+        }
+
+        /* Catalog Container */
+        .hero {
+            background: url('wine-honey-hero.jpg') no-repeat center center/cover;
+            height: 200px;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 5.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .section {
+            padding: 10px;
+        }
+
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 5px;
+            color: #333;
+            border-color: burlywood
+        }
+
+        .product {
+            background: #f8f1e1;
+            border: 1px solid #d4b483;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 5px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        /* Button */
+        .buy-now {
+            display: inline-block;
+            padding: 10px 15px;
+            margin-top: 10px;
+            background-color: #2F4F4F;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .buy-now:hover {
+            background-color: #2F4F4F;
+        }
+
+        .center-image {
+            display: block;
+            /* Makes the image a block element */
+            margin: 0 auto;
+            /* Centers the image horizontally */
+
+        }
+
+        #cartTotal {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            float: right;
+        }
+
+        /* footer */
+        footer {
+            background: #e2b007;
+            color: #fff;
+            align-items: center;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            height: 20vh;
+            margin: 0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            /* Ensures text inside is centered */
+        }
+
+        .footer-container {
+            display: flex;
+            flex-direction: row;
+            /* Stack items vertically */
+            justify-content: center;
+            align-items: center;
+            /* Center horizontally */
+            max-width: 1200px;
+            margin: 0px auto;
+            font-size: medium;
+            text-align: center;
+            /* Ensures text is centered */
+            font-size: 16px;
+        }
+
+        .footer-section {
+            margin: 0;
+            padding: 1px 0;
+            /* Reduced padding to make it more compact */
+        }
+
+        .footer-section h3 {
+            font-size: 18px;
+            color: #000000;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e2b007;
+            padding-bottom: 5px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #000000;
+            font-size: 18px;
+        }
+
+        .checked {
+            color: orange;
+        }
+
+        .button-container {
+            position: absolute;
+            margin-right: 100px;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            display: block;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            /* Centers text horizontally */
+            align-items: center;
+            /* Centers text vertically */
+            height: 30px;
+            width: 150px;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0px;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            background-color: #e2b007;
+            /* Example button color */
+            border-radius: 5px;
+            /* Optional: rounded corners */
+            float: right;
+        }
+
+        .adjust-btn {
+            width: auto;
+            height: auto;
+            margin: 0 5px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .adjust-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .quantity {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        .total-text {
+            font-size: 22px;
+            text-align: right;
+            /* Change from left to right */
+            color: rgb(27, 20, 20);
+            font-weight: bold;
+            display: flex;
+            justify-content: flex-end;
+            /* Ensures text is aligned to the right */
+            margin-right: 100px;
+        }
+
+        /* Slider Container middle text */
         .slider-container {
             position: relative;
             width: 100%;
             max-width: 1350px;
-            height: 430px; /* Keep a consistent height */
+            height: 430px;
+            /* Keep a consistent height */
             margin: auto;
             border-radius: 10px;
-            display: flex; /* Helps align content */
-            align-items: center; /* Centers content vertically */
-            justify-content: center; /* Centers content horizontally */
-            overflow: hidden; /* Prevents overflow */
-        
+            display: flex;
+            /* Helps align content */
+            align-items: center;
+            /* Centers content vertically */
+            justify-content: center;
+            /* Centers content horizontally */
+            overflow: hidden;
+            /* Prevents overflow */
+
         }
-	
+
         .slider {
             display: flex;
             transition: transform 1s ease;
             width: 100%;
         }
-		/* Each slide */
+
+        /* Each slide */
         .slide {
             min-width: 100%;
             height: 100%;
@@ -49,12 +461,16 @@
             position: relative;
             box-sizing: border-box;
         }
-		.slider-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Ensures the image fits within the container */
-        border-radius: 10px; /* Matches the container's border radius */
-    }
+
+        .slider-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensures the image fits within the container */
+            border-radius: 10px;
+            /* Matches the container's border radius */
+        }
+
         /* Text Overlay for Honey Slides */
         .slide .text-overlay {
             position: absolute;
@@ -65,11 +481,12 @@
             font-size: 35px;
             font-weight: bold;
             text-align: center;
-			padding: 20px 20px;
-			padding-top: 400px;
-			height: 10vh;
-			text-shadow: 2px 2px 4px Black;
+            padding: 20px 20px;
+            padding-top: 400px;
+            height: 10vh;
+            text-shadow: 2px 2px 4px Black;
         }
+
         /* Navigation Arrows */
         .arrow {
             position: absolute;
@@ -83,12 +500,15 @@
             cursor: pointer;
             z-index: 1;
         }
+
         .arrow-left {
             left: 10px;
         }
+
         .arrow-right {
             right: 10px;
         }
+
         /* Dots for Navigation */
         .dots {
             position: absolute;
@@ -97,6 +517,7 @@
             transform: translateX(-50%);
             display: flex;
         }
+
         .dot {
             width: 15px;
             height: 15px;
@@ -105,9 +526,12 @@
             margin: 0 5px;
             cursor: pointer;
         }
+
         .active {
-            background-color: #FFD700; /* Golden color for active dot */
+            background-color: #FFD700;
+            /* Golden color for active dot */
         }
+
         .language-selector {
             background-color: #444;
             color: white;
@@ -115,34 +539,40 @@
             padding: 5px;
             font-size: 1em;
             border-radius: 5px;
-			position: absolute;
-			top: 15px;
-			right: 20px;
+            position: absolute;
+            top: 15px;
+            right: 20px;
         }
+
         .language-selector option {
             background-color: #333;
             color: white;
         }
+
         .language-selector:focus {
             outline: none;
         }
-	    .language-selector-container {
+
+        .language-selector-container {
             font-family: Arial, sans-serif;
             text-align: right;
             margin-top: 20px;
-			margin-bottom: 20px;
+            margin-bottom: 20px;
         }
+
         label {
             font-size: 1.2em;
             margin-right: 10px;
         }
+
         select {
             padding: 5px;
             font-size: 1em;
             border-radius: 5px;
             border: 1px solid #ccc;
         }
-	    .highlight-frame {
+
+        .highlight-frame {
             background: linear-gradient(to right, #fff5db, #f9f1c2);
             border: 2px solid #e2b007;
             padding: 5px;
@@ -150,9 +580,10 @@
             font-style: italic;
             color: #333;
             text-align: center;
-			margin: 10px 0;
-		}
-	    .highlight-header {
+            margin: 10px 0;
+        }
+
+        .highlight-header {
             background: linear-gradient(to right, #151106, #050504);
             border: 2px solid #f9f8f5;
             padding: 5px;
@@ -161,30 +592,39 @@
             color: #faf5f5;
             text-align: center;
             margin: 10px 0;
-            display: flex;  /* Ensures flexbox behavior */
-            justify-content: center; /* Centers text horizontally */
-            align-items: center; /* Centers text vertically */
+            display: flex;
+            /* Ensures flexbox behavior */
+            justify-content: center;
+            /* Centers text horizontally */
+            align-items: center;
+            /* Centers text vertically */
         }
-        .highlight-header-container{
+
+        .highlight-header-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-        .logo img{
-            height:40px;
+
+        .logo img {
+            height: 40px;
             width: auto;
         }
-        .nav{
+
+        .nav {
             display: flex;
         }
-        .nav-item{
+
+        .nav-item {
             margin-right: 20px;
             cursor: pointer;
         }
-        .nav-text{
+
+        .nav-text {
             font-size: 14px;
             font-weight: bold;
         }
+
         .search {
             display: flex;
             align-items: center;
@@ -192,12 +632,13 @@
             margin-left: 20px;
         }
 
-        #search-bar{
+        #search-bar {
             width: 100%;
             padding: 8px;
             border-radius: 4px;
             border: none;
         }
+
         #search-button {
             background-color: #febd69;
             border: none;
@@ -211,17 +652,24 @@
             height: 20px;
             width: auto;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
         }
-        table, th, td {
+
+        table,
+        th,
+        td {
             border: 1px solid #ddd;
         }
-        th, td {
+
+        th,
+        td {
             padding: 10px;
             text-align: left;
         }
+
         th {
             background-color: #f4f4f4;
         }
@@ -249,6 +697,7 @@
         .cart-summary p {
             margin: 5px 0;
         }
+
         .cart {
             display: flex;
             align-items: center;
@@ -260,482 +709,199 @@
             margin-right: 5px;
         }
 
-        .cart-icon img {
-            height: 24px;
-            width: auto;
-            }
-
-        .cart-count {
-            background-color: #f08804;
-            border-radius: 50%;
-            padding: 2px 6px;
-            font-size: 12px;
-            color: white;
-            position: absolute;
-            top: -5px;
-            right: -5px;
-        }
-            .remove-btn {
+        .remove-btn {
             color: red;
             cursor: pointer;
             text-decoration: underline;
-            }
-	    /* content <p> */
-	    .left-align {
-		    text-align: left;
-		    background-color: white;
-		    padding: 10px;
-	    }
-	        /* About our product.conteainer head */
+        }
+
+        /* content <p> */
+        .left-align {
+            text-align: left;
+            background-color: white;
+            padding: 10px;
+        }
+
+        /* About our product.conteainer head */
         .center-flex {
             display: flex;
-            justify-content: center; /* Centers horizontally */
-            align-items: center; /* Centers vertically */
-            height: auto; /* Makes the container fill the entire viewport height */
-			background-color: #2B2B2B; /* Choose your background color */
-            color: white;  /* Text color inside the header */
-			padding-top: : 5px;
-		    padding-bottom: 5px;
+            justify-content: center;
+            /* Centers horizontally */
+            align-items: center;
+            /* Centers vertically */
+            height: auto;
+            /* Makes the container fill the entire viewport height */
+            background-color: #2B2B2B;
+            /* Choose your background color */
+            color: white;
+            /* Text color inside the header */
+            padding-top: 5px;
+            padding-bottom: 5px;
             text-align: center;
-			margin: 20px 0;
+            margin: 20px 0;
         }
+
         .cartTable th {
-             text-align: center;
-            }
-            .cartTable tbody td {
             text-align: center;
         }
-        .cartTable{
-            }
-         <script type="text/javascript">
-        function changeLanguage(language) {
-            let content = document.getElementById("content");
-            if (language === "en") {
-                content.innerHTML = "Welcome to our website!";
-            } else if (language === "th") {
-                content.innerHTML = "ยินดีต้อนรับสู่เว็บไซต์ของเรา!";
-            } else if (language === "es") {
-                content.innerHTML = "¡Bienvenido a nuestro sitio web!";
-            }
-    </script>
-            p {
-            font-size : 16px;
+
+        .cartTable tbody td {
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
             text-align: left;
-            }
-            .amazon-header {
+        }
+
+        .amazon-header {
             background-color: rgb(19, 25, 33);
             color: white;
             padding-left: 15px;
             padding-right: 15px;
             display: flex;
             align-items: center;
-           
+
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             height: 60px;
-            }
-            .amazon-header-left-section {
+        }
+
+        .amazon-header-left-section {
             width: 180px;
-            }
-
-    
-    </style>
-<body>    
-	<div class="language-selector-container">
-    <a href="index.html" onclick="changeLanguage('en')">English🇺🇸</a>| 
-    <a href="th.html" onclick="changeLanguage('th')">ภาษาไทย🇹🇭</a>|
-　　　<a href="th.html" onclick="changeLanguage('th')">日本語🇯🇵</a>|
-　　　<a href="th.html" onclick="changeLanguage('th')">中国🇨🇳</a>|
-    <div id="content">
-        <!-- Content will change based on the selected language -->
-        Welcome to our website!
-    </div>
-<div class="highlight-header">
-    <p>"Wine and honey is the gold of nature—pure, natural, and filled with life-enhancing properties."</p>
-</div>
-	<header class="highlight-header">
-        <div class="highlight-header-container"
-     
-<!-- Navigation Bar (original) -->
-      <body>
-        <div class="highlight-header">
-            <h3>Asia and Mediterranean of Herbal medicine healthy and Hygiene, the influx of exotic medicinal plants</h3>
-            </a>
-          </div>
-    
-         
-          </div>
-    
-      
-      </nav>
-  </header>
-  
-</div>
-</body>
-<head>
-    <style>
-        /* Slider container */
-        .slider {
-            position: relative;
-            width: 100%;
-            max-width: 1215px;
-            height: 550px;
-            margin: auto;
-            overflow: hidden;
-            border-radius: 10px;
-			padding: 2px,2px,2px,2px;
-        }
-        /* Slides */
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: 100%;
-        }
-        /* Each slide */
-        .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-			padding: 5px,5px,5px,5px;
-        }
-        /* Navigation buttons */
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 2;
-        }
-        .prev {
-            left: 10px;
         }
 
-        .next {
-            right: 10px;
-        }
-
-        /* Dots navigation */
-        .dots {
-            text-align: center;
-            position: absolute;
-            bottom: 10px;
-            width: 100%;
-        }
-        .dot {
-            display: inline-block;
-            height: 10px;
-            width: 10px;
-            margin: 0 5px;
-            background-color: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        .dot.active {
-            background-color: white;
-        }
-        /* Basic Styling */
-        body 
-		{
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-		/* blackground colors header */
-        header {
-            background-color: #2B2B2B;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-			padding-top: 10px;
-            width: 100%;
-        }
-        nav {
-            background: #e2b007;
-            padding: 10px;
-            text-align: center; /* Fallback for non-flex environments */
-            font-size: 18px;
-            display: flex;
-            justify-content: center; /* Centers text horizontally */
-            align-items: center; /* Centers items vertically */
-            height: 60px; /* Optional: Adjust height for better alignment */
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-            background-color: #6e2c00; /* Highlight on hover */
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 10px;
-            display: flex;
-			text-align: center;
-			font-size: 18px;
-            justify-content: center; /* Centers horizontally */
-           
-        }
-        nav ul li {
-            position: relative; /* Required for dropdown positioning */
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 3px 30px;
-            display: block;
-			font-size: 18px;
-			text-align: center;
-        }
-
-        nav ul li a:hover {
-            background-color: #575757;
-        }
-
-        /* Dropdown Menu Styling */
-        nav ul li ul {
-            display: none; /* Hide dropdown by default */
-            position: absolute;
-            top: 100%; /* Position below the parent menu item */
-            left: 0;
-            background-color: #444;
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            min-width: 150px;
-            z-index: 1000;
-            
-        }
-        nav ul li ul li {
-            border-bottom: 1px solid #555;
-        }
-
-        nav ul li ul li a {
-            padding: 10px;
-        }
-
-        nav ul li ul li a:hover {
-            background-color: #575757;
-        }
-        /* Show dropdown on hover */
-        nav ul li:hover > ul {
-            display: block;
-        }
-		/* Catalog Container */
-        .hero {
-            background: url('wine-honey-hero.jpg') no-repeat center center/cover;
-            height: 200px;
-            color: black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 5.5em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-        .section {
-            padding: 10px;
-        }
-        .products {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 5px;
-	    color: #333;
-	    border-color: burlywood
-        }
-        .product {
-            background: #f8f1e1;
-            border: 1px solid #d4b483;
+        .auth-box {
+            width: fit-content;
+            background: #fff;
             padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            flex: 1;
-            max-width: 300px;
-        }
-        .product img {
-            max-width: 100%;
-            height: auto;
             border-radius: 10px;
-		}
-        }
-		main {
-            padding: 20px;
-        }
-		h2 {
-	    text-align: center;
-		}
-        section {
-            margin-bottom: 5px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-        /* Button */
-        .buy-now {
-            display: inline-block;
-            padding: 10px 15px;
-            margin-top: 10px;
-            background-color: #2F4F4F;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .buy-now:hover {
-			   background-color: #2F4F4F;
-        }  
-		.center-image {
-            display: block;         /* Makes the image a block element */
-            margin: 0 auto;         /* Centers the image horizontally */
-		
-		}
-        #cartTotal {
-            margin-top: 20px;
-            font-size: 18px;
-            font-weight: bold;
-            float: right;
-        }/* footer */
-        footer {
-            background: #e2b007;
-            color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            display: none;
             align-items: center;
-            padding: 1rem 0;
+        }
+
+        .profile {
             display: flex;
-            justify-content: center;
-            height: 20vh;
-            margin: 0;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-            text-align: center; /* Ensures text inside is centered */
+            align-items: center;
+            gap: 15px;
         }
 
-        .footer-container {
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .info {
             display: flex;
-            flex-direction: row; /* Stack items vertically */
-            justify-content: center;
-            align-items: center; /* Center horizontally */
-            max-width: 1200px;
-            margin: 0px auto;
-            font-size: medium;
-            text-align: center; /* Ensures text is centered */
-            font-size: 16px;
+            flex-direction: column;
+            align-items: start;
         }
-        .footer-section {
-                margin: 0;
-                padding: 1px 0;  /* Reduced padding to make it more compact */
-            }
-        .footer-section h3 {
-            font-size: 18px;
-			color: #000000;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #e2b007;
-            padding-bottom: 5px;
-        }
-        .footer-section p, .footer-section a {
-            font-size: 14px;
-            line-height: 1.8;
-            color: #000000;
-            text-decoration: none;
-        }
-        .social-icons a {
-            display: inline-block;
-            margin-right: 10px;
-            color: #000000;
-            font-size: 18px;
-        }
-	.checked {
-  		color: orange;
-	}
 
-            //*botton checkout*//
-                .button-container {
-                position: absolute;
-               margin-right: 100px;
-                transform: translate(-50%, -50%);
-                text-align: center;
-                display: block;
-                }
-
-            .btn {
-            display: flex;
-            justify-content: center;  /* Centers text horizontally */
-            align-items: center;  /* Centers text vertically */
-            height: 30px;
-            width: 150px;
-            position: relative;
-            overflow: hidden;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 0px;
-            color: white;
-            font-size: 16px;
-            text-align: center;
-            background-color: #e2b007; /* Example button color */
-            border-radius: 5px; /* Optional: rounded corners */
-            float: right;
-            }
-            .adjust-btn {
-            width: auto;
-            height: auto;
-            margin: 0 5px;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-            border-radius: 5px;
-            }
-
-            .adjust-btn:hover {
-            background-color: #0056b3;
-            }
-
-            .quantity {
+        .name {
             font-size: 16px;
             font-weight: bold;
-            padding: 0 10px;
-            }
-            .total-text {
-        font-size: 22px;
-        text-align: right;  /* Change from left to right */
-        color: rgb(27, 20, 20);
-        font-weight: bold;
-        display: flex;
-        justify-content: flex-end; /* Ensures text is aligned to the right */
-        margin-right: 100px;
-    }
+        }
 
-    
+        .role {
+            font-size: 14px;
+            color: #666;
+        }
 
+        .cart-container {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .cart-icon {
+            font-size: 24px;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        .cart-icon:hover {
+            color: #007bff;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            background: red;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 50%;
+        }
+
+        .logout-text {
+            text-align: start;
+            color: red;
+            font-size: 14px;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-top: -15px;
+            display: inline-block;
+        }
     </style>
 </head>
+
 <body>
-</script>
-</header>
-<header>
-	<nav>
+    <div class="language-selector-container">
+        <a href="index.html" onclick="changeLanguage('en')">English🇺🇸</a>|
+        <a href="th.html" onclick="changeLanguage('th')">ภาษาไทย🇹🇭</a>|
+        　　　<a href="th.html" onclick="changeLanguage('th')">日本語🇯🇵</a>|
+        　　　<a href="th.html" onclick="changeLanguage('th')">中国🇨🇳</a>|
+        <div id="content">
+            <!-- Content will change based on the selected language -->
+            Welcome to our website!
+        </div>
+
+        <div class="auth-box" id="auth-box">
+            <div class="profile" id="profile-box">
+                <img class="avatar" src="./image/avartar.jpg" alt="Avatar">
+                <div class="info">
+                    <p class="name" id="name-auth">John Doe</p>
+                    <p class="role" id="email-auth" style="margin-top: -15px;">johndoe@example.com</p>
+                    <span id="logout-text" class="logout-text">Logout</span>
+                </div>
+
+                <div class="cart-container">
+                    <i class="fa fa-shopping-cart cart-icon" alt="Cart" id="cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-header">
+            <p>"Wine and honey is the gold of nature—pure, natural, and filled with life-enhancing properties."</p>
+        </div>
+        <header class="highlight-header">
+            <div class="highlight-header-container" <!-- Navigation Bar (original) -->
+
+                <body>
+                    <div class="highlight-header">
+                        <h3>Asia and Mediterranean of Herbal medicine healthy and Hygiene, the influx of exotic
+                            medicinal plants</h3>
+                        </a>
+                    </div>
+
+
+            </div>
+
+
+            </nav>
+        </header>
+
+    </div>
+
+    <nav>
         <ul>
-			<li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li>
                 <a href="wine.html">Wine</a>
                 <ul>
@@ -744,36 +910,36 @@
                     <li><a href="Winebenefit.html">Wine Benefit</a></li>
                 </ul>
             </li>
-			<li>
+            <li>
                 <a href="#honey">Honey</a>
                 <ul>
                     <li><a href="#Pine">Pine</a></li>
                     <li><a href="#Flower">Flower</a></li>
                     <li><a href="#Thyme">Thyme</a></li>
-					<li><a href="#Oak">Oak and Forest</a></li>
-					<li><a href="#Orange">Orange</a></li>
+                    <li><a href="#Oak">Oak and Forest</a></li>
+                    <li><a href="#Orange">Orange</a></li>
                     <li><a href="#Fir">Fir</a></li>
-					<li><a href="#Vanilla">Vanilla</a></li>
+                    <li><a href="#Vanilla">Vanilla</a></li>
                 </ul>
             </li>
-            
+
             <li>
                 <a href="#services">Olive oil</a>
                 <ul>
                     <li><a href="#Pine">Skin Care</a></li>
                 </ul>
-                <li>
-                    <a href="#honey">Our Shop</a>
-                    <ul>
-                        <li><a href="##">Bangkok</a></li>
-                        <li><a href="##">Pattaya</a></li>
-                        <li><a href="##">Chaing Mai</a></li>
-                        <li><a href="##">Phuket</a></li>
-                        <li><a href="##">Krabi</a></li>
-                        <li><a href="##">Prachinburi</a></li>
-                        <li><a href="##">Hua Hin</a></li>
-                    </ul>
-                </li>           
+            <li>
+                <a href="#honey">Our Shop</a>
+                <ul>
+                    <li><a href="##">Bangkok</a></li>
+                    <li><a href="##">Pattaya</a></li>
+                    <li><a href="##">Chaing Mai</a></li>
+                    <li><a href="##">Phuket</a></li>
+                    <li><a href="##">Krabi</a></li>
+                    <li><a href="##">Prachinburi</a></li>
+                    <li><a href="##">Hua Hin</a></li>
+                </ul>
+            </li>
             <li>
                 <a href="#services">Contact</a>
                 <ul>
@@ -781,47 +947,108 @@
                     <li><a href="#Pine">International Shipping</a></li>
                 </ul>
     </nav>
-	</header>
+    </header>
     <div class="center-flex">
-        <h3><marquee direction="left">Dear customer, we are acceptable an order via Line offcial and What's app (add) me +6689 693 1668 ;Payment Online development is on proces. acceptable by credit card.<a href="https://lin.ee/RBnKOuz">Click Here</a></marquee></h3>
+        <h3>
+            <marquee direction="left">Dear customer, we are acceptable an order via Line offcial and What's app (add) me
+                +6689 693 1668 ;Payment Online development is on proces. acceptable by credit card.<a
+                    href="https://lin.ee/RBnKOuz">Click Here</a></marquee>
+        </h3>
     </div>
     <section style="text-align: center;">
-      <marquee direction="left"><img src="https://static.vecteezy.com/system/resources/previews/018/904/113/non_2x/popular-online-payment-methods-logo-with-white-background-transparent-with-logotype-gateway-icon-set-for-website-free-vector.jpg" width="490px" height="200px" alt="Paymet acceptable"></marquee>
+        <marquee direction="left"><img
+                src="https://static.vecteezy.com/system/resources/previews/018/904/113/non_2x/popular-online-payment-methods-logo-with-white-background-transparent-with-logotype-gateway-icon-set-for-website-free-vector.jpg"
+                width="490px" height="200px" alt="Paymet acceptable"></marquee>
     </section>
-  <div class="cart-container">
-    <h2> Your Heathly Cart</h2>
+    <div class="-auth">
+        <h2> Your Heathly Cart</h2>
 
-    <!-- Cart Items Table -->
-    <table id="cartTable" class="cartTable">
-        <thead>
-            <tr>
-                <th>Product Name</th>
-                <th>Quantity</th>
-                <th>Size</th>
-                <th>Price</th>
-                <th>Total</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Cart items will be rendered here -->
-        </tbody>
-    </table>
-    <p class="total-text">Total Price: $<span id="totalPrice">0.00</span></p>
-    <a href="index.html">Back to Home</a>
+        <!-- Cart Items Table -->
+        <table id="cartTable" class="cartTable">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Size</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Cart items will be rendered here -->
+            </tbody>
+        </table>
+        <p class="total-text">Total Price: $<span id="totalPrice">0.00</span></p>
+        <a href="index.html">Back to Home</a>
 
-    <div class="center-flex-">
-                <div class="button-container">
-                    <a href="Payment.html" class="btn"><span>Confirm order</span></a>
-                  </div>
-                </section>        
-
+        <div class="center-flex-">
+            <div class="button-container">
+                <a href="Payment.html" class="btn"><span>Confirm order</span></a>
             </div>
-                <h4 style="text-align: center;">Contact us</h4>
-                <p style="text-align: center;">I© 2024 Pure Healthy Living. All rights reserved. Read our Privacy Policy. <a href="#">get in touch</a>.</p>
-            </div>
-     <script src="cartScript.js"></script>
-</section>
-    		    
+            </section>
+
+        </div>
+        <h4 style="text-align: center;">Contact us</h4>
+        <p style="text-align: center;">I© 2024 Pure Healthy Living. All rights reserved. Read our Privacy Policy. <a
+                href="#">get in touch</a>.</p>
+    </div>
+    </section>
+
+    <script src="./javascript/cartScript.js"></script>
+    <script type="module">
+        import { getCookie, backendUrl, setCookie } from "./utils/index.js";
+
+        document.getElementById("logout-text").addEventListener("click", async () => {
+            try {
+                const response = await fetch(`${backendUrl}/logout`, { method: "GET", credentials: "include" });
+                if (!response.ok) throw new Error("Logout failed");
+
+                // ล้าง Cookie
+                ["session", "email", "userId", "name"].forEach(cookieName => setCookie(cookieName, "", -1));
+
+                // รีโหลดหน้าเว็บ
+                window.location.reload();
+            } catch (error) {
+                alert(`Error: ${error.message}`);
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const emailCookie = getCookie("email");
+            const nameCookie = getCookie("name");
+
+            if (emailCookie) {
+                let authBox = document.getElementById("auth-box");
+                let nameAuth = document.getElementById("name-auth");
+                let emailAuth = document.getElementById("email-auth");
+
+                if (authBox) {
+                    authBox.style.display = 'flex';
+                }
+
+                if (nameAuth) {
+                    nameAuth.innerHTML = nameCookie;
+                }
+
+                if (emailAuth) {
+                    emailAuth.innerHTML = emailCookie;
+                }
+            }
+        });
+
+        function changeLanguage(language) {
+            let content = document.getElementById("content");
+
+            if (language === "en") {
+                content.innerHTML = "Welcome to our website!";
+            } else if (language === "th") {
+                content.innerHTML = "ยินดีต้อนรับสู่เว็บไซต์ของเรา!";
+            } else if (language === "es") {
+                content.innerHTML = "¡Bienvenido a nuestro sitio web!";
+            }
+        }
+    </script>
 </body>
+
 </html>
