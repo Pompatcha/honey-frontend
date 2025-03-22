@@ -315,7 +315,7 @@
     }
 
     .profile {
-        display: flex;
+        display: none;
         align-items: center;
         gap: 20px;
         background: #fff;
@@ -813,7 +813,7 @@
 
             <div class="cart-container">
                 <i class="fa fa-shopping-cart" alt="Cart" id="cart" style="width: 30px; height: 30px;"></i>
-                <span class="cart-count">0</span>
+                <span class="cart-count" id="cart-item">0</span>
             </div>
         </div>
 
@@ -1048,11 +1048,11 @@
                     <select id="size">
                         <option value="750ml">750ml</option>
                     </select>
-                    <a href="https://siam10winery.com/shoppingcart.html" class="add-to-cart">Add to Cart</a>
+                    <span class="add-to-cart" style="cursor: pointer;">Add to Cart</span>
                 </div>
             </div>
             <!-- Link to external JavaScript file -->
-            <script src="./javascript/script.js"></script>
+            <script type="module" src="./javascript/script.js"></script>
 
             <!-- Product Description -->
             <header>
@@ -1162,7 +1162,11 @@
             </div>
 
             <script type="module">
-                import { getCookie, backendUrl, setCookie } from "./utils/index.js";
+                import { getCookie, backendUrl, setCookie, getCart } from "./utils/index.js";
+
+                document.getElementById('cart').addEventListener('click', async () => {
+                    window.open('/shoppingcart.html', "_self");
+                })
 
                 document.getElementById("logout-text").addEventListener("click", async () => {
                     try {
@@ -1180,6 +1184,9 @@
                 document.addEventListener("DOMContentLoaded", () => {
                     const emailCookie = getCookie("email");
                     const nameCookie = getCookie("name");
+                    const cart = getCart();
+                    const cartItem = document.getElementById('cart-item');
+                    cartItem.innerText = cart?.length;
 
                     if (emailCookie) {
                         let authBox = document.getElementById("auth-box");

@@ -429,7 +429,7 @@
 
                     <div class="cart-container">
                         <i class="fa fa-shopping-cart cart-icon" alt="Cart" id="cart"></i>
-                        <span class="cart-count">0</span>
+                        <span class="cart-count" id="cart-item">0</span>
                     </div>
                 </div>
             </div>
@@ -1116,7 +1116,11 @@
                 </div>
 
                 <script type="module">
-                    import { getCookie, backendUrl, setCookie } from "./utils/index.js";
+                    import { getCookie, backendUrl, setCookie, getCart } from "./utils/index.js";
+
+                    document.getElementById('cart').addEventListener('click', async () => {
+                        window.open('/shoppingcart.html', "_self");
+                    })
 
                     document.getElementById("logout-text").addEventListener("click", async () => {
                         try {
@@ -1134,6 +1138,9 @@
                     document.addEventListener("DOMContentLoaded", () => {
                         const emailCookie = getCookie("email");
                         const nameCookie = getCookie("name");
+                        const cart = getCart();
+                        const cartItem = document.getElementById('cart-item');
+                        cartItem.innerText = cart?.length;
 
                         if (emailCookie) {
                             let authBox = document.getElementById("auth-box");

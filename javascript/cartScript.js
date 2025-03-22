@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  console.log(cart);
 
   const tableBody = document.querySelector("#cartTable tbody");
   const totalPriceElement = document.getElementById("totalPrice");

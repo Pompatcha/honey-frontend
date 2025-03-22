@@ -39,3 +39,8 @@ export function parseJwt(token) {
     return null;
   }
 }
+
+// ✅ ดึงข้อมูลตะกร้าสินค้าจาก localStorage
+export function getCart() {
+  return JSON.parse(localStorage.getItem("cart")) || [];
+}

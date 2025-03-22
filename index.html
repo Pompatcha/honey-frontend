@@ -563,7 +563,7 @@
 
         <div class="cart-container">
           <i class="fa fa-shopping-cart" alt="Cart" id="cart" class="cart-icon"></i>
-          <span class="cart-count">0</span>
+          <span class="cart-count" id="cart-item">0</span>
         </div>
       </div>
 
@@ -1335,7 +1335,7 @@
       </div>
 
       <script type="module">
-        import { backendUrl, getQueryVariable, setCookie, parseJwt, getCookie } from "./utils/index.js";
+        import { backendUrl, getQueryVariable, setCookie, parseJwt, getCookie, getCart } from "./utils/index.js";
 
         document.addEventListener("DOMContentLoaded", () => {
           document.getElementById("social-login-google").href = `${backendUrl}/auth/google`;
@@ -1351,6 +1351,10 @@
           const profileBox = document.getElementById('profile-box');
           const nameAuth = document.getElementById('name-auth');
           const emailAuth = document.getElementById('email-auth');
+          const cart = getCart();
+          const cartItem = document.getElementById('cart-item');
+          cartItem.innerText = cart?.length;
+
           if (token) {
             setCookie("session", token);
             const jwtPayload = parseJwt(token);

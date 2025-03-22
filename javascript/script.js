@@ -1,7 +1,19 @@
+import { getCookie } from "../utils/index.js"; // เพิ่ม .js เพื่อให้ import ทำงานได้
+
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".add-to-cart").forEach((button) => {
     button.addEventListener("click", function (e) {
       e.preventDefault();
+
+      // ✅ เช็คว่ามี session หรือ email ใน Cookie หรือไม่
+      const session = getCookie("session");
+      const email = getCookie("email");
+
+      if (!session || !email) {
+        alert("You must login before adding items to the cart.");
+        window.location.href = "/login.html"; // เปลี่ยนเป็นหน้า login ของคุณ
+        return;
+      }
 
       const productDiv = this.closest(".right");
       const productName = productDiv.querySelector(".product-name").textContent;
@@ -53,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem("cart", JSON.stringify(cart));
 
       // ✅ Redirect to cart page
-      window.location.href = "shoppingcart.html";
+      window.location.href = "/shoppingcart.html";
     });
   });
 });
