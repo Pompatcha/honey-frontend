@@ -758,9 +758,7 @@
                         <option value="US">United States</option>
                         <option value="VN">Vietnam</option>
                     </select>
-
                     <h2>Payment Method</h2>
-
                     <label for="payment-method">Choose Payment Method</label>
                     <select id="payment-method" onchange="togglePaymentFields()">
                         <option value="">Select Payment Method</option>
@@ -769,36 +767,45 @@
                         <option value="paypal">PayPal</option>
                         <option value="wise">Wise</option>
                     </select>
-
-
+                    
                     <!-- Cash Transfer Info -->
                     <div id="cash-transfer-info" class="hidden">
                         <h3>Bank Transfer Details</h3>
                         <p><strong>Bank Name:</strong> Kasikorn Thai</p>
                         <p><strong>Account Number:</strong> 720-21495-84</p>
                         <p><strong>SWIFT Code:</strong> KASITHBKXXX</p>
-                        <p>*Important*<br>Attach transfer Slip after transferring <br>to confirm your order for
-                            delivery.</p>
+                        <p>*Important*<br>Attach transfer Slip after transferring <br>to confirm your order for delivery.</p>
                     </div>
-
+                    
                     <!-- PayPal Payment -->
                     <div id="paypal-info" class="hidden">
                         <h3>Pay with PayPal</h3>
                         <a href="https://www.paypal.com" target="_blank" class="payment-link">Pay with PayPal</a>
                     </div>
-
+                    
                     <!-- Wise Payment -->
                     <div id="wise-info" class="hidden">
                         <h3>Pay with Wise</h3>
                         <a href="https://wise.com" target="_blank" class="payment-link">Pay with Wise</a>
                     </div>
-
+                    
+                    <!-- Credit Card Info -->
+                    <div id="credit-card-form" class="hidden">
+                        <h3>Pay with Credit Card</h3>
+                        <div id="card-element">
+                            <!-- A Stripe Element will be inserted here -->
+                        </div>
+                        <div id="card-errors" role="alert"></div>
+                        <button id="submit-payment">Submit Payment</button>
+                    </div>
+                    
                     <!-- Submit and Other Buttons -->
                     <div><button onclick="submitForm()">Submit</button></div>
                     <div>
                         <button onclick="printForm()">Print</button>
                         <button onclick="downloadPDF()">Download as PDF</button>
                     </div>
+                    
 
                     <script type="module">
                         import { getCookie, backendUrl, setCookie, getCart } from "./utils/index.js";
@@ -846,6 +853,44 @@
                             }
                         });
 
+                        // Stripe integration
+                        let stripe;
+                        let elements;
+
+                        const stripePublishableKey = "your-publishable-key-here"; // Replace with your actual Stripe publishable key
+                        document.addEventListener("DOMContentLoaded", () => {
+                            // Initialize Stripe and Elements
+                            stripe = Stripe(stripePublishableKey);
+                            elements = stripe.elements();
+
+                            const cardElement = elements.create("card");
+                            cardElement.mount("#card-element");
+
+                            // Handle real-time validation errors from the card Element.
+                            cardElement.addEventListener("change", (event) => {
+                                const displayError = document.getElementById("card-errors");
+                                if (event.error) {
+                                    displayError.textContent = event.error.message;
+                                } else {
+                                    displayError.textContent = "";
+                                }
+                            });
+
+                            // Handle submit payment button click
+                            document.getElementById("submit-payment").addEventListener("click", async (event) => {
+                                event.preventDefault();
+                                const { token, error } = await stripe.createToken(cardElement);
+
+                                if (error) {
+                                    // Show error to the user
+                                    document.getElementById("card-errors").textContent = error.message;
+                                } else {
+                                    // Send token to your server for further processing
+                                    submitPayment(token);
+                                }
+                            });
+                        });
+
                         function togglePaymentFields() {
                             var paymentMethod = document.getElementById("payment-method").value;
 
@@ -853,6 +898,7 @@
                             document.getElementById("cash-transfer-info").classList.add("hidden");
                             document.getElementById("paypal-info").classList.add("hidden");
                             document.getElementById("wise-info").classList.add("hidden");
+                            document.getElementById("credit-card-form").classList.add("hidden");
 
                             // Show the selected payment section
                             if (paymentMethod === "credit-card") {
@@ -866,13 +912,35 @@
                             }
                         }
 
+                        function submitPayment(token) {
+                            // You can send the token to your server and process the payment
+                            fetch("/process-payment", {
+                                method: "POST",
+                                body: JSON.stringify({ token: token.id, amount: 2000 }), // Example amount: 2000 cents ($20)
+                                headers: {
+                                    "Content-Type": "application/json"
+                                }
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.success) {
+                                    alert("Payment successful!");
+                                    window.location.href = "/thank-you"; // Redirect to a thank you page or confirmation
+                                } else {
+                                    alert("Payment failed: " + data.error);
+                                }
+                            })
+                            .catch(error => {
+                                console.error("Error processing payment:", error);
+                            });
+                        }
+
                         function submitForm() {
                             var paymentMethod = document.getElementById("payment-method").value;
 
                             // Check if the selected payment method is 'credit-card'
                             if (paymentMethod === "credit-card") {
-                                // Redirect to the Stripe Dashboard page after submitting the form
-                                window.location.href = "https://www.tiktok.com/@siam10winery?_t=ZS-8ug1hoVeiJE&_r=1";
+                                // Payment via Stripe is already handled through submitPayment function
                             } else {
                                 // Handle other payment methods (you can show a success message, or redirect as needed)
                                 alert("Payment method selected: " + paymentMethod);
@@ -895,6 +963,7 @@
                                 doc.save("payment_form.pdf");
                             });
                         }
+
                     </script>
                 </div>
                 <!-- Right Column: Cart -->
