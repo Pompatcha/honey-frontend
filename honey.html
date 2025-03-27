@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Honey and Wellness">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <title>Raw Honey - Natural Wellness</title>
+    <meta name="description" content="Discover the benefits of raw honey for health and wellness. A natural remedy for your well-being." />
+    <link rel="canonical" href="https://siam10winery.com/honey"/>
+
+    <style>
+        /* Full-screen Background Styling */
+        body {
+            background-image: url('https://source.unsplash.com/1600x900/?honeycomb,honey'); /* Update with your image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Dark Overlay for Better Readability */
+        .overlay {
+            background: rgba(255, 255, 255, 0.85); /* Light honey-colored overlay */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Content Box */
+        .content {
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.95); /* Softer white box */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Blogger Info */
+        .blogger {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .blogger img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+            border: 2px solid #D4A017; /* Honey gold border */
+        }
+
+        .blogger p {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Kalam', cursive;
+            color: #D4A017; /* Warm honey gold */
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 12px;
+            background: #FFD700; /* Golden honey tone */
+            color: #333;
+            margin: 6px auto;
+            border-radius: 5px;
+            display: inline-block;
+            width: 80%;
+            max-width: 500px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+
+            .blogger {
+                flex-direction: column;
+            }
+
+            .blogger img {
+                margin-bottom: 10px;
+            }
+
+            ul li {
+                width: 90%;
+            }
+        }
+       
+    .review-section {
+        margin-top: 20px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .rating {
+        font-size: 24px;
+        color: #ccc;
+        cursor: pointer;
+    }
+
+    .star {
+        display: inline-block;
+        padding: 5px;
+        font-size: 30px;
+        transition: color 0.3s;
+    }
+
+    .star:hover,
+    .star.selected {
+        color: #FFD700; /* Golden Honey */
+    }
+
+    textarea {
+        width: 100%;
+        max-width: 600px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-top: 10px;
+        resize: none;
+    }
+
+    button {
+        margin-top: 10px;
+        background: #D4A017;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background: #B8860B;
+    }
+
+    #review-message {
+        margin-top: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        color: green;
+    }
+
+    #reviews-list {
+        margin-top: 20px;
+        text-align: left;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .review-item {
+        background: #fff8e1;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .review-item p {
+        margin: 5px 0;
+    }
+    footer {
+        background: #222;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        flex: 1;
+        padding: 10px;
+    }
+
+    .footer-center img {
+        width: 100px; /* Adjust based on logo size */
+        display: block;
+        margin: auto;
+    }
+
+    .footer-right a img {
+        width: 30px;
+        margin: 0 10px;
+        transition: 0.3s;
+    }
+
+    .footer-right a img:hover {
+        opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .footer-right {
+            margin-top: 10px;
+        }
+    }
+
+    /* Community Section - Full width with background */
+    .community {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        background: url('background-image.jpg') center/cover no-repeat; /* Replace with actual background */
+        padding: 20px 20px;
+    }
+
+    .comment-section {
+        margin-top: 20px;
+        padding: 10px;
+        background: #f8f8f8;
+        border-radius: 8px;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        resize: none;
+    }
+
+    button {
+        margin-top: 10px;
+        background: #D4A017;
+        color: white;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .comment {
+        background: white;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .comment .reply {
+        margin-left: 20px;
+        font-size: 14px;
+        color: gray;
+        cursor: pointer;
+    }
+
+    .like-btn {
+        cursor: pointer;
+        color: #888;
+        margin-left: 10px;
+    }
+
+    .like-btn:hover {
+        color: #D4A017;
+    }
+</style>
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="content">
+            <h1>Raw Honey for Health & Wellness</h1>
+
+            <!-- Blogger Section -->
+            <div class="blogger">
+                <img src="https://i.ibb.co/DsKMzB9/profile.jpg" alt="Patcharin CH"> 
+                <p><strong>By:</strong> Patcharin CH.</p>
+            </div>
+
+            <p>Raw honey is nature’s liquid gold, rich in nutrients, antioxidants, and therapeutic properties. Used for centuries as a natural remedy, honey provides holistic health benefits.</p>
+            
+            <h2>Health Benefits</h2>
+            <ul>
+                <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5424551/" target="_blank">Antifungal & Antibacterial</a></li>
+                <li><a href="https://www.healthline.com/nutrition/10-benefits-of-honey" target="_blank">Boosts Immunity</a></li>
+                <li><a href="https://www.medicalnewstoday.com/articles/benefits-of-honey" target="_blank">Supports Digestive Health</a></li>
+                <li><a href="https://www.webmd.com/diet/ss/slideshow-honey-health-benefits" target="_blank">Anti-Aging & Skin Benefits</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5424551/#:~:text=Honey%20is%20rich%20in%20enzymes" target="_blank">Rich in Vitamins & Enzymes</a></li>
+            </ul>
+
+            <h2>Relaxation & Anxiety Relief</h2>
+            <p>Honey contains natural flavonoids that help reduce stress and promote relaxation. Its calming properties make it a great addition to your daily wellness routine.</p>
+
+            <h2>Experience the Power of Honey</h2>
+            <p><b>Share your experience</b> the journey of natural healing with raw, unprocessed honey.</p>
+        </div> 
+       <!-- Customer Review Section -->
+        <div class="review-section">
+            <div class="rating">
+                <p><b>Rate your experience:</b></p>
+                <span class="star" onclick="rate(1)">★</span>
+                <span class="star" onclick="rate(2)">★</span>
+                <span class="star" onclick="rate(3)">★</span>
+                <span class="star" onclick="rate(4)">★</span>
+                <span class="star" onclick="rate(5)">★</span>
+                <p id="rating-value">Select stars to rate</p>
+            </div>
+
+            <textarea id="review" placeholder="Share your experience..." rows="4"></textarea>
+            <button onclick="submitReview()">Submit</button>
+            <div id="review-message"></div>
+            <!-- Review Display Section -->
+            <div id="reviews-list"></div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Community comment -->
+<div class="community">
+        <div class="content">
+    <h2>Community Discussion</h2>
+    <p>Engage with others about the benefits of honey!</p>
+
+    <!-- Post a New Comment -->
+    <div class="comment-section">
+        <textarea id="newComment" placeholder="Write a comment..." rows="3"></textarea>
+        <button onclick="postComment()">Post</button>
+    </div>
+    </div>
+
+</div>
+    <!-- Display Comments -->
+    <div id="comments-container"></div>
+    <script>
+        let selectedRating = 0;
+        let reviews = [];
+    
+        function rate(stars) {
+            selectedRating = stars;
+            document.getElementById("rating-value").innerText = "You rated: " + stars + " stars";
+    
+            let starElements = document.querySelectorAll(".star");
+            starElements.forEach((star, index) => {
+                if (index < stars) {
+                    star.classList.add("selected");
+                } else {
+                    star.classList.remove("selected");
+                }
+            });
+        }
+    
+        function submitReview() {
+            let reviewText = document.getElementById("review").value;
+    
+            if (selectedRating === 0) {
+                alert("Please select a rating.");
+                return;
+            }
+    
+            if (reviewText.trim() === "") {
+                alert("Please share your experience.");
+                return;
+            }
+    
+            // Store the new review at the beginning
+            reviews.unshift({ rating: selectedRating, text: reviewText });
+    
+            // Limit reviews to the last 7
+            if (reviews.length > 7) {
+                reviews.pop();
+            }
+    
+            displayReviews();
+            
+            document.getElementById("review-message").innerText = "Thank you for your feedback!";
+            document.getElementById("review").value = "";
+            selectedRating = 0;
+            document.getElementById("rating-value").innerText = "Select stars to rate";
+            document.querySelectorAll(".star").forEach(star => star.classList.remove("selected"));
+        }
+    
+        function displayReviews() {
+            let reviewsList = document.getElementById("reviews-list");
+            reviewsList.innerHTML = ""; // Clear existing reviews
+    
+            reviews.forEach(review => {
+                let reviewItem = document.createElement("div");
+                reviewItem.classList.add("review-item");
+                reviewItem.innerHTML = `
+                    <p><b>Rating:</b> ${"★".repeat(review.rating)}</p>
+                    <p>${review.text}</p>
+                `;
+                reviewsList.appendChild(reviewItem);
+            });
+        }
+    </script>
+    <!-- Discussion function -->
+<script>
+    let comments = [];
+
+    function postComment() {
+        let commentText = document.getElementById("newComment").value;
+        if (commentText.trim() === "") {
+            alert("Please write a comment.");
+            return;
+        }
+
+        let comment = {
+            id: Date.now(),
+            text: commentText,
+            likes: 0,
+            replies: []
+        };
+
+        comments.push(comment);
+        document.getElementById("newComment").value = "";
+        displayComments();
+    }
+
+    function likeComment(id) {
+        let comment = comments.find(c => c.id === id);
+        if (comment) {
+            comment.likes += 1;
+            displayComments();
+        }
+    }
+
+    function replyComment(id) {
+        let replyText = prompt("Enter your reply:");
+        if (replyText) {
+            let comment = comments.find(c => c.id === id);
+            if (comment) {
+                comment.replies.push(replyText);
+                displayComments();
+            }
+        }
+    }
+
+    function displayComments() {
+        let container = document.getElementById("comments-container");
+        container.innerHTML = "";
+
+        comments.forEach(comment => {
+            let commentDiv = document.createElement("div");
+            commentDiv.classList.add("comment");
+            commentDiv.innerHTML = `
+                <p>${comment.text}</p>
+                <span class="like-btn" onclick="likeComment(${comment.id})">👍 ${comment.likes}</span>
+                <span class="reply" onclick="replyComment(${comment.id})">Reply</span>
+            `;
+
+            comment.replies.forEach(reply => {
+                let replyDiv = document.createElement("div");
+                replyDiv.classList.add("comment");
+                replyDiv.style.marginLeft = "20px";
+                replyDiv.innerHTML = `<p>↪ ${reply}</p>`;
+                commentDiv.appendChild(replyDiv);
+            });
+
+            container.appendChild(commentDiv);
+        });
+    }
+</script>
+</body>
+<footer>
+    <div class="footer-container">
+        <!-- Left Side: Contact Info -->
+        <div class="footer-left">
+            <p><b>Contact us:</b> <a href="mailto:info@siam10.com">info@siam10.com</a></p>
+            <p><b>Office:</b> Asia Pacific (Wellness Center), Bangkok Thailand</p>
+        </div>
+
+        <!-- Center: Logo & Copyright -->
+        <div class="footer-center">
+            <img src="https://i.ibb.co/SDJvL3px/lo.jpg" alt="Siam10 Logo">
+            <p>© 2025 Siam10. All rights reserved.</p>
+        </div>
+
+        <!-- Right Side: Social Media -->
+        <div class="footer-right">
+            <a href="https://www.instagram.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram"></a>
+            <a href="https://line.me/en/" target="_blank"><img src="https://logos-world.net/wp-content/uploads/2021/03/Line-Emblem.png" alt="Line"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.FQYyu80e7eHzc3lbL4BzBQHaHY?rs=1&pid=ImgDetMain" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.LbsHMSdyV4iC_nxgjP-hHAHaHa?rs=1&pid=ImgDetMain" alt="TikTok"></a>
+        </div>
+    </div>
+</footer>
+</html>
