@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!session || !email) {
         alert("You must login before adding items to the cart.");
-        window.location.href = "/login.html"; // เปลี่ยนเป็นหน้า login ของคุณ
+        window.location.href = "/index.html"; // เปลี่ยนเป็นหน้า login ของคุณ
         return;
       }
 
