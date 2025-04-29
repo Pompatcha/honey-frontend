@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../honey-backend"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "honey-frontend"
+	}
+}
