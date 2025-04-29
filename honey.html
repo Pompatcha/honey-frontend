@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Honey and Wellness">
+    <meta name="author" content="น้ำมันมะกอก">
+    <meta name="keywords" content="ประโยชน์ของน้ำมันและน้ำมันมะกอก">
+<meta name="keywords" content="Wellness">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +19,108 @@
     <link rel="canonical" href="https://siam10winery.com/honey"/>
 
     <style>
+         /* blackground colors header */
+    header {
+      background-color: #2B2B2B;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      padding-top: 10px;
+      width: 100%;
+    }
+
+    nav {
+      background: #e2b007;
+      padding: 10px;
+      text-align: center;
+      /* Fallback for non-flex environments */
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      /* Centers text horizontally */
+      align-items: center;
+      /* Centers items vertically */
+      height: 60px;
+      /* Optional: Adjust height for better alignment */
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      background-color: #6e2c00;
+      /* Highlight on hover */
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 5px 10px;
+      display: flex;
+      text-align: center;
+      font-size: 18px;
+      justify-content: start;
+      width: 100%;
+      /* Centers horizontally */
+    }
+
+    nav ul li {
+      position: relative;
+      /* Required for dropdown positioning */
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 3px 30px;
+      display: block;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    nav ul li a:hover {
+      background-color: #575757;
+    }
+
+    /* Dropdown Menu Styling */
+    nav ul li ul {
+      display: none;
+      /* Hide dropdown by default */
+      position: absolute;
+      top: 100%;
+      /* Position below the parent menu item */
+      left: 0;
+      background-color: #444;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      min-width: 150px;
+      z-index: 1000;
+
+    }
+
+    nav ul li ul li {
+      border-bottom: 1px solid #555;
+    }
+
+    nav ul li ul li a {
+      padding: 10px;
+    }
+
+    nav ul li ul li a:hover {
+      background-color: #575757;
+    }
+
+    /* Show dropdown on hover */
+    nav ul li:hover>ul {
+      display: block;
+    }
+
         /* Full-screen Background Styling */
         body {
             background-image: url('https://source.unsplash.com/1600x900/?honeycomb,honey'); /* Update with your image */
@@ -37,6 +142,7 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
+            width: 100%;
         }
 
         /* Content Box */
@@ -85,16 +191,14 @@
 
         ul li {
             padding: 12px;
-            background: #FFD700; /* Golden honey tone */
             color: #333;
             margin: 6px auto;
             border-radius: 5px;
             display: inline-block;
-            width: 80%;
+            width: 100%;
             max-width: 500px;
             font-weight: 600;
         }
-
         p {
             font-size: 18px;
             line-height: 1.6;
@@ -312,6 +416,56 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="wine.html">Wine</a>
+              <ul>
+                <li><a href="buywine.html">Buy Wine</a></li>
+                <li><a href="wineclass.html">Wine Class</a></li>
+                <li><a href="winebenefit.html">Wine Benefit</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="honeyproductlist.html">Honey</a>
+              <ul>
+                <li><a href="honey.html">Pine</a></li>
+                <li><a href="flower.html">Flower</a></li>
+                <li><a href="thyme.html">Thyme</a></li>
+                <li><a href="oak.html">Oak and Forest</a></li>
+                <li><a href="orange.html">Orange</a></li>
+                <li><a href="fir.html">Fir</a></li>
+                <li><a href="vanilla.html">Vanilla</a></li>
+              </ul>
+            </li>
+  
+            <li>
+              <a href="Olive.html">Olive oil</a>
+              <ul>
+                <li><a href="skincare.html">Skin Care</a></li>
+              </ul>
+            <li>
+              <a href="ourshop.html">Our Shop</a>
+              <ul>
+                <li><a href="ourshop.html">Bangkok</a></li>
+                <li><a href="ourshop.html">Pattaya</a></li>
+                <li><a href="ourshop.html">Chaing Mai</a></li>
+                <li><a href="ourshop.html">Phuket</a></li>
+                <li><a href="ourshop.html">Krabi</a></li>
+                <li><a href="ourshop.html">Prachinburi</a></li>
+                <li><a href="ourshop.html">Hua Hin</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="aboutus.html">Contact</a>
+              <ul>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="ourshop.html">International Shipping</a></li>
+              </ul>
+        </nav>
+      </header>
     <div class="overlay">
         <div class="content">
             <h1>Raw Honey for Health & Wellness</h1>
