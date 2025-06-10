@@ -1,33 +1,999 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Olive Oil">
-  <meta name="description" content="ขายส่งน้ำมันมะกอก">
-  <meta name="description" content="ขายส่งน้ำผึ้ง">
-  <meta name="description" content="ขายส่งไวน์">
-  <title>Premium Wine and Olive oil</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="reset.css">
-  <link rel="stylesheet" type="text/css" href="olive.css">
+<meta charset="UTF-8">
+<meta name="description" content="This is a premium honey collection website offering the finest quality honey.">
+<meta name="keywords" content="ไวน์พรีเมี่ยม, ขายไวน์, exclusive product, wine testing, ไวน์ออแกนนิกส์, wine cellar, wine bar, แอลกอฮอล์, ขายไวน์ออนไลน์, wine & beverage, ร้านขายไวน์, ร้านอาหาร, โรงแรม, สายไวน์, อาหาร, ไวน์กูรู, wineguru, wine event, wine pairing, wine pairing menu, จับคู่อาหารกับไวน์, ไวน์ราคาขายส่ง, ไวน์ขายส่ง, ไวน์ราคาพิเศษ, wine list, ไวน์สำหรับงานแต่งงาน, ไวน์สำหรับอีเวนต์, พิเศษในโรงแรม, wine connection, the wine merchant, scarlettwine, wine bar, the bar upstairs, wine beverage, mandarin oriental, capella, house wine, น้ำมันมะกอกปลอดสาร, ไวน์ปลอดสารเคมี, ไวน์แดง, ไวน์ขาว, ไวน์โรส, ไวน์สปาร์คกิ้ง">
+<meta name="keywords" content="Wellness">
+<meta name="author" content="Patcharin Chanaphukdee">
+<meta property="og:image" content="https://i.ibb.co/h14wZP5X/Screenshot-2568-04-03-at-23-00-10.png">
+
+  <!-- Open Graph Meta Tags (for social sharing) -->
+  <meta property="og:title" content="Premium Honey Collection">
+  <meta property="og:description" content="Explore our premium honey collection, made from nature's finest sources.">
+  <title>Premium Oive oil and Honey | Organics Olive oil | Organic Honey</title>
+  <!-- Google Fonts - Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/shared/general.css">
+  <link rel="stylesheet" href="olive.css">
+  <link rel="stylesheet" href="css/dropdownmenu.css">
+  
 </head>
+
+<style>
+  /* Styling for the heading */
+  .head-body {
+    padding: 10px;
+    width: 100%;
+    /* Ensure heading takes full width */
+    margin-bottom: 10px;
+    text-align: left;
+    /* Align text to the left */
+    font-size: 1.5rem;
+    /* Adjust font size as needed */
+    height: 50px;
+    /* Adjust height as needed */
+  }
+
+  /* Styling the Google Translate container */
+  .p-slect-language {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* Aligns items (text + Google Translate) vertically */
+    /* position: absolute; */
+    /* Use fixed if you want it to stay on screen */
+    /* top: 10px;
+    right: 10px; */
+    font-size: 18px;
+    /* Reduced font size for better fit */
+    background-color: #0f0b01;
+    color: #f4f1f1;
+    font-family: 'Poppins', sans-serif;
+    padding: 8px 15px;
+    /* Padding for better spacing */
+    border-radius: 5px;
+    gap: 10px;
+    /* Adds space between text and Google Translate */
+  }
+
+  #google_translate_element {
+    display: flex;
+    justify-content: flex-end;
+    /* Align to the right */
+  }
+
+
+  /* Customizing the dropdown */
+  .goog-te-gadget {
+    font-family: Arial, sans-serif;
+    font-size: 26px;
+  }
+
+  /* Hide the Google logo */
+  .goog-logo-link,
+  .goog-te-gadget span {
+    display: none !important;
+  }
+
+  /* Style the dropdown select */
+  .goog-te-combo {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-size: 14px;
+  }
+
+  .goog-te-banner-frame img {
+    transform: scale(1.5);
+    /* Adjust the scaling factor as needed */
+  }
+
+  .top-image {
+        display: flex;
+        justify-content: center; /* center horizontally */
+        align-items: center;     /* center vertically */
+        background: linear-gradient(to right, #f9e6b3, #f3d27a);
+        }
+        .top-image img {
+        max-width: 100%;
+        height: 120px;
+        }
+
+  /* Slider Container middle text */
+  .slider-container {
+    position: relative;
+    width: 100%;
+    height: 410px;
+    /* Adjust the height to fit your design */
+    overflow: hidden;
+    max-width: 1215px;
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 1s ease;
+    width: 100%;
+  }
+
+  /* Each slide */
+  .slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Text Overlay for Honey Slides */
+  .slide .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px 40px;
+    padding-top: 400px;
+    height: 10vh;
+    text-shadow: 2px 2px 4px Black;
+  }
+
+  /* Navigation Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .arrow-left {
+    left: 10px;
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+
+  /* Dots for Navigation */
+  .dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+
+  .dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .active {
+    background-color: #FFD700;
+    /* Golden color for active dot */
+  }
+
+  /* About our product.conteainer head */
+  .center-flex {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    /* Align content to the left */
+    align-items: center;
+    /* Centers vertically */
+    height: auto;
+    /* Makes the container fill the entire viewport height */
+    background-color: #2B2B2B;
+    /* Choose your background color */
+    color: white;
+    /* Text color inside the header */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  /* content <p> */
+  .left-align {
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .center-align {
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+  }
+
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    height: fit-content;
+    background-size: cover;
+    background-position: center;
+    height: fit-content;
+    /* Adjusts the height to fit its content */
+  }
+
+  /* Grid container with two columns */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Increase left box proportion */
+    /* Left: products, Right: login and add new colume */
+    grid-template-rows: auto auto;
+    /* Adds a second row below the first */
+    gap: 20px;
+    align-items: start;
+    margin-top: 3%;
+    width: 105%; /* Increase width */
+    max-width: 1600px; /* Set a max-width for better responsiveness */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Left box for products */
+  .left-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure it fills the allocated space */ 
+  }
+
+  
+
+  /* Right box for login with reduced width */
+  .right-box {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    
+  }
+
+  /* Additional boxes under login */
+  .box {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  /* Styling for ISO Logo */
+  .adv-logo {
+    width: 140px;
+    /* Adjust image width */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Hover effect on ISO Logo */
+  .iso-logo:hover {
+    transform: scale(1.1);
+  }
+
+  /* New row box */
+  .new-row-box {
+    display: flex;
+    /* Enable flexbox layout */
+    flex-direction: row;
+    /* Stack content vertically (default) */
+    justify-content: center;
+    /* Align items to the left */
+    align-items: center;
+    /* Center content horizontally */
+    padding: 10px;
+    text-align: center;
+    height: 150px;
+    /* Adjust height as needed */
+    row-gap: 60px;
+    background: #ccc;
+    border-radius: 10px;
+
+  }
+
+  /* Optional: Styling for the heading */
+  .new-row-boxh3 {
+    width: 100%;
+    /* Ensures heading takes full width */
+    margin-bottom: 10px;
+  }
+
+  /* Styling for ISO Logo */
+  .iso-logo {
+    width: 140px;
+    /* Adjust image width */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Flex container for products with wrap style */
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start;
+  }
+
+  /* Product item: Adjust to fit 4 items per row on larger screens */
+  .product {
+    background: #f8f1e1;
+    border: 1px solid #d4b483;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1 1 calc(25% - 20px); /* 25% width for 4 items per row */
+    box-sizing: border-box;
+    max-width: 450px;
+  }
+  .product img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  /* Login container styles */
+  .login-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .social-login {
+    margin-bottom: 20px;
+  }
+
+  .google-btn,
+  .facebook-btn,
+  .tiktok-btn,
+  .instragram-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #db4437;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16p
+  }
+
+  .facebook-btn {
+    background-color: #3b5998;
+  }
+
+  .instagram-btn {
+    background-color: #c13584;
+  }
+
+  .tiktok-btn {
+    background-color: #000000;
+    color: white;
+  }
+
+  .Lazada-btn {
+    background-color: #2703a9;
+    color: white;
+  }
+
+  .shoppee-btn {
+    background-color: #000000;
+    color: white;
+  }
+
+  .google-btn:hover,
+  .facebook-btn:hover,
+  .tiktok-btn:hover,
+  .Lazada-btn:hover,
+  .shoppee-btn:hover {
+    opacity: 0.9;
+  }
+
+  button img {
+    width: 20px;
+    height: 20px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #6c757d;
+  }
+
+  .login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .login-btn:hover {
+    background-color: #218838;
+  }
+
+  .links {
+    margin-top: 20px;
+  }
+
+  .links a {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    margin: 5px 0;
+  }
+
+  .links a:hover {
+    text-decoration: underline;
+  }
+
+  .profile {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2.5px;
+  }
+
+  .name {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+  }
+
+  .role {
+    font-size: 12px;
+    color: gray;
+  }
+
+  .auth-box {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .cart-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .cart-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 50%;
+    min-width: 18px;
+    text-align: center;
+  }
+
+  .logout-text {
+    text-align: start;
+    font-size: 14px;
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+    display: inline-block;
+  }
+</style>
+<!-- google translation -->
+
 <body>
-  <div class="language-dropdown">
-    <button class="dropdown-btn">🌍 Select Language</button>
-    <div class="dropdown-content">
-        <a href="index.html" onclick="changeLanguage('en')">🇺🇸 English</a>
-        <a href="th.html" onclick="changeLanguage('th')">🇹🇭 ภาษาไทย</a>
-        <a href="jp.html" onclick="changeLanguage('jp')">🇯🇵 日本語</a>
-        <a href="cn.html" onclick="changeLanguage('cn')">🇨🇳 中国</a>
+  <div class="head-body">
+
+    <!-- This is the verification box. When you successfully login, it will show your name, email, and shopping cart from cookies. -->
+    <div class="auth-box">
+      <div class="profile" id="profile-box">
+        <img class="avatar" src="https://i.ibb.co/p69WWMWY/Screenshot-2568-04-03-at-22-44-15.png">
+        <div class="info">
+          <p class="name" id="name-auth"></p>
+          <p class="role" id="email-auth"></p>
+          <span id="logout-text" class="logout-text">Logout</span>
+        </div>
+
+        <div class="cart-container">
+          <i class="fa fa-shopping-cart" alt="Cart" id="cart" class="cart-icon"></i>
+          <span class="cart-count" id="cart-item">0</span>
+        </div>
+      </div>
+
+      <div class="p-slect-language">
+        <span>Select Language:</span>
+        <div id="google_translate_element"></div>
+      </div>
     </div>
-</div>
-<script>
-    function changeLanguage(lang) {
-        alert("Language changed to: " + lang);
-        // You can redirect the page or store the language preference here
-</body>
-<header>
+  </div>
+
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'en', includedLanguages: 'en,th,zh-CN,ja,fr,de,es,gk,it,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </div>
+
+  <!-- Highlight Title -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+    .highlight-frame {
+      background: linear-gradient(to right, #f9e6b3, #f3d27a);
+      border: 3px solid #c9a227;
+      /* Premium gold */
+      padding: 15px 25px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 35px auto;
+      margin-top: 65px;
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .highlight-text {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: #8b0000;
+      /* Deep red wine color */
+      font-style: normal;
+    }
+
+    .sub-text {
+      font-size: 18px;
+      font-style: italic;
+      color: #4a2c00;
+      /* Warm brown tone */
+    }
+  </style>
+  <div class="top-image">
+    <img src="https://i.ibb.co/FqHVXHBY/Screenshot-2568-06-08-at-01-29-04.png" alt="Centered Image">
+  </div>
+
+  <div class="highlight-frame">
+    <p class="sub-text">🫒Olive oil and honey 🐝 are the gold of nature—pure,
+      natural, and filled with life-enhancing
+      properties.</p>
+    <p class="highlight-text">Pure Organic Product ECO-System 100% (Healthy Living)</p>
+    <p class="sub-text">(Medical Food care yours)</p>
+  </div>
+
+  <style>
+    /* Slider container */
+    .slider {
+      position: relative;
+      width: 100%;
+      max-width: 1215px;
+      height: 550px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    /* Slides */
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+
+    /* Each slide */
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Navigation buttons */
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    /* Dots navigation */
+    .dots {
+      text-align: center;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+    }
+
+    .dot {
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background-color: white;
+    }
+
+    /* Basic Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* blackground colors header */
+    header {
+      background-color: #2B2B2B;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      padding-top: 10px;
+      width: 100%;
+    }
+
+    nav {
+      background: #e2b007;
+      padding: 10px;
+      text-align: center;
+      /* Fallback for non-flex environments */
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      /* Centers text horizontally */
+      align-items: center;
+      /* Centers items vertically */
+      height: 60px;
+      /* Optional: Adjust height for better alignment */
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      background-color: #6e2c00;
+      /* Highlight on hover */
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 5px 10px;
+      display: flex;
+      text-align: center;
+      font-size: 18px;
+      justify-content: start;
+      /* Centers horizontally */
+
+    }
+
+    nav ul li {
+      position: relative;
+      /* Required for dropdown positioning */
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 3px 30px;
+      display: block;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    nav ul li a:hover {
+      background-color: #575757;
+    }
+
+    /* Dropdown Menu Styling */
+    nav ul li ul {
+      display: none;
+      /* Hide dropdown by default */
+      position: absolute;
+      top: 100%;
+      /* Position below the parent menu item */
+      left: 0;
+      background-color: #444;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      min-width: 150px;
+      z-index: 1000;
+
+    }
+
+    nav ul li ul li {
+      border-bottom: 1px solid #555;
+    }
+
+    nav ul li ul li a {
+      padding: 10px;
+    }
+
+    nav ul li ul li a:hover {
+      background-color: #575757;
+    }
+
+    /* Show dropdown on hover */
+    nav ul li:hover>ul {
+      display: block;
+    }
+
+    /* Catalog Container */
+    .hero {
+      background: url('wine-honey-hero.jpg') no-repeat center center/cover;
+      height: 200px;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 5.5em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .section {
+      padding: 20px;
+    }
+
+    .products {
+      display: flex;
+      justify-content: center;
+      /* Center the items */
+      flex-direction: start;
+      gap: 10px;
+      /* Increase gap for better spacing */
+      color: #333;
+      border-color: burlywood;
+    }
+
+    .product {
+      background: #f8f1e1;
+      border: 1px solid #d4b483;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      flex: 1 1 calc(25% - 40px);
+      /* 4 items per row */
+      max-width: 300px;
+      box-sizing: border-box;
+    }
+
+    .product img {
+      width: 180px;
+      /* Ensures full width */
+      height: 150px;
+      /* Fixed height for equal sizing */
+      object-fit: cover;
+      /* Ensures images maintain aspect ratio */
+      border-radius: 10px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    section {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      justify-content: space-between;
+      width: fit-content;
+    }
+
+    /* Button */
+  </style>
+  </head>
+
+  <body>
+        <div class="slider">
+          <!-- Slides container -->
+          <div class="slides">
+            <div class="slide">
+              <img src="https://assets.unileversolutions.com/v1/104926992.png?im=Resize,width=1200,height=1200">
+            </div>
+            <div class="slide">
+              <img src="https://www.oliveoil.com/content/images/size/w1000/2021/05/Koroneiki-olives-1.jpg">
+            </div>
+      </div>
+      <!-- Navigation buttons -->
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+
+      <!-- Dots navigation -->
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+    <script>
+      const slides = document.querySelector('.slides');
+      const slide = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+      let currentIndex = 0;
+
+      // Update the slider
+      function updateSlider(index) {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+      }
+
+      // Navigate to the next slide
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slide.length;
+        updateSlider(currentIndex);
+      }
+
+      // Navigate to the previous slide
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + slide.length) % slide.length;
+        updateSlider(currentIndex);
+      }
+
+      // Automatic sliding
+      let autoSlide = setInterval(nextSlide, 3000);
+
+      // Pause auto sliding on user interaction
+      function resetAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(nextSlide, 3000);
+      }
+
+      // Event listeners for buttons
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoSlide();
+      });
+
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoSlide();
+      });
+
+      // Event listeners for dots
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          currentIndex = index;
+          updateSlider(index);
+          resetAutoSlide();
+        });
+      });
+      // Initialize
+      updateSlider(currentIndex);
+    </script>
+    </header>
+    <header>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -76,42 +1042,60 @@
             </ul>
       </nav>
     </header>
-
-  <div id="banner">
-    <h1>Paradise Olive Oil</h1>
-  </div>
   <div id="blog">
     <div class="post">
-      <h2>Olive oil benefit</h2>
-      <h3>Heathly and Wellness</h3>
-      <strong class="opening-line">The paradise oil natural.</strong>
-      <p>It is a wonderfully food whole olives, the fruit, a traditional tree crop of the Mediterranean Basin, and extracting mix of goods from all over the world - delightfully random. I dusted off my bargaining skills to buy a metal bracelet with camels on it, and Maggie bought a lapis lazuli necklace from Athens. In the evening, we walked along Gulf Road towards the marina, passed through Marina Mall, and ate dinner at a wonderful little cafe that we will definitely be frequenting. Ive developed a slight obsession with lentil soul... maybe its because I miss Focos Indian lentil chili.</p>
-      <div class="image-container">
-        <img src="https://www.oliveoil.com/content/images/size/w1000/2021/05/Koroneiki-olives-1.jpg" />
+      <h2>Paradise Olive Oil-Olive oil benefit</h2>
+      <div style="text-align: center;">
+        <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/Fiy7cEsjD5Y" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
       </div>
+      <p> <strong class="opening-line">The paradise oil natural.</strong>It is a wonderfully food whole olives, the fruit, a traditional tree crop of the Mediterranean Basin, and extracting mix of goods from all over the world - delightfully random. I dusted off my bargaining skills to buy a metal bracelet with camels on it, and Maggie bought a lapis lazuli necklace from Athens. In the evening, we walked along Gulf Road towards the marina, passed through Marina Mall, and ate dinner at a wonderful little cafe that we will definitely be frequenting. Ive developed a slight obsession with lentil soul... maybe its because I miss Focos Indian lentil chili.</p>
+     
       <p>Classical pure olive oil produce extra classical olive oil. There are also a rising number of fake olive oil in the market.Olive oil is not only for food but it is a natrual to made varity of product such essential oil, customestic etc friendly with skins and hairs.</p>
       <p>That reason, the our farm would like to be know and guide to cooking olive oil that covers the olive oil smoke point, and whether or not to sear saute or fry using olive oil.</p>
     </div>
       <p>Cooking with Olive oil lest 1tsp in a pan or salad blow oil to increase levels of good cholesterol (HDL) while loweing "bad" cholesterol (LDL).</p>
-      <div class="image-container">
+      <div style="text-align: center;">
         <img src="https://i.ibb.co/v4Z9Nfrm/Siam10.png"/>
       </div>
     </div>
-    <footer>
-    <div class="footer-container">
-        <div class="footer-section">
-            <div class="social-icons">
-              <h4>Contact us</h4>
-                <a href="https://www.facebook.com/profile.php?id=61569136800046" target="_blank">🌐 Facebook</a>
-                <a href="https://www.instagram.com/siam10winery/profilecard/?igsh=cW5remt1NnA1dTdv" target="_blank">📸 Instagram</a>
-                <a href="#" target="_blank">🐦 Twitter</a>
-                <a href="#" target="https://www.tiktok.com/@siam10winery?_t=ZS-8u41NzHQrYN&_r=">🔗 Tikkok</a>
-                
-            </div>
-        </div>
-        <div class="footer-section">
-          <p class="text-align: center;">I© 2024 Pure Healthy Living. All rights reserved. <br>Read our Privacy Policy. <a href="#">get in touch</a>.<br> Journalist : C. Pathcharin</p>
-    </div>
-</footer>
-</body>
+      <footer style="background-color: blue; color: white; font-size: 20px;text-align: center;height: fit-content;margin-top: 3%;
+  ">
+        FAOS is a member of Product-ECO-System community promote
+        wellness and heathly; Harb Medical Copy
+        Right@2024.
+
+      </footer>"
+      <!--Start of Tawk.to Script-->
+
+      <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+
+        (function () {
+
+          var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+
+          s1.async = true;
+
+          s1.src = 'https://embed.tawk.to/5eb0fd1da1bad90e54a1bc86/default';
+
+          s1.charset = 'UTF-8';
+
+          s1.setAttribute('crossorigin', '*');
+
+          s0.parentNode.insertBefore(s1, s0);
+
+        })();
+
+      </script>
+
+      <!--End of Tawk.to Script-->
+
+  </body>
+
 </html>
