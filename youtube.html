@@ -249,7 +249,6 @@
     font-family: Arial, sans-serif;
     padding: 20px;
     height: fit-content;
-    background-image: url("https://i.ibb.co/gbKVdHvg/Designer-3.jpg");
     background-size: cover;
     background-position: center;
     height: fit-content;
@@ -271,7 +270,17 @@
     margin-left: auto;
     margin-right: auto;
   }
+  /* Left box for products */
+  .left-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure it fills the allocated space */ 
+  }
+
   
+
   /* Right box for login with reduced width */
   .right-box {
     background: rgba(255, 255, 255, 0.8);
@@ -291,7 +300,6 @@
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-bottom: 40px; /* ⬅️ Add this line for more vertical spacing */
   }
 
   /* Styling for ISO Logo */
@@ -353,48 +361,25 @@
     gap: 15px;
     justify-content: flex-start;
   }
- /* Left side information */
-  .main-grid {
-  display: grid;
-  grid-template-columns: 3fr 1fr; /* Left: table, Right: login & promo */
-  gap: 30px;
-  max-width: 100%;
-  margin: 30px auto;
-  padding: 20px;
-}
-.left-section {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-.left-section table {
+
+  /* Product item: Adjust to fit 4 items per row on larger screens */
+  .product {
+    background: #f8f1e1;
+    border: 1px solid #d4b483;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1 1 calc(25% - 20px); /* 25% width for 4 items per row */
+    box-sizing: border-box;
+    max-width: 450px;
+  }
+  .product img {
     width: 100%;
-    border-collapse: collapse;
-    font-size: 0.95rem;
-  }
-
-  .left-section th, .left-section td {
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: left;
-    vertical-align: top;
-  }
-
-  .left-section img {
-    width: 100px;
     height: auto;
-    border-radius: 5px;
+    object-fit: cover;
+    border-radius: 10px;
   }
 
-  .left-section a {
-    color: #0077cc;
-    text-decoration: none;
-  }
-
-  .left-section a:hover {
-    text-decoration: underline;
-  }
   /* Login container styles */
   .login-container h2 {
     font-size: 24px;
@@ -576,36 +561,12 @@
     cursor: pointer;
     display: inline-block;
   }
-  table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-}
-th, td {
-  padding: 10px;
-  border: 2px solid #ccc;
-}
-th {
-  background-color: #eee;
- 
-}
-button a {
-  text-decoration: none;
-  color: #fff;
-}
-button {
-  background: #4CAF50;
-  border: none;
-  padding: 6px 10px;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-}
 </style>
 <!-- google translation -->
 
 <body>
   <div class="head-body">
+
     <!-- This is the verification box. When you successfully login, it will show your name, email, and shopping cart from cookies. -->
     <div class="auth-box">
       <div class="profile" id="profile-box">
@@ -855,10 +816,13 @@ button {
       margin: 0;
       min-width: 150px;
       z-index: 1000;
+
     }
+
     nav ul li ul li {
       border-bottom: 1px solid #555;
     }
+
     nav ul li ul li a {
       padding: 10px;
     }
@@ -871,6 +835,7 @@ button {
     nav ul li:hover>ul {
       display: block;
     }
+
     /* Catalog Container */
     .hero {
       background: url('wine-honey-hero.jpg') no-repeat center center/cover;
@@ -881,13 +846,16 @@ button {
       justify-content: center;
       text-align: center;
     }
+
     .hero h1 {
       font-size: 5.5em;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
+
     .section {
       padding: 20px;
     }
+
     .products {
       display: flex;
       justify-content: center;
@@ -898,6 +866,7 @@ button {
       color: #333;
       border-color: burlywood;
     }
+
     .product {
       background: #f8f1e1;
       border: 1px solid #d4b483;
@@ -909,6 +878,7 @@ button {
       max-width: 300px;
       box-sizing: border-box;
     }
+
     .product img {
       width: 180px;
       /* Ensures full width */
@@ -918,6 +888,7 @@ button {
       /* Ensures images maintain aspect ratio */
       border-radius: 10px;
     }
+
     main {
       padding: 20px;
     }
@@ -939,46 +910,8 @@ button {
     /* Button */
   </style>
   </head>
-  <body>
-    <div class="slider">
-      <!-- Slides container -->
-      <div class="slides">
-        <div class="slide">
-          <img src="https://assets.unileversolutions.com/v1/104926992.png?im=Resize,width=1200,height=1200">
-        </div>
-        <div class="slide">
-          <img src="https://honey.com/images/default/Celebrating-Beekeeping-Around-the-World-Apimondia.jpg">
-        </div>
-        <div class="slide">
-          <img src="https://i.ibb.co/xqgpNc6q/Screenshot-2568-06-25-at-06-21-30.png">
-        </div>
-        <div class="slide">
-          <img src="https://assets.unileversolutions.com/v1/104926993.png?im=Resize,width=1200,height=1200">
-        </div>
-        <div class="slide">
-          <img
-            src="https://t4.ftcdn.net/jpg/14/05/14/93/360_F_1405149352_K4qhIYVahGLumUCry09QJaDyquDaXVrh.jpg">
-        </div>
-        <div class="slide">
-          <img src="https://www.scb.co.th/content/media/personal-banking/stories-tips/thai-food/thai-food10.jpg">
-        </div>
-        <div class="slide">
-          <img src="https://www.lucariscrystal.com/wp-content/uploads/2019/10/eve2.jpg">
-        </div>
-        <div class="slide">
-          <img src="https://i.ibb.co/Xx0mQ2F1/Screenshot-2568-06-25-at-06-07-44.png">
-        </div>
-      </div>
-      <!-- Navigation buttons -->
-      <button class="prev">&#10094;</button>
-      <button class="next">&#10095;</button>
 
-      <!-- Dots navigation -->
-      <div class="dots">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
+  <body>
     </div>
     <script>
       const slides = document.querySelector('.slides');
@@ -987,7 +920,6 @@ button {
       const prevBtn = document.querySelector('.prev');
       const nextBtn = document.querySelector('.next');
       let currentIndex = 0;
-
       // Update the slider
       function updateSlider(index) {
         slides.style.transform = `translateX(-${index * 100}%)`;
@@ -1016,11 +948,13 @@ button {
         clearInterval(autoSlide);
         autoSlide = setInterval(nextSlide, 3000);
       }
+
       // Event listeners for buttons
       nextBtn.addEventListener('click', () => {
         nextSlide();
         resetAutoSlide();
       });
+
       prevBtn.addEventListener('click', () => {
         prevSlide();
         resetAutoSlide();
@@ -1056,7 +990,7 @@ button {
           </li>
 
           <li>
-            <a href="Olive_benfefit.html">Olive oil</a>
+            <a href="Olive.html">Olive oil</a>
             <ul>
               <li><a href="skincare.html">Mountain Tea</a></li>
             </ul>
@@ -1087,411 +1021,31 @@ button {
             </ul>
       </nav>
     </header>
-    <main>
-      <div class="center-flex" style="background-color: white;">
-        <h3>
-          <marquee direction="left" style="color: #000000;">
-            Dear customer, we are acceptable an order via Line offcial and
-            What's app (add) me +6689 693 1668 ;Payment
-            Online development is on proces. acceptable by credit card.
-            <a href="https://lin.ee/RBnKOuz">Click Here</a>
-          </marquee>
-        </h3>
-
+  <div id="blog">
+    <div class="post">
+      <h1>What are the benefits of olive oil for the skin?</h1>
+      <div style="text-align: center;">
+        <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/Fiy7cEsjD5Y" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
       </div>
-      <p style="text-align: center; background-color: rgb(163, 244, 250); color: rgb(17, 17, 17); font-size: 24px;">
-        Olive oil and honey is the gold of nature—pure, natural, and filled with
-        life-enhancing properties. ollaborating with the Innovation to brainstrom, reserach, and evalate product concepts, Managing projects from ideation and development to market launch. Conduct food sience testing, including stability and shelf-life tests, to ensure product integrity, quality, and compliance with regulatory standards.I love working with nature. Is physically fit and healthy.
-      </p>
-
-      <div class="main-grid">
-         <!-- LEFT COLUMN: Olive Oil and Honey Sections Combined -->
-        <div class="left-section">
-
-          <!-- Olive Oil Section -->
-          <h2>The Benefit of Olive Oil</h2>
-          <div style="max-height: 300px; overflow-y: auto;">
-          <table>
-            <tr>
-              <th>No.</th>
-              <th>Benefit</th>
-              <th>Picture</th>
-              <th>Read more</th>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>High olive oil consumption associated with longevity</td>
-              <td>
-                <img src="https://aspirabody.com/storage/elementor/thumbs/Longevity-By-Aspira-Aesthetic-Center-Corp-in-FALL-RIVER-MA-1-qf3mmqufpzghgabxyk3vkfparc8mgbv9docbwy38ts.jpeg" 
-                     alt="Heart Health" 
-                     style="width: 100px; height: auto; border-radius: 5px;">
-              </td>
-              <td><a href="https://www.health.harvard.edu/staying-healthy/harvard-study-high-olive-oil-consumption-associated-with-longevity" target="_blank">Read more</a></td>
-            </tr>
-            <tr>
-              <tr>
-                <td>2</td>
-                <td>Benefits of olive oil for the skin and face</td>
-                <td>
-                  <img src="https://images.ctfassets.net/xvcg1y2kwpfh/2VQwmw8jOAH32STx9ztl7F/ce861f738e978b65f1e0211391f4664e/3-1-about-your-babys-skin-en-ae" 
-                       alt="Heart Health" 
-                       style="width: 100px; height: auto; border-radius: 5px;">
-                </td>
-                <td><a href="Olive_benfefit.html" target="_blank">Read more</a></td>
-              </tr>
-              <tr>
-                <tr>
-                  <td>3</td>
-                  <td>Olive oil is beneficial for maternal-fetal health</td>
-                  <td>
-                    <img src="https://www.news-medical.net/images/news/ImageForNews_734804_16727928629362084.jpg" 
-                         alt="Heart Health" 
-                         style="width: 100px; height: auto; border-radius: 5px;">
-                  </td>
-                  <td><a href="https://www.news-medical.net/news/20230103/Olive-oil-is-beneficial-for-maternal-fetal-health.aspx" target="_blank">Read more</a></td>
-                </tr>
-                <tr>
-                  <tr>
-                    <td>4</td>
-                    <td>mediterranean diet food with olive oil</td>
-                    <td>
-                      <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Dad-s-Greek-Salad_EXPS_TOHAM25_189184_P2_MD_03_01_7b-e1724861544942.jpg" 
-                           alt="Heart Health" 
-                           style="width: 100px; height: auto; border-radius: 5px;">
-                    </td>
-                    <td><a href="https://nycancer.com/news/olive-oil-key-component-mediterranean-diet" target="_blank">Read more</a></td>
-                  </tr>
-            <!-- Add other rows here... -->
-          </table>
-        </div>   
-        <!-- Honey Section -->
-      <h2 style="margin-top: 40px;">The Benefit of Honey & Healthy Menu</h2>
-      <div style="max-height: 300px; overflow-y: auto;">
-        <table>
-          <tr>
-            <th>No.</th>
-            <th>Benefit</th>
-            <th>Picture</th>
-            <th>Read more</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>My Honey Ice Cream recipe is a naturally sweetened ice cream</td>
-            <td>
-              <img src="https://theviewfromgreatisland.com/wp-content/uploads/2020/06/honey-ice-cream-6.jpg"
-                   alt="Wound Healing"
-                   style="width: 120px; height: 100px; border-radius: 5px;">
-            </td>
-            <td>
-              <a href="https://theviewfromgreatisland.com/honey-ice-cream-recipe/"
-                 target="_blank">Read more</a>
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Honey Lemon Tea menu</td>
-            <td>
-              <img src="https://www.allrecipes.com/thmb/ehao-8tH1IV2pFPxakFNtGdAjGY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/56445-honey-lemon-tea-ddmfs-hero-4x3-2902-8ebd5ce46c984980ae39ce07b4bc43cc.jpg"
-                   alt="Cough Relief"
-                   style="width: 120px; height: 100px; border-radius: 5px;">
-            </td>
-            <td>
-              <a href="https://www.allrecipes.com/recipe/56445/honey-lemon-tea/"
-                 target="_blank">Read more</a>
-            </td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Using Greek Honey for Beautiful Skin, Hair, and Anti-Aging</td>
-            <td>
-              <img src="https://greekreporter.com/wp-content/uploads/2020/10/Honey_Greece_Greek_honey_credit_GR_AP.jpg"
-                   alt="Cough Relief"
-                   style="width: 120px; height: 100px; border-radius: 5px;">
-            </td>
-            <td>
-              <a href="https://greekreporter.com/2023/07/09/greek-honey-for-beautiful-skin-hair-and-anti-aging/"
-                 target="_blank">Read more</a>
-            </td>
-          </tr>
-          <!-- Add up to 5 rows max here -->
-        </table>
-      </div> 
-      <!-- Wine Section -->
-      <h2 style="margin-top: 40px;">The Benefit of Wine & Thai Food pairing</h2>
-      <div style="max-height: 300px; overflow-y: auto;">
-        <table>
-          <tr>
-            <th>No.</th>
-            <th>Benefit</th>
-            <th>Picture</th>
-            <th>Read more</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Greek Wine paring with Pad Thai (The Health Benefits of Brown Rice Pad Thai Noodles)</td>
-            <td>
-              <img src="https://www.lucariscrystal.com/wp-content/uploads/2019/10/eve5.jpg"
-                   alt="Wound Healing"
-                   style="width: 100px; height: auto; border-radius: 5px;">
-            </td>
-            <td>
-              <a href="https://kingsoba.co.uk/blogs/blog/the-health-benefits-of-brown-rice-pad-thai-noodles"
-                 target="_blank">Read more</a>
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Food for thought: Thailand Tom yum kung gets the nod from UNESCO paring with Greek wine</td>
-            <td>
-              <img src="https://www.lucariscrystal.com/wp-content/uploads/2019/10/eve6.jpg"
-                   alt="Cough Relief"
-                   style="width: 100px; height: auto; border-radius: 5px;">
-            </td>
-            <td>
-              <a href="https://www.nationthailand.com/life/food/40043849"
-                 target="_blank">Read more</a>
-            </td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Wine healthy and benefit</td>
-            <td>
-              <img src="https://images.prismic.io/gatsbyshopify-test/2ea6ed04-0293-458b-b07e-cd8721aeec1b_wine-glass-sunset-Alfira-shutterstock.jpg?auto=compress,format&rect=0,53,700,394&w=1600&h=900"
-                   alt="Cough Relief"
-                   style="width: 100px; height: auto; border-radius: 5px;">
-            </td>
-            <td>
-              <a href="xxxx"
-                 target="_blank">Read more</a>
-            </td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Wine healthy and Thai Food</td>
-            <td>
-              <img src="https://i.guim.co.uk/img/media/442a6c969b976cb9a2597da7bd6ecceeb7568c94/163_0_4721_3428/master/4721.jpg?width=465&dpr=1&s=none&crop=none"
-                   alt="Cough Relief"
-                   style="width: 100px; height: auto; border-radius: 5px;">
-            </td>
-            <td>
-              <a href="https://www.lifestyleasia.com/bk/dining/drinks/pair-wine-with-thai-food-like-a-pro/"
-                 target="_blank">Read more</a>
-            </td>
-          </tr>
-          <!-- Add up to 5 rows max here -->
-        </table>
-      </div> 
+      <p> <strong class="opening-line">The paradise oil natural.</strong>It is a wonderfully food whole olives, the fruit, a traditional tree crop of the Mediterranean Basin, and extracting mix of goods from all over the world - delightfully random. I dusted off my bargaining skills to buy a metal bracelet with camels on it, and Maggie bought a lapis lazuli necklace from Athens. In the evening, we walked along Gulf Road towards the marina, passed through Marina Mall, and ate dinner at a wonderful little cafe that we will definitely be frequenting. Ive developed a slight obsession with lentil soul... maybe its because I miss Focos Indian lentil chili.</p>
+     
+      <p>Classical pure olive oil produce extra classical olive oil. There are also a rising number of fake olive oil in the market.Olive oil is not only for food but it is a natrual to made varity of product such essential oil, customestic etc friendly with skins and hairs.</p>
+      <p>That reason, the our farm would like to be know and guide to cooking olive oil that covers the olive oil smoke point, and whether or not to sear saute or fry using olive oil.</p>
     </div>
-        <!-- Right Box: Reduced-width Login Form -->
-        <div class="right-box">
-          <div class="login-container">
-            <form class="login-form" id="loginForm">
-              <p id="social-login-header">Login to FOAS</p>
-              <div class="social-login">
-                <a id="social-login-google" href="#" target="_self">
-                  <button class="google-btn" type="button">
-                    <img
-                      src="https://developers.google.com/static/identity/images/branding_guideline_sample_lt_rd_sl.svg"
-                      alt="Google Logo">
-                    Google
-                  </button>
-                </a>
-                <a id="social-login-facebook" href="#" target="_self">
-                  <button class="facebook-btn" type="button">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
-                      alt="Facebook Logo">
-                    Facebook
-                  </button>
-                </a>
-                <a href="ttps://www.tiktok.com/@siam10honey?_t=ZS-8xRqaUaLTFQ&_r=1" target="_blank">
-                  <button class="instragram-btn" type="button">
-                    <img
-                      src="https://st4.depositphotos.com/1050070/21934/i/450/depositphotos_219349048-stock-illustration-chisinau-moldova-september-2018-instagram.jpg"
-                      alt="Instragramlogo">
-                    Instagram
-                  </button>
-                </a>
-                <a href="https://www.tiktok.com/@siam10winery?_t=ZS-8ug1hoVeiJE&_r=1" target="_blank">
-                  <button class="tiktok-btn" type="button">
-                    <img
-                      src="https://th.bing.com/th/id/OIP.6YpUFmcFyTEYcQyNzFkI1gHaIC?w=158&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-                      alt="TikTok Logo">
-                    Tiktok Shop
-                  </button>
-                </a>
-                </a>
-              </div>
-              <!-- Username Input -->
-              <div id="social-login-form">
-                <label for="username">Enter Email:</label>
-                <input type="email" id="email" placeholder="Email" required />
-                <input type="password" id="password" placeholder="Password" required />
-                <button type="submit" class="login-btn">Login</button>
-                <div class="links">
-                  <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
-                  <a href="register.html" class="register">Register New
-                    Member</a>
-                  <a href="index.html" class="register">Back to Home page</a>
-                </div>
-              </div>
-              <!-- Additional Boxes -->
-              <div class="box">
-                <h3>Olive oil (Premium)</h3>
-                <img
-                  src="https://jamaicahospital.org/newsletter/wp-content/uploads/2023/07/GettyImages-1353349245.jpg"
-                  alt="Oliveoil" class="adv-logo">
-              </div>
-              <div class="box"> 
-                <h3>Health Benefits of Olive Oil</h3>
-                <img src="https://femina.wwmindia.com/content/2023/apr/olive-oil-benefits-for-skin.jpg"
-                  alt="ISO Certified" class="adv-logo">
-              </div>
-            </form>
-          </div>
-        </div>
+      <p>Cooking with Olive oil lest 1tsp in a pan or salad blow oil to increase levels of good cholesterol (HDL) while loweing "bad" cholesterol (LDL).</p>
+      <div style="text-align: center;">
+        <img src="https://i.ibb.co/v4Z9Nfrm/Siam10.png"/>
       </div>
-      </div>
-      <!-- Second row (New row box under the first row) -->
-      <div class="new-row-box">
-        <!-- First ISO image -->
-        <img src="https://seajoy.com/images/company-news/AB_eurofeuille.png" alt="ISO Certification Image 1"
-          class="iso-logo">
-
-        <!-- Second ISO image (e.g., ISO icon) -->
-        <img src="https://1.bp.blogspot.com/-lofZ1ZddkjA/VrRvD8Y24KI/AAAAAAAACpM/QsG8-zh5pY8/s1600/iso_icon.png"
-          alt="ISO Certification Icon" class="iso-logo">
-
-        <!-- Third ISO image (e.g., ISO icon) -->
-        <img src="https://vectorseek.com/wp-content/uploads/2023/09/Bio-nach-EG-Oko-Verordnung-Logo-Vector.svg-.png"
-          alt="ISO Certification Icon" class="iso-logo">
-
-        <!-- Fourth ISO image (e.g., ISO icon) -->
-        <img src="https://iasiso-australia.com/wp-content/uploads/2023/02/HACCP-Training-705x662.png"
-          alt="ISO Certification Icon" class="iso-logo">
-
-      </div>
-      
-      <!-- Strip payment gateway -->
-      <script src="https://js.stripe.com/v3/"></script>
-
-
-      <script type="module">
-        import { backendUrl, getQueryVariable, setCookie, parseJwt, getCookie, getCart } from "./utils/index.js";
-
-        document.addEventListener("DOMContentLoaded", () => {
-          document.getElementById("social-login-google").href = `${backendUrl}/auth/google`;
-          document.getElementById("social-login-facebook").href = `${backendUrl}/auth/facebook`;
-
-          const token = getQueryVariable("token");
-          const emailCookie = getCookie("email");
-          const nameCookie = getCookie("name");
-          const socialLoginHeader = document.getElementById("social-login-header");
-          const socialLoginGoogle = document.getElementById("social-login-google");
-          const socialLoginFacebook = document.getElementById("social-login-facebook");
-          const socialLoginForm = document.getElementById("social-login-form");
-          const profileBox = document.getElementById('profile-box');
-          const nameAuth = document.getElementById('name-auth');
-          const emailAuth = document.getElementById('email-auth');
-          const cart = getCart();
-          const cartItem = document.getElementById('cart-item');
-          cartItem.innerText = cart?.length;
-
-          if (token) {
-            setCookie("session", token);
-            const jwtPayload = parseJwt(token);
-            console.log(jwtPayload);
-
-            if (jwtPayload) {
-              setCookie("userId", jwtPayload._id);
-              setCookie("email", jwtPayload.email);
-              setCookie("name", jwtPayload.name);
-            }
-
-            if (window.history.pushState) {
-              const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
-              window.history.replaceState({ path: newUrl }, '', newUrl);
-
-              window.location.reload();
-            }
-          }
-
-          if (emailCookie) {
-            socialLoginHeader.innerHTML = `Welcome back, ${nameCookie} ${emailCookie}! <span id="logout" style="color: red; cursor: pointer; margin-left: 10px;">(Logout)</span>`;
-
-            profileBox.style.display = 'flex';
-            nameAuth.innerHTML = nameCookie;
-            emailAuth.innerHTML = emailCookie;
-            [socialLoginGoogle, socialLoginFacebook, socialLoginForm].forEach(element => {
-              if (element) {
-                element.style.display = "none";
-              }
-            });
-          }
-
-          document.getElementById('cart').addEventListener('click', async () => {
-            window.open('/shoppingcart.html', "_self");
-          })
-
-          document.getElementById("logout-text").addEventListener("click", async () => {
-            try {
-              const response = await fetch(`${backendUrl}/logout`, { method: "GET", credentials: "include" });
-              if (!response.ok) throw new Error("Logout failed");
-
-              ["session", "email", "userId", "name"].forEach(cookieName => setCookie(cookieName, "", -1));
-
-              window.location.reload();
-            } catch (error) {
-              alert(`Error: ${error.message}`);
-            }
-          });
-        });
-
-        document.getElementById("logout").addEventListener("click", async () => {
-          try {
-            const response = await fetch(`${backendUrl}/logout`, { method: "GET", credentials: "include" });
-            if (!response.ok) throw new Error("Logout failed");
-
-            ["session", "email", "userId", "name"].forEach(cookieName => setCookie(cookieName, "", -1));
-
-            window.location.reload();
-          } catch (error) {
-            alert(`Error: ${error.message}`);
-          }
-        });
-
-        document.getElementById("loginForm").addEventListener("submit", async function (event) {
-          event.preventDefault();
-          const email = document.getElementById("email").value;
-          const password = document.getElementById("password").value;
-
-          try {
-            const response = await fetch(`${backendUrl}/login`, {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ email, password }),
-            });
-
-            const data = await response.json();
-            if (!response.ok) throw new Error(data.error || "Login failed. Please check your credentials.");
-
-            setCookie("session", data.token);
-            const jwtPayload = parseJwt(data.token);
-            if (jwtPayload) {
-              setCookie("user_id", jwtPayload.sub);
-              setCookie("email", jwtPayload.email);
-            }
-
-            alert("Login successful.");
-            window.location.href = "/pine.html";
-          } catch (error) {
-            alert(`Error: ${error.message}`);
-          }
-        });
-      </script>
-
+    </div>
       <footer style="background-color: blue; color: white; font-size: 20px;text-align: center;height: fit-content;margin-top: 3%;
   ">
-        Siam10Herbal is a member of Product-ECO-System community promote
+        FAOS is a member of Product-ECO-System community promote
         wellness and heathly; Harb Medical Copy
         Right@2024.
 

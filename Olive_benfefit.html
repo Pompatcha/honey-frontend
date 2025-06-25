@@ -89,12 +89,10 @@
     background-color: white;
     font-size: 14px;
   }
-
   .goog-te-banner-frame img {
     transform: scale(1.5);
     /* Adjust the scaling factor as needed */
   }
-
   .top-image {
         display: flex;
         justify-content: center; /* center horizontally */
@@ -105,139 +103,13 @@
         max-width: 100%;
         height: 120px;
         }
-
-  /* Slider Container middle text */
-  .slider-container {
-    position: relative;
-    width: 100%;
-    height: 410px;
-    /* Adjust the height to fit your design */
-    overflow: hidden;
-    max-width: 1215px;
-    height: 250px;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 10px;
-  }
-
-  .slider {
-    display: flex;
-    transition: transform 1s ease;
-    width: 100%;
-  }
-
-  /* Each slide */
-  .slide {
-    min-width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    box-sizing: border-box;
-  }
-
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* Text Overlay for Honey Slides */
-  .slide .text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 35px;
-    font-weight: bold;
-    text-align: center;
-    padding: 40px 40px;
-    padding-top: 400px;
-    height: 10vh;
-    text-shadow: 2px 2px 4px Black;
-  }
-
-  /* Navigation Arrows */
-  .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 30px;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
-  }
-
-  .arrow-left {
-    left: 10px;
-  }
-
-  .arrow-right {
-    right: 10px;
-  }
-
-  /* Dots for Navigation */
-  .dots {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-  }
-
-  .dot {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: white;
-    margin: 0 5px;
-    cursor: pointer;
-  }
-
-  .active {
-    background-color: #FFD700;
-    /* Golden color for active dot */
-  }
-
-  /* About our product.conteainer head */
-  .center-flex {
-    display: flex;
-    width: 100%;
-    justify-content: flex-start;
-    /* Align content to the left */
-    align-items: center;
-    /* Centers vertically */
-    height: auto;
-    /* Makes the container fill the entire viewport height */
-    background-color: #2B2B2B;
-    /* Choose your background color */
-    color: white;
-    /* Text color inside the header */
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-align: center;
-    margin: 20px 0;
-  }
-
-  /* content <p> */
-  .left-align {
-    text-align: center;
-    background-color: white;
-    padding: 10px;
-    justify-content: start;
-    align-items: center;
-  }
+  
 
   .center-align {
     text-align: center;
     background-color: white;
     padding: 10px;
   }
-
   /* General Reset */
   * {
     margin: 0;
@@ -254,64 +126,7 @@
     height: fit-content;
     /* Adjusts the height to fit its content */
   }
-
-  /* Grid container with two columns */
-  .grid-container {
-    display: grid;
-    grid-template-columns: 3fr 1fr; /* Increase left box proportion */
-    /* Left: products, Right: login and add new colume */
-    grid-template-rows: auto auto;
-    /* Adds a second row below the first */
-    gap: 20px;
-    align-items: start;
-    margin-top: 3%;
-    width: 105%; /* Increase width */
-    max-width: 1600px; /* Set a max-width for better responsiveness */
-    margin-left: auto;
-    margin-right: auto;
-  }
-  /* Left box for products */
-  .left-box {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ensure it fills the allocated space */ 
-  }
-
-  
-
-  /* Right box for login with reduced width */
-  .right-box {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 50px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 300px;
-    width: 100%;
-    
-  }
-
-  /* Additional boxes under login */
-  .box {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-
-  /* Styling for ISO Logo */
-  .adv-logo {
-    width: 140px;
-    /* Adjust image width */
-    height: auto;
-    /* Maintain aspect ratio */
-    margin-top: 10px;
-    transition: transform 0.3s ease-in-out;
-  }
-
+ 
   /* Hover effect on ISO Logo */
   .iso-logo:hover {
     transform: scale(1.1);
@@ -334,7 +149,6 @@
     row-gap: 60px;
     background: #ccc;
     border-radius: 10px;
-
   }
 
   /* Optional: Styling for the heading */
@@ -353,43 +167,6 @@
     margin-top: 10px;
     transition: transform 0.3s ease-in-out;
   }
-
-  /* Flex container for products with wrap style */
-  .products {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: flex-start;
-  }
-
-  /* Product item: Adjust to fit 4 items per row on larger screens */
-  .product {
-    background: #f8f1e1;
-    border: 1px solid #d4b483;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    flex: 1 1 calc(25% - 20px); /* 25% width for 4 items per row */
-    box-sizing: border-box;
-    max-width: 450px;
-  }
-  .product img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-
-  /* Login container styles */
-  .login-container h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-  .social-login {
-    margin-bottom: 20px;
-  }
-
   .google-btn,
   .facebook-btn,
   .tiktok-btn,
@@ -651,89 +428,6 @@
   </div>
 
   <style>
-    /* Slider container */
-    .slider {
-      position: relative;
-      width: 100%;
-      max-width: 1215px;
-      height: 550px;
-      margin: auto;
-      overflow: hidden;
-      border-radius: 10px;
-    }
-
-    /* Slides */
-    .slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      width: 100%;
-    }
-
-    /* Each slide */
-    .slide {
-      min-width: 100%;
-      box-sizing: border-box;
-    }
-
-    .slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Navigation buttons */
-    .prev,
-    .next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      padding: 10px;
-      cursor: pointer;
-      z-index: 2;
-    }
-
-    .prev {
-      left: 10px;
-    }
-
-    .next {
-      right: 10px;
-    }
-
-    /* Dots navigation */
-    .dots {
-      text-align: center;
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
-    }
-
-    .dot {
-      display: inline-block;
-      height: 10px;
-      width: 10px;
-      margin: 0 5px;
-      background-color: rgba(255, 255, 255, 0.5);
-      border-radius: 50%;
-      cursor: pointer;
-    }
-
-    .dot.active {
-      background-color: white;
-    }
-
-    /* Basic Styling */
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-
     /* blackground colors header */
     header {
       background-color: #2B2B2B;
@@ -758,20 +452,17 @@
       height: 60px;
       /* Optional: Adjust height for better alignment */
     }
-
     nav a {
       color: #fff;
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
     }
-
     nav a:hover {
       text-decoration: underline;
       background-color: #6e2c00;
       /* Highlight on hover */
     }
-
     nav ul {
       list-style-type: none;
       margin: 0;
@@ -781,14 +472,11 @@
       font-size: 18px;
       justify-content: start;
       /* Centers horizontally */
-
     }
-
     nav ul li {
       position: relative;
       /* Required for dropdown positioning */
     }
-
     nav ul li a {
       color: white;
       text-decoration: none;
@@ -893,12 +581,6 @@
       padding: 20px;
     }
 
-    h2 {
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-    }
-
     section {
       border: 1px solid #ccc;
       border-radius: 5px;
@@ -912,86 +594,8 @@
   </head>
 
   <body>
-        <div class="slider">
-          <!-- Slides container -->
-          <div class="slides">
-            <div class="slide">
-              <img src="https://assets.unileversolutions.com/v1/104926992.png?im=Resize,width=1200,height=1200">
-            </div>
-            <div class="slide">
-              <img src="https://www.oliveoil.com/content/images/size/w1000/2021/05/Koroneiki-olives-1.jpg">
-            </div>
-      </div>
-      <!-- Navigation buttons -->
-      <button class="prev">&#10094;</button>
-      <button class="next">&#10095;</button>
-
-      <!-- Dots navigation -->
-      <div class="dots">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
     </div>
-    <script>
-      const slides = document.querySelector('.slides');
-      const slide = document.querySelectorAll('.slide');
-      const dots = document.querySelectorAll('.dot');
-      const prevBtn = document.querySelector('.prev');
-      const nextBtn = document.querySelector('.next');
-      let currentIndex = 0;
-
-      // Update the slider
-      function updateSlider(index) {
-        slides.style.transform = `translateX(-${index * 100}%)`;
-        dots.forEach((dot, i) => {
-          dot.classList.toggle('active', i === index);
-        });
-      }
-
-      // Navigate to the next slide
-      function nextSlide() {
-        currentIndex = (currentIndex + 1) % slide.length;
-        updateSlider(currentIndex);
-      }
-
-      // Navigate to the previous slide
-      function prevSlide() {
-        currentIndex = (currentIndex - 1 + slide.length) % slide.length;
-        updateSlider(currentIndex);
-      }
-
-      // Automatic sliding
-      let autoSlide = setInterval(nextSlide, 3000);
-
-      // Pause auto sliding on user interaction
-      function resetAutoSlide() {
-        clearInterval(autoSlide);
-        autoSlide = setInterval(nextSlide, 3000);
-      }
-
-      // Event listeners for buttons
-      nextBtn.addEventListener('click', () => {
-        nextSlide();
-        resetAutoSlide();
-      });
-
-      prevBtn.addEventListener('click', () => {
-        prevSlide();
-        resetAutoSlide();
-      });
-
-      // Event listeners for dots
-      dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-          currentIndex = index;
-          updateSlider(index);
-          resetAutoSlide();
-        });
-      });
-      // Initialize
-      updateSlider(currentIndex);
-    </script>
+  
     </header>
     <header>
       <nav>
@@ -1042,33 +646,94 @@
             </ul>
       </nav>
     </header>
-  <div id="blog">
-    <div class="post">
-      <h2>Paradise Olive Oil-Olive oil benefit</h2>
+    <div>
+      <h1 style="font-size: 32px;">What are the benefits of olive oil for the skin?</h1>
       <div style="text-align: center;">
-        <iframe width="560" height="315" 
-          src="https://www.youtube.com/embed/Fiy7cEsjD5Y" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen>
-        </iframe>
       </div>
-      <p> <strong class="opening-line">The paradise oil natural.</strong>It is a wonderfully food whole olives, the fruit, a traditional tree crop of the Mediterranean Basin, and extracting mix of goods from all over the world - delightfully random. I dusted off my bargaining skills to buy a metal bracelet with camels on it, and Maggie bought a lapis lazuli necklace from Athens. In the evening, we walked along Gulf Road towards the marina, passed through Marina Mall, and ate dinner at a wonderful little cafe that we will definitely be frequenting. Ive developed a slight obsession with lentil soul... maybe its because I miss Focos Indian lentil chili.</p>
-     
-      <p>Classical pure olive oil produce extra classical olive oil. There are also a rising number of fake olive oil in the market.Olive oil is not only for food but it is a natrual to made varity of product such essential oil, customestic etc friendly with skins and hairs.</p>
-      <p>That reason, the our farm would like to be know and guide to cooking olive oil that covers the olive oil smoke point, and whether or not to sear saute or fry using olive oil.</p>
-    </div>
-      <p>Cooking with Olive oil lest 1tsp in a pan or salad blow oil to increase levels of good cholesterol (HDL) while loweing "bad" cholesterol (LDL).</p>
+      <h3 style="font-size: 20px; color: green;">
+        Olive oil may be beneficial for the skin and face. This is because it contains antioxidants, vitamins, and antibacterial properties.Some of the potential benefits of olive oil for the skin include:
+      </h3>
       <div style="text-align: center;">
         <img src="https://i.ibb.co/v4Z9Nfrm/Siam10.png"/>
       </div>
-    </div>
+</div>
+<h2>1. Antioxidant content</h2>
+
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+  <img src="https://www.aboutoliveoil.org/hubfs/polyphenols-and-antioxidants.jpg" style="width: 400px; height: auto;" />
+
+  <div style="text-align: left; max-width: 600px;">
+    <p>
+      Olive oil acts as an antioxidant, which is a substance that prevents oxidation.
+      Oxidation is a process that can produce free radicals, which are chemicals that
+      can potentially damage cells and may contribute to cancer development.
+    </p>
+    <p>
+      When applied to the skin, antioxidants may prevent premature aging. Also,
+      some research suggests that putting olive oil on the skin after sun exposure
+      may fight off cancer-causing cells.
+    </p>
+    <p>
+      In the study, scientists applied the oil to the skin of mice that had been exposed
+      to potentially harmful ultraviolet (UV) rays. Tumor growth was significantly lower
+      in the mice that had olive oil on their skin compared with those who did not.
+    </p>
+    <p>
+      Scientists need to carry out more research in this area to understand the effects
+      of olive oil’s antioxidant properties on human skin.
+    </p>
+  </div>
+</div>
+<h2>2.Vitamin content</h2>
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+  <img src="https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2019/05/different-types-of-olives-in-oil-in-wooden-bowl.jpg?w=1155&h=1541" style="width: 400px; height: auto;" />
+
+  <div style="text-align: left; max-width: 600px;">
+    <p>
+      Olive oil contains the fat-soluble vitamins A, D, E, and K. Some of these vitamins may be beneficial for the skin.
+    </p>
+    <p>
+      For example, people have used vitamin E oil topically throughout history to treat a variety of skin conditions, including psoriasis and eczema.
+    </p>
+  </div>
+</div>
+<h2>3. Antibacterial effects</h2>
+
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+  <img src="https://images-provider.frontiersin.org/api/ipx/w=1200&f=png/https://www.frontiersin.org/files/Articles/723040/fphar-12-723040-HTML/image_m/fphar-12-723040-g001.jpg" style="width: 400px; height: auto;" />
+
+  <div style="text-align: left; max-width: 600px;">
+    <p>
+      Olive oil has been shownTrusted Source to have antibacterial properties. However, there are very few studies on olive oil’s ability to control bacteria on the skin.
+    </p>
+    <p>
+      One small studyTrusted Source looked at the effects of using olive oil and coconut oil on Staphylococcus aureus bacteria on the skin. The results found that both oils exhibited antibacterial properties, but virgin coconut oil was more effective at eliminating the bacteria.
+    </p>
+    <p>
+      Nonetheless, olive oil may sometimes be used to treat bacterial infections of the skin. It may also improve healingTrusted Source in people with foot ulcers caused by type 2 diabetes.
+    </p>
+  </div>
+</div>
+<h2>4. Moisturizing effectst</h2>
+
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+  <img src="https://cdn.shopify.com/s/files/1/0071/6197/0758/files/shutterstock_390196507_480x480.jpg?v=1584714939" style="width: 400px; height: auto;" />
+
+  <div style="text-align: left; max-width: 600px;">
+    <p>
+      Olive oil is a popular natural moisturizer that is often used to soften both skin and hair. However, there is very little research on its effectiveness.
+    </p>
+  </div>
+</div>
+
+
+
+      
+
       <footer style="background-color: blue; color: white; font-size: 20px;text-align: center;height: fit-content;margin-top: 3%;
   ">
-        FAOS is a member of Product-ECO-System community promote
-        wellness and heathly; Harb Medical Copy
-        Right@2024.
+        FAOS located in Thailand place the Hub of Asia Pacific
+        Organics Product/ Tade Mark Copy Right@2025 from New York
 
       </footer>"
       <!--Start of Tawk.to Script-->
