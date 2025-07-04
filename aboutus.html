@@ -1,671 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="This is a premium honey collection website offering the finest quality honey.">
-    <meta name="keywords" content="premium honey, natural honey, pure honey, honey collection">
-    <meta name="keywords" content="ยาแก้ไข น้ำผึ้ง">
-    <meta name="author" content="Patcharin Chanaphukdee">
-    <meta property="og:title" content="Premium Honey Collection">
-    <meta property="og:description" content="Explore our premium honey collection, made from nature's finest sources.">
-    <meta property="og:image" content="https://example.com/honey-image.jpg">
-    <title>Premium Olive oil and Honey,Red wine, Honey organics</title>
- <!-- Google Fonts - Roboto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- External Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles/shared/general.css">
-    <link rel="stylesheet" href="olive.css">
-    <link rel="stylesheet" href="css/dropdownmenu.css">	
-</head>
-</html>
-    <style>
-		/* Slider Container middle text */
-        .slider-container {
-            position: relative;
-            width: 100%;
-            height: 410px;  /* Adjust the height to fit your design */
-            overflow: hidden;
-            max-width: 1350px;
-            height: 430px;
-            margin: auto;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-		.paddle{
-			position: absolute;
-			top: 10%;
-			left: 10%;
-			width: 10%;
-			height: 10%;
-			background-color: #4D4B4B;
-			border-radius: 10px;
-			transform: translate(-50%,-50%);
-			transition: left 0.2s ease-in-out;
-		}
-        .slider {
-            display: flex;
-            transition: transform 1s ease;
-            width: 100%;
-        }
-		/* Each slide */
-        .slide {
-            min-width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            box-sizing: border-box;
-        }
-		.slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        /* Text Overlay for Honey Slides */
-        .slide .text-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            font-size: 35px;
-            font-weight: bold;
-            text-align: center;
-			padding: 20px 20px;
-			padding-top: 400px;
-			height: 10vh;
-			text-shadow: 2px 2px 4px Black;
-        }
-        /* Navigation Arrows */
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            font-size: 30px;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 1;
-        }
-        .arrow-left {
-            left: 10px;
-        }
-        .arrow-right {
-            right: 10px;
-        }
-        /* Dots for Navigation */
-        .dots {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-        }
-        .dot {
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background-color: white;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-        .active {
-            background-color: #FFD700; /* Golden color for active dot */
-        }
-         /* Styling for the heading */
-      .head-body{
-        width: 100%;   /* Ensure heading takes full width */
-        margin-bottom: 10px;
-        text-align: left; /* Align text to the left */
-        font-size: 1.5rem; /* Adjust font size as needed */
-        height: 50px;               /* Adjust height as needed */
-        }
-        /* Styling the Google Translate container */
-        .p-slect-language {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center; /* Aligns items (text + Google Translate) vertically */
-            position: absolute; /* Use fixed if you want it to stay on screen */
-            top: 10px;
-            right: 10px;
-            font-size: 18px; /* Reduced font size for better fit */
-            background-color: #0f0b01; 
-            color: #f4f1f1;
-            font-family: 'Poppins', sans-serif;
-            padding: 8px 15px; /* Padding for better spacing */
-            border-radius: 5px;
-            gap: 10px; /* Adds space between text and Google Translate */
-        }
+  <meta charset="UTF-8" />
+  <meta name="description" content="This is a premium honey collection website offering the finest quality honey." />
+  <meta name="keywords" content="premium honey, natural honey, pure honey, honey collection, ยาแก้ไข น้ำผึ้ง" />
+  <meta name="author" content="Patcharin Chanaphukdee" />
+  <meta property="og:title" content="Premium Honey Collection" />
+  <meta property="og:description" content="Explore our premium honey collection, made from nature's finest sources." />
+  <meta property="og:image" content="https://example.com/honey-image.jpg" />
+  <title>Premium Olive oil and Honey, Red wine, Honey organics</title>
 
-    #google_translate_element {
-    display: flex;
-    justify-content: flex-end; /* Align to the right */
-}
+  <!-- Google Fonts - Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles/shared/general.css" />
+  <link rel="stylesheet" href="olive.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <script src="js/about.js"></script>
 
-      /* Customizing the dropdown */
-      .goog-te-gadget {
-          font-family: Arial, sans-serif;
-          font-size: 26px;
-      }
-
-      /* Hide the Google logo */
-      .goog-logo-link, .goog-te-gadget span {
-          display: none !important;
-      }
-
-      /* Style the dropdown select */
-      .goog-te-combo {
-          padding: 5px;
-          border-radius: 5px;
-          border: 1px solid #ccc;
-          background-color: white;
-          font-size: 14px;
-      }
-      .goog-te-banner-frame img {
-    transform: scale(1.5); /* Adjust the scaling factor as needed */
-      }
-
-        .top-image {
-        display: flex;
-        justify-content: center; /* center horizontally */
-        align-items: center;     /* center vertically */
-        background: linear-gradient(to right, #f9e6b3, #f3d27a);
-        }
-        .top-image img {
-        max-width: 100%;
-        height: 120px;
-        }
- 
-        .highlight-frame {
-        background: linear-gradient(to right, #f9e6b3, #f3d27a);
-        border: 3px solid #c9a227; /* Premium gold */
-        padding: 10px 20px; /* Reduced padding */
-        border-radius: 12px;
-        text-align: center;
-        margin: 15px auto; /* Reduced margin */
-        width: fit-content;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    }
-
-    .highlight-text {
-        font-family: 'Playfair Display', serif;
-        font-weight: 700;
-        font-size: 26px; /* Slightly reduced font size */
-        color: #8b0000; /* Deep red wine color */
-        font-style: normal;
-        margin: 5px 0; /* Reduce gap */
-    }
-
-    .sub-text {
-        font-size: 16px; /* Slightly reduced font size */
-        font-style: italic;
-        color: #4a2c00; /* Warm brown tone */
-        margin: 3px 0; /* Reduce gap */
-        line-height: 1.2; /* Adjust line height */
-    }
-
-	    /* content <p> */
-	    .left-align {
-		    text-align: left;
-		    background-color: white;
-		    padding: 10px;
-	    }
-	        /* About our product.conteainer head */
-        .center-flex {
-            display: flex;
-            justify-content: center; /* Centers horizontally */
-            align-items: center; /* Centers vertically */
-            height: auto; /* Makes the container fill the entire viewport height */
-			background-color: #2B2B2B; /* Choose your background color */
-            color: white;  /* Text color inside the header */
-			padding-top: 5px;
-		    padding-bottom: 5px;
-            text-align: center;
-			margin: 20px 0;
-        }
-               
-    </style>
-      <!-- google translation -->
-<body>    
-    <div class="head-body">
-        <div class="p-slect-language">
-            <span>Select Language:</span>
-            <div id="google_translate_element"></div>
-        </div>
-      </di>
-    
-    <script>
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement(
-                {pageLanguage: 'en', includedLanguages: 'en,th,zh-CN,ja,fr,de,es,gk,it,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 
-                'google_translate_element'
-            );
-        }
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-      </div>
-      <div class="top-image">
-        <img src="https://i.ibb.co/FqHVXHBY/Screenshot-2568-06-08-at-01-29-04.png" alt="Centered Image">
-      </div>
-
-      <div class="highlight-frame">
-        <p class="sub-text">Olive oil and honey 🐝 are the gold of nature—pure, natural, and filled with life-enhancing properties.</p>
-        <p class="highlight-text">FAOS Premium Organic Collection</p>
-      </div>
-</body>
-<head>
-    <style>
-        /* Slider container */
-        .slider {
-            position: relative;
-            width: 100%;
-            max-width: 1215px;
-            height: 550px;
-            margin: auto;
-            overflow: hidden;
-            border-radius: 10px;
-			padding: 2px,2px,2px,2px;
-        }
-        /* Slides */
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: 100%;
-        }
-        /* Each slide */
-        .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-			padding: 5px,5px,5px,5px;
-        }
-        /* Navigation buttons */
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 2;
-        }
-        .prev {
-            left: 10px;
-        }
-
-        .next {
-            right: 10px;
-        }
-
-        /* Dots navigation */
-        .dots {
-            text-align: center;
-            position: absolute;
-            bottom: 10px;
-            width: 100%;
-        }
-        .dot {
-            display: inline-block;
-            height: 10px;
-            width: 10px;
-            margin: 0 5px;
-            background-color: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        .dot.active {
-            background-color: white;
-        }
-        /* Basic Styling */
-        body 
-		{
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-		/* blackground colors header */
-        header {
-            background-color: #2B2B2B;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-			padding-top: 10px;
-            width: 100%;
-            
-        }
-            nav {
-            background: #e2b007;
-            padding: 10px;
-            text-align: center; /* Fallback for non-flex environments */
-            font-size: 18px;
-            display: flex;
-            justify-content: center; /* Centers text horizontally */
-            align-items: center; /* Centers items vertically */
-            height: 60px; /* Optional: Adjust height for better alignment */
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-            background-color: #6e2c00; /* Highlight on hover */
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 10px;
-            display: flex;
-			text-align: center;
-			font-size: 18px;
-        }
-        nav ul li {
-            position: relative; /* Required for dropdown positioning */
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 3px 30px;
-            display: block;
-			font-size: 18px;
-			text-align: center;
-        }
-
-        nav ul li a:hover {
-            background-color: #575757;
-        }
-
-        /* Dropdown Menu Styling */
-        nav ul li ul {
-            display: none; /* Hide dropdown by default */
-            position: absolute;
-            top: 100%; /* Position below the parent menu item */
-            left: 0;
-            background-color: #444;
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            min-width: 150px;
-            z-index: 1000;
-        }
-        nav ul li ul li {
-            border-bottom: 1px solid #555;
-        }
-
-        nav ul li ul li a {
-            padding: 10px;
-        }
-
-        nav ul li ul li a:hover {
-            background-color: #575757;
-        }
-        /* Show dropdown on hover */
-        nav ul li:hover > ul {
-            display: block;
-        }
-		/* Catalog Container */
-        .hero {
-            background: url('wine-honey-hero.jpg') no-repeat center center/cover;
-            height: 200px;
-            color: black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 5.5em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-        .section {
-            padding: 10px;
-        }
-        .products {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 5px;
-	    color: #333;
-	    border-color: burlywood
-        }
-        .product {
-            background: #f8f1e1;
-            border: 1px solid #d4b483;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            flex: 1;
-            max-width: 300px;
-        }
-        .product img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-		}
-		main {
-            padding: 20px;
-        }
-		h2 {
-	    text-align: center;
-		}
-        section {
-            margin-bottom: 5px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }	
-    /* Essentail FAOS */
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #b8860b; /* Wine-inspired golden color */
-            text-align: center;
-        }
-        p {
-            line-height: 1.6;
-            font-size: 16px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            padding: 5px 0;
-            font-weight: bold;
-        }
-        .highlight {
-            font-weight: bold;
-            color: #8b0000; /* Deep red wine color */
-        }
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-            color: #666;
-        }
-		/* footer */
-        footer {
-            background: #e2b007;
-            color: #fff;
-            align-items: center;
-            padding: 1rem 0;
-            display: flex;
-            justify-content: center;
-            height: 20vh;
-            margin: 0;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-            text-align: center; /* Ensures text inside is centered */
-        }
-
-        .footer-container {
-            display: flex;
-            flex-direction: row; /* Stack items vertically */
-            justify-content: center;
-            align-items: center; /* Center horizontally */
-            max-width: 1200px;
-            margin: 0px auto;
-            font-size: medium;
-            text-align: center; /* Ensures text is centered */
-            font-size: 16px;
-        }
-        .footer-section {
-                margin: 0;
-                padding: 1px 0;  /* Reduced padding to make it more compact */
-            }
-        .footer-section h3 {
-            font-size: 18px;
-			color: #000000;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #e2b007;
-            padding-bottom: 5px;
-        }
-        .footer-section p, .footer-section a {
-            font-size: 14px;
-            line-height: 1.8;
-            color: #000000;
-            text-decoration: none;
-        }
-        .social-icons a {
-            display: inline-block;
-            margin-right: 10px;
-            color: #000000;
-            font-size: 18px;
-        }
-    </style>
 </head>
 <body>
-	<header>
-	 <div class="slider">
-    <!-- Slides container -->
-    <div class="slides">
-        <div class="slide">
-          <img src="https://assets.unileversolutions.com/v1/104926992.png?im=Resize,width=1200,height=1200">
-        </div>
-        <div class="slide">
-          <img src="https://honey.com/images/default/Celebrating-Beekeeping-Around-the-World-Apimondia.jpg">
-        </div>
-        <div class="slide">
-          <img src="https://t4.ftcdn.net/jpg/08/68/30/15/360_F_868301596_MAFqCmk6bvdCGrKTuEOZDpV1JId6Jeac.jpg">
-        </div>
-        <div class="slide">
-          <img src="https://assets.unileversolutions.com/v1/104926993.png?im=Resize,width=1200,height=1200">
-        </div>
-        <div class="slide">
-          <img
-            src="https://t4.ftcdn.net/jpg/14/05/14/93/360_F_1405149352_K4qhIYVahGLumUCry09QJaDyquDaXVrh.jpg">
-        </div>
-        <div class="slide">
-          <img src="https://www.mygreekdish.com/wp-content/uploads/2014/03/Greek-Sesame-Bread-rings-recipe-Koulouri-Thessalonikis-1-1536x1152.jpg">
-        </div>
-        <div class="slide">
-          <img src="https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/6/1/619nlRtOk5L._AC_SL1082_.jpg">
-        </div>
-        <div class="slide">
-          <img src="https://img.freepik.com/premium-photo/black-metal-teapot-cup-tea-glass-cup_74095-2856.jpg">
-        </div>
+  <!-- Language Selector -->
+  <div class="head-body">
+    <div class="p-slect-language">
+      <span>Select Language:</span>
+      <div id="google_translate_element"></div>
+    </div>
+  </div>
+
+  <!-- Google Translate Script -->
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,th,zh-CN,ja,fr,de,es,gk,it,pt',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Top Banner Image -->
+  <div class="top-image">
+    <img src="https://i.ibb.co/FqHVXHBY/Screenshot-2568-06-08-at-01-29-04.png" alt="Centered Image" />
+  </div>
+
+  <!-- Highlight Section -->
+  <div class="highlight-frame">
+    <p class="sub-text">
+      Olive oil and honey 🐝 are the gold of nature—pure, natural, and filled with life‑enhancing properties.
+    </p>
+    <p class="highlight-text">FAOS Premium Organic Collection</p>
+  </div>
+
+  <!-- Slider Header -->
+  <header>
+    <div class="slider">
+      <div class="slides">
+        <div class="slide"><img src="https://assets.unileversolutions.com/v1/104926992.png?im=Resize,width=1200,height=1200" alt="" /></div>
+        <div class="slide"><img src="https://honey.com/images/default/Celebrating-Beekeeping-Around-the-World-Apimondia.jpg" alt="" /></div>
+        <div class="slide"><img src="https://t4.ftcdn.net/jpg/08/68/30/15/360_F_868301596_MAFqCmk6bvdCGrKTuEOZDpV1JId6Jeac.jpg" alt="" /></div>
+        <div class="slide"><img src="https://assets.unileversolutions.com/v1/104926993.png?im=Resize,width=1200,height=1200" alt="" /></div>
+        <div class="slide"><img src="https://t4.ftcdn.net/jpg/14/05/14/93/360_F_1405149352_K4qhIYVahGLumUCry09QJaDyquDaXVrh.jpg" alt="" /></div>
+        <div class="slide"><img src="https://www.mygreekdish.com/wp-content/uploads/2014/03/Greek-Sesame-Bread-rings-recipe-Koulouri-Thessalonikis-1-1536x1152.jpg" alt="" /></div>
+        <div class="slide"><img src="https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/6/1/619nlRtOk5L._AC_SL1082_.jpg" alt="" /></div>
+        <div class="slide"><img src="https://img.freepik.com/premium-photo/black-metal-teapot-cup-tea-glass-cup_74095-2856.jpg" alt="" /></div>
       </div>
-    <!-- Navigation buttons -->
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
 
-    <!-- Dots navigation -->
-    <div class="dots">
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+
+      <div class="dots">
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
+      </div>
     </div>
-</div>
-<script>
-    const slides = document.querySelector('.slides');
-    const slide = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
-    let currentIndex = 0;
+  </header>
 
-    // Update the slider
-    function updateSlider(index) {
-        slides.style.transform = `translateX(-${index * 100}%)`;
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
-        });
-    }
-
-    // Navigate to the next slide
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slide.length;
-        updateSlider(currentIndex);
-    }
-
-    // Navigate to the previous slide
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + slide.length) % slide.length;
-        updateSlider(currentIndex);
-    }
-
-    // Automatic sliding
-    let autoSlide = setInterval(nextSlide, 3000);
-
-    // Pause auto sliding on user interaction
-    function resetAutoSlide() {
-        clearInterval(autoSlide);
-        autoSlide = setInterval(nextSlide, 3000);
-    }
-
-    // Event listeners for buttons
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-        resetAutoSlide();
-    });
-
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        resetAutoSlide();
-    });
-
-    // Event listeners for dots
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            currentIndex = index;
-            updateSlider(index);
-            resetAutoSlide();
-        });
-    });
-    // Initialize
-    updateSlider(currentIndex);
-</script>
-<body>
-    </div>
-</header>
-<header>
+  <!-- Navigation Menu -->
+  <header>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -681,25 +99,23 @@
             <li><a href="vanilla.html">Vanilla</a></li>
           </ul>
         </li>
-
         <li>
           <a href="Olive.html">Olive oil</a>
+          <ul><li><a href="skincare.html">Mountain Tea</a></li></ul>
+        </li>
+        <li>
+          <a href="wine.html">Organics skin care</a>
           <ul>
-            <li><a href="skincare.html">Mountain Tea</a></li>
+            <li><a href="buywine.html">Lotions</a></li>
+            <li><a href="wineclass.html">Face and Hair</a></li>
           </ul>
-          <li>
-            <a href="wine.html">Organics skin care</a>
-            <ul>
-              <li><a href="buywine.html">Lotions</a></li>
-              <li><a href="wineclass.html">Face and Hair</a></li>
-            </ul>
-          </li>
+        </li>
         <li>
           <a href="ourshop.html">Our Shop</a>
           <ul>
             <li><a href="ourshop.html">Bangkok</a></li>
             <li><a href="ourshop.html">Pattaya</a></li>
-            <li><a href="ourshop.html">Chaing Mai</a></li>
+            <li><a href="ourshop.html">Chiang Mai</a></li>
             <li><a href="ourshop.html">Phuket</a></li>
             <li><a href="ourshop.html">Krabi</a></li>
             <li><a href="ourshop.html">Prachinburi</a></li>
@@ -712,21 +128,34 @@
             <li><a href="aboutus.html">About us</a></li>
             <li><a href="ourshop.html">International Shipping</a></li>
           </ul>
+        </li>
+      </ul>
     </nav>
   </header>
-	<main>
-            <div class="container">
-                <h2>Holistic Olive oil and Honey</h2>
-                <h2>Olive oil and Honey, Healthy Products </h2>
-            <p> Collaborating with the Innovation to brainstrom, reserach, and evalate product concepts, Managing projects from ideation and development to market launch. Conduct food sience testing, including stability and shelf-life tests, to ensure product integrity, quality, and compliance with regulatory standards.I love working with nature. Is physically fit and healthy. <br>  <a href="#">Read More</a></p>
-		</div>
-	</section>
-	<div class="center-flex">
-        <h2>Food and Herbal Medicine</h2>
-		</div>
-		<div class="container">
-            <h2>Founder of FAOS Premium Organic Collection </h2>
-            <p> Patcharin Chanaphukdee the founder of pure organics products, a visionary based in Bangkok, Thailand, the land historically known as<span class="highlight"> Suvaṇṇabhūmior the "Land of Gold."</span>  With 19 years of experience regarding agreement regarding compliance with regulations on Environtment, I’m dedicated to environmental sustainability and compliance management. Throughout my career, I have built a large social community and a deep connection with various sectors.
+
+  <!-- Main Content -->
+  <main>
+    <section class="container">
+      <h2>Holistic Olive oil and Honey</h2>
+      <h2>Olive oil and Honey, Healthy Products</h2>
+      <p>
+        FAOS Thailand began with a simple but powerful idea. <span class="highlight">Prioritizing mental health and consuming high-quality</span>, natural foods can lead to stronger physical and mental well-being. This insight emerged through a surprising discovery from food biologists and a deep study of traditional Greek cuisine, one of the most respected food cultures in Europe for its health benefits.
+
+        Through community cooking experiments and cooperative learning, we found that <span class="highlight">Thai and Greek food traditions share many values.</span> Both emphasize fresh ingredients, natural preparation, and a strong connection to the land. These shared principles inspired us to create a line of organic foods and cosmetic products made entirely from nature. Every product we develop uses one hundred percent natural ingredients that preserve the purity of what we consume and apply to our bodies.
+
+        We believe that <span class="highlight">the quality of what we eat and use every day</span> has a direct impact on our health. When we consume products that contain toxins, our bodies absorb those harmful substances, which can lead to frequent illness. <span class="highlight">Between the years 2018 and 2022, Thailand saw a steady rise in mortality rates, reaching nine deaths per one thousand people in 2022. </span>Male mortality has remained higher than female mortality every year. <span class="highlight">In 2022, the male rate was 10.3 while the female rate was 7.7 per one thousand people.</span>
+
+        At FAOS Thailand, we recognize that food and everyday products play an important role in helping people live longer, healthier, and happier lives. Our mission is to provide pure, natural alternatives that support well-being both physically and mentally. <span class="highlight">We are committed to sharing these products with the people of Thailand, throughout Asia, and across the world.</span>
+
+        <br /><a href="#">Read More</a>
+      </p>
+    </section>
+
+    <div class="center-flex"><h2>Food and Herbal Medicine</h2></div>
+
+    <section class="container">
+      <h2>Founder of FAOS Premium Organic Collection</h2>
+      <p> Patcharin Chanaphukdee the founder of pure organics products, a visionary based in Bangkok, Thailand, the land historically known as<span class="highlight"> Suvaṇṇabhūmior the "Land of Gold."</span>  With 19 years of experience regarding agreement regarding compliance with regulations on Environtment, I’m dedicated to environmental sustainability and compliance management. Throughout my career, I have built a large social community and a deep connection with various sectors.
                 The inception of Pure organic products emerged from my  personal journey towards<span class="highlight">well-being and sustainability.</span> While navigating a period of <span class="highlight">mental and physical distress</span> caused by <span class="highlight">the negative influences of alcoholism in my life</span>, I was inspired to seek healing. Despite not being a consumer of alcohol, I was deeply affected by its destructive consequences on the people around me, which led to emotional unrest and physical issues.
                 In search of peace and healing, I found honeyin the Mediterranean sea in Europe with natruallly and <span class="highlight"> connection with nature deeply resonated with me.</span> Through the beekeeper's guidance and my own exploration of nature, I found solace in the simplicity and beauty of the natural world, particularly in the peaceful harmony found in beekeeping, honey, and the surrounding forest. This newfound appreciation for nature played a significant role in calming my mind and emotions.
                 My interest in natural healing led me to explore the ancient art of olive tree. I experimented with creating natural food from  <span class="highlight">olive fruint and honey , other bloosom Flower, Herbal</span>, inspired by <span class="highlight">traditional  Mediterranean methods integrity with Asian traditional.</span> Through careful research and scientific experimentation, I ensured the process was safe, and the wine became a source of comfort that helped me regain emotional 
@@ -736,54 +165,81 @@
                 In search of peace and healing, I met a natrually and good food in the Mediterranean sea in Europe healing lifestyle and <span class="highlight"> connection with nature deeply resonated with me.</span> Through the health and wellness's guidance and my own exploration of nature, I found solace in the simplicity and beauty of the natural world, particularly in the peaceful harmony found in beekeeping, honey, and the surrounding forest. This newfound appreciation for nature played a significant role in calming my mind and emotions.
                 My interest in natural healing led me to explore the ancient art of winemaking. I experimented with creating natural alcohol from  <span class="highlight">grapes and honey , other bloosom Flower, Herbal</span>, inspired by <span class="highlight">traditional  Mediterranean methods integrity with Asian traditional.</span> Through careful research and scientific experimentation, I ensured the process was safe, and the wine became a source of comfort that helped me regain emotional 
                 This transformative experience motivated me to share the benefits of natural, sustainable practices with others. Premium Organic Collection was established to promote<span class="highlight"> green sustainability</span> and offer products that nourish both the body and mind. Through the company's efforts, I hope to contribute to the well-being of individuals while advocating for a return to nature’s healing properties. </p>
+      <div style="display:flex;justify-content:center;gap:20px;align-items:center;">
+        <img src="https://i.ibb.co/C5MxqMM5/IMG-8158.jpg" alt="myphoto" width="250" height="350" />
+        <img src="https://i.ibb.co/351rJLyB/IMG-8438.jpg" alt="myphoto" width="250" height="350" />
+      </div>
+    </section>
 
-                <div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
-                    <img src="https://i.ibb.co/C5MxqMM5/IMG-8158.jpg" alt="myphoto" width="250" height="350">
-                    <img src="https://i.ibb.co/351rJLyB/IMG-8438.jpg" alt="myphoto" width="250" height="350">
-                </div>
-                
-                <div class="container">
-            <h1>The Essence of Pure organics Products</h1>
-            <p>At <span class="highlight">Pure</span>, we take pride in crafting the finest wines and honey, sourced directly from <span class="highlight">community organic farms</span>. Our mission is to create premium, natural products that promote <span class="highlight">health, sustainability, and well-being</span>.</p>
+    <div class="center-flex"><h2>The Essence of Pure organics Products</h2></div>
+
+    <section class="container">
+      <h1>The Essence of Pure organics Products</h1>
+      <p>At <span class="highlight">Pure</span>, we take pride in crafting the finest wines and honey, sourced directly from <span class="highlight">community organic farms</span>. Our mission is to create premium, natural products that promote <span class="highlight">health, sustainability, and well-being</span>.</p>
+    </div>
+      </section>
+
+       <div class="center-flex"><h2>Our Commitment to Quality & Sustainability</h2></div>
+
+         <section class="container"></section>
+      <p>FAOS was founded with a vision: to produce <span class="highlight">Premium Organic Collection</span> that contribute to a <span class="highlight">greener world and sustainable living</span>. We collaborate with organic farming communities across <span class="highlight">Asia and the West</span>, exchanging knowledge and expertise to create <span class="highlight">limited-edition, naturally</span>.</p>
+    </div>
+  </section>
+
+   <div class="center-flex"><h2>The Health Benefits of Organic Olive oil</h2></div>
+   <p>Our honey and Olive oil are made using <span class="highlight">scientifically researched methods</span>, ensuring each bottle delivers both <span class="highlight">quality and health benefits</span>. Organic honey and Olive oil, when enjoyed in moderation, can:</p>
+   <ul>
+        <li>Reduce stress & anxiety</li>
+        <li>Enhance social connections</li>
+        <li>Support heart health</li>
+        <li>Promote overall well-being</li>
+      </ul>
+    </div>
+  </section>
+   <div class="center-flex"><h2>From Farm to Bottle: A Commitment to Excellence</h2></div>
+       <section class="container">
+     <p>Every step of our honey and Olive oil process—<span class="highlight">from selecting the best organic forest to created to be a herbs and bottling</span>—is carefully monitored. We work closely with <span class="highlight">certified organic farms</span>, ensuring that no harmful chemicals are used. Each batch undergoes <span class="highlight">rigorous lab testing</span> to guarantee purity, taste, and exceptional quality.</p>
     
-            <h2>Our Commitment to Quality & Sustainability</h2>
-            <p>FAOS was founded with a vision: to produce <span class="highlight">Premium Organic Collection</span> that contribute to a <span class="highlight">greener world and sustainable living</span>. We collaborate with organic farming communities across <span class="highlight">Asia and the West</span>, exchanging knowledge and expertise to create <span class="highlight">limited-edition, naturally crafted wines</span>.</p>
+      <p>At FAOS Premium Organic Collection, we believe that <span class="highlight">Organics product is more than just a eat or consume—it’s a way to celebrate life, good food, and meaningful connections</span>. Join us on our journey towards a healthier, sustainable future—one sip at a time. </p>
+    </section>
+  </main>
+
+ <!-- Footer -->
+<footer>
+  <div class="footer-container">
     
-            <h2>The Health Benefits of Organic Olive oil</h2>
-            <p>Our honey and Olive oil are made using <span class="highlight">scientifically researched methods</span>, ensuring each bottle delivers both <span class="highlight">quality and health benefits</span>. Organic honey and Olive oil, when enjoyed in moderation, can:</p>
-            <ul>
-                <li>✔️ Reduce stress & anxiety</li>
-                <li>✔️ Enhance social connections</li>
-                <li>✔️ Support heart health</li>
-                <li>✔️ Promote overall well-being</li>
-            </ul>
+    <!-- Left Column: Social Links -->
+    <div class="footer-column social-links">
+      <h3>Follow Us</h3>
+      <a href="https://facebook.com/" target="_blank">🌐 Facebook</a>
+      <a href="https://instagram.com/" target="_blank">📸 Instagram</a>
+      <a href="#" target="_blank">🐦 Twitter</a>
+      <a href="#" target="_blank">🎵 TikTok</a>
+      <a href="#" target="_blank">💬 LINE Official</a>
+    </div>
+
+    <!-- Right Column: Research References with Scrollbar -->
+    <div class="footer-column references-scroll">
+      <h3>Research & References</h3>
+      <div class="scrollable">
+        <p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6567113/" target="_blank">🧪 NCBI: Olive Oil Health Benefits</a></p>
+        <p><a href="https://www.healthline.com/nutrition/honey-benefits" target="_blank">🍯 Healthline: Benefits of Honey</a></p>
+        <p><a href="https://www.sciencedirect.com/science/article/pii/S0308814618310649" target="_blank">📘 ScienceDirect: Olive Oil Composition</a></p>
+        <p><a href="https://www.who.int/publications/i/item/9789240005105" target="_blank">🌍 WHO Guidelines: Traditional Medicine</a></p>
+        <p><a href="https://scholar.google.com/" target="_blank">🔍 Google Scholar: Natural Product Research</a></p>
+        <!-- Add more links as needed -->
+      </div>
+    </div>
     
-            <h2>From Farm to Bottle: A Commitment to Excellence</h2>
-            <p>Every step of our honey and Olive oil process—<span class="highlight">from selecting the best organic forest to created to be a herbs and bottling</span>—is carefully monitored. We work closely with <span class="highlight">certified organic farms</span>, ensuring that no harmful chemicals are used. Each batch undergoes <span class="highlight">rigorous lab testing</span> to guarantee purity, taste, and exceptional quality.</p>
-    
-            <p>At FAOS Premium Organic Collection, we believe that <span class="highlight">Organics product is more than just a eat or consume—it’s a way to celebrate life, good food, and meaningful connections</span>. Join us on our journey towards a healthier, sustainable future—one sip at a time.</p>
-    
-        </div>
-        <div class="container">
-        </div>
-	</section>
-    <footer>
-        <!-- Social Media Links -->
-        <div class="footer">
-            <h4>Follow Us</h4>
-            <div class="footer-container">
-                <a href="https://www.facebook.com/profile.php?id=61569136800046" target="_blank">🌐 Facebook</a>
-                <a href="https://www.instagram.com/siam10winery/profilecard/?igsh=cW5remt1NnA1dTdv" target="_blank">📸 Instagram</a>
-                <a href="#" target="_blank">🐦 Twitter</a>
-                <a href="#" target="https://www.tiktok.com/@siam10winery?_t=ZS-8u41NzHQrYN&_r=">🔗 Tikkok</a>
-                <a href="#" target="https://lin.ee/RBnKOuz">🔗 Line offcial</a>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE Official Account" width="20"></a>.</p> 
-            </div>
-            <div class="footer">
-                <p>&copy; 2024@ Premium Organic Collection | Crafted with Passion & Sustainability</p>
-        </div>
-    </footer>
-</section>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 Premium Organic Collection | Crafted with Passion & Sustainability</p>
+  </div>
+</footer>
+
+
+
 
 </body>
 </html>
