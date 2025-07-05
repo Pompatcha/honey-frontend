@@ -229,29 +229,28 @@
     height: fit-content;
     /* Adjusts the height to fit its content */
   }
-  /* Grid container with two columns */
-  .grid-container {
+    .grid-container {
     display: grid;
-    grid-template-columns: 3fr 1fr; /* Increase left box proportion */
-    /* Left: products, Right: login and add new colume */
+    grid-template-columns: 4fr 1fr; /* ⬅️ Increased left side */
     grid-template-rows: auto auto;
-    /* Adds a second row below the first */
     gap: 20px;
     align-items: start;
     margin-top: 3%;
-    width: 105%; /* Increase width */
-    max-width: 1600px; /* Set a max-width for better responsiveness */
+    width: 100%;
+    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
   }
+  
+
   /* Right box for login with reduced width */
   .right-box {
     background: rgba(255, 255, 255, 0.8);
-    padding: 50px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 300px;
+    max-width: 400px;
     width: 100%;
     
   }
@@ -328,17 +327,19 @@
   .main-grid {
   display: grid;
   grid-template-columns: 3fr 1fr; /* Left: table, Right: login & promo */
-  gap: 30px;
+  gap: 10px;
   max-width: 100%;
-  margin: 30px auto;
-  padding: 20px;
+  padding: 10px;
 }
 .left-section {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: linear-gradient(145deg, #fdfcfb, #e2d1c3); /* Soft luxury gradient */
+  border-radius: 5px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1); /* Softer and deeper shadow */
+  width: 100%;
+  max-width: 100%; /* Ensures it uses all available space from the grid */
+  transition: all 0.3s ease-in-out;
 }
+
 .left-section table {
     width: 100%;
     border-collapse: collapse;
@@ -547,6 +548,7 @@
     cursor: pointer;
     display: inline-block;
   }
+
   table {
   width: 100%;
   border-collapse: collapse;
@@ -555,6 +557,8 @@
 th, td {
   padding: 10px;
   border: 2px solid #ccc;
+  font-size: 18px; /* Increased font size */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Optional: for a more modern look */
 }
 th {
   background-color: #eee;
