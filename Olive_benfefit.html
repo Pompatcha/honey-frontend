@@ -1,766 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="description" content="This is a premium honey collection website offering the finest quality honey.">
-<meta name="keywords" content="ไวน์พรีเมี่ยม, ขายไวน์, exclusive product, wine testing, ไวน์ออแกนนิกส์, wine cellar, wine bar, แอลกอฮอล์, ขายไวน์ออนไลน์, wine & beverage, ร้านขายไวน์, ร้านอาหาร, โรงแรม, สายไวน์, อาหาร, ไวน์กูรู, wineguru, wine event, wine pairing, wine pairing menu, จับคู่อาหารกับไวน์, ไวน์ราคาขายส่ง, ไวน์ขายส่ง, ไวน์ราคาพิเศษ, wine list, ไวน์สำหรับงานแต่งงาน, ไวน์สำหรับอีเวนต์, พิเศษในโรงแรม, wine connection, the wine merchant, scarlettwine, wine bar, the bar upstairs, wine beverage, mandarin oriental, capella, house wine, น้ำมันมะกอกปลอดสาร, ไวน์ปลอดสารเคมี, ไวน์แดง, ไวน์ขาว, ไวน์โรส, ไวน์สปาร์คกิ้ง">
-<meta name="keywords" content="Wellness">
-<meta name="author" content="Patcharin Chanaphukdee">
-<meta property="og:image" content="https://i.ibb.co/h14wZP5X/Screenshot-2568-04-03-at-23-00-10.png">
+  <meta charset="UTF-8" />
+  <meta name="description" content="This is a premium honey collection website offering the finest quality honey." />
+  <meta name="keywords" content="premium honey, natural honey, pure honey, honey collection, ยาแก้ไข น้ำผึ้ง" />
+  <meta name="author" content="Patcharin Chanaphukdee" />
+  <meta property="og:title" content="Premium Honey Collection" />
+  <meta property="og:description" content="Explore our premium honey collection, made from nature's finest sources." />
+  <meta property="og:image" content="https://example.com/honey-image.jpg" />
+  <title>Premium Olive oil and Honey, Red wine, Honey organics</title>
 
-  <!-- Open Graph Meta Tags (for social sharing) -->
-  <meta property="og:title" content="Premium Honey Collection">
-  <meta property="og:description" content="Explore our premium honey collection, made from nature's finest sources.">
-  <title>Premium Oive oil and Honey | Organics Olive oil | Organic Honey</title>
   <!-- Google Fonts - Roboto -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
   <!-- External Stylesheets -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="styles/shared/general.css">
-  <link rel="stylesheet" href="olive.css">
-  <link rel="stylesheet" href="css/dropdownmenu.css">
-  
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles/shared/general.css" />
+  <link rel="stylesheet" href="olive.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <script src="js/about.js"></script>
+
 </head>
-
-<style>
-  /* Styling for the heading */
-  .head-body {
-    padding: 10px;
-    width: 100%;
-    /* Ensure heading takes full width */
-    margin-bottom: 10px;
-    text-align: left;
-    /* Align text to the left */
-    font-size: 1.5rem;
-    /* Adjust font size as needed */
-    height: 50px;
-    /* Adjust height as needed */
-  }
-
-  /* Styling the Google Translate container */
-  .p-slect-language {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    /* Aligns items (text + Google Translate) vertically */
-    /* position: absolute; */
-    /* Use fixed if you want it to stay on screen */
-    /* top: 10px;
-    right: 10px; */
-    font-size: 18px;
-    /* Reduced font size for better fit */
-    background-color: #0f0b01;
-    color: #f4f1f1;
-    font-family: 'Poppins', sans-serif;
-    padding: 8px 15px;
-    /* Padding for better spacing */
-    border-radius: 5px;
-    gap: 10px;
-    /* Adds space between text and Google Translate */
-  }
-
-  #google_translate_element {
-    display: flex;
-    justify-content: flex-end;
-    /* Align to the right */
-  }
-
-
-  /* Customizing the dropdown */
-  .goog-te-gadget {
-    font-family: Arial, sans-serif;
-    font-size: 26px;
-  }
-
-  /* Hide the Google logo */
-  .goog-logo-link,
-  .goog-te-gadget span {
-    display: none !important;
-  }
-
-  /* Style the dropdown select */
-  .goog-te-combo {
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: white;
-    font-size: 14px;
-  }
-  .goog-te-banner-frame img {
-    transform: scale(1.5);
-    /* Adjust the scaling factor as needed */
-  }
-  .top-image {
-        display: flex;
-        justify-content: center; /* center horizontally */
-        align-items: center;     /* center vertically */
-        background: linear-gradient(to right, #f9e6b3, #f3d27a);
-        }
-        .top-image img {
-        max-width: 100%;
-        height: 120px;
-        }
-  
-
-  .center-align {
-    text-align: center;
-    background-color: white;
-    padding: 10px;
-  }
-  /* General Reset */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    height: fit-content;
-    background-size: cover;
-    background-position: center;
-    height: fit-content;
-    /* Adjusts the height to fit its content */
-  }
- 
-  /* Hover effect on ISO Logo */
-  .iso-logo:hover {
-    transform: scale(1.1);
-  }
-
-  /* New row box */
-  .new-row-box {
-    display: flex;
-    /* Enable flexbox layout */
-    flex-direction: row;
-    /* Stack content vertically (default) */
-    justify-content: center;
-    /* Align items to the left */
-    align-items: center;
-    /* Center content horizontally */
-    padding: 10px;
-    text-align: center;
-    height: 150px;
-    /* Adjust height as needed */
-    row-gap: 60px;
-    background: #ccc;
-    border-radius: 10px;
-  }
-
-  /* Optional: Styling for the heading */
-  .new-row-boxh3 {
-    width: 100%;
-    /* Ensures heading takes full width */
-    margin-bottom: 10px;
-  }
-
-  /* Styling for ISO Logo */
-  .iso-logo {
-    width: 140px;
-    /* Adjust image width */
-    height: auto;
-    /* Maintain aspect ratio */
-    margin-top: 10px;
-    transition: transform 0.3s ease-in-out;
-  }
-  .google-btn,
-  .facebook-btn,
-  .tiktok-btn,
-  .instragram-btn {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    background-color: #db4437;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 16p
-  }
-
-  .facebook-btn {
-    background-color: #3b5998;
-  }
-
-  .instagram-btn {
-    background-color: #c13584;
-  }
-
-  .tiktok-btn {
-    background-color: #000000;
-    color: white;
-  }
-
-  .Lazada-btn {
-    background-color: #2703a9;
-    color: white;
-  }
-
-  .shoppee-btn {
-    background-color: #000000;
-    color: white;
-  }
-
-  .google-btn:hover,
-  .facebook-btn:hover,
-  .tiktok-btn:hover,
-  .Lazada-btn:hover,
-  .shoppee-btn:hover {
-    opacity: 0.9;
-  }
-
-  button img {
-    width: 20px;
-    height: 20px;
-  }
-
-  input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-
-  input:focus {
-    outline: none;
-    border-color: #6c757d;
-  }
-
-  .login-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  .login-btn:hover {
-    background-color: #218838;
-  }
-
-  .links {
-    margin-top: 20px;
-  }
-
-  .links a {
-    display: block;
-    color: #007bff;
-    text-decoration: none;
-    margin: 5px 0;
-  }
-
-  .links a:hover {
-    text-decoration: underline;
-  }
-
-  .profile {
-    display: none;
-    align-items: center;
-    gap: 10px;
-    background: #fff;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
-  .info {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 2.5px;
-  }
-
-  .name {
-    font-size: 14px;
-    font-weight: bold;
-    color: black;
-  }
-
-  .role {
-    font-size: 12px;
-    color: gray;
-  }
-
-  .auth-box {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-  }
-
-  .cart-container {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-  }
-
-  .cart-icon {
-    width: 30px;
-    height: 30px;
-  }
-
-  .cart-count {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background: red;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 3px 6px;
-    border-radius: 50%;
-    min-width: 18px;
-    text-align: center;
-  }
-
-  .logout-text {
-    text-align: start;
-    font-size: 14px;
-    color: red;
-    text-decoration: underline;
-    cursor: pointer;
-    display: inline-block;
-  }
-</style>
-<!-- google translation -->
-
 <body>
+  <!-- Language Selector -->
   <div class="head-body">
-
-    <!-- This is the verification box. When you successfully login, it will show your name, email, and shopping cart from cookies. -->
-    <div class="auth-box">
-      <div class="profile" id="profile-box">
-        <img class="avatar" src="https://i.ibb.co/p69WWMWY/Screenshot-2568-04-03-at-22-44-15.png">
-        <div class="info">
-          <p class="name" id="name-auth"></p>
-          <p class="role" id="email-auth"></p>
-          <span id="logout-text" class="logout-text">Logout</span>
-        </div>
-
-        <div class="cart-container">
-          <i class="fa fa-shopping-cart" alt="Cart" id="cart" class="cart-icon"></i>
-          <span class="cart-count" id="cart-item">0</span>
-        </div>
-      </div>
-
-      <div class="p-slect-language">
-        <span>Select Language:</span>
-        <div id="google_translate_element"></div>
-      </div>
+    <div class="p-slect-language">
+      <span>Select Language:</span>
+      <div id="google_translate_element"></div>
     </div>
   </div>
 
+  <!-- Google Translate Script -->
   <script>
     function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-        { pageLanguage: 'en', includedLanguages: 'en,th,zh-CN,ja,fr,de,es,gk,it,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
-        'google_translate_element'
-      );
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,th,zh-CN,ja,fr,de,es,gk,it,pt',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
     }
   </script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  </div>
 
-  <!-- Highlight Title -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
-
-    .highlight-frame {
-      background: linear-gradient(to right, #f9e6b3, #f3d27a);
-      border: 3px solid #c9a227;
-      /* Premium gold */
-      padding: 15px 25px;
-      border-radius: 12px;
-      text-align: center;
-      margin: 35px auto;
-      margin-top: 65px;
-      width: fit-content;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    }
-
-    .highlight-text {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      font-size: 28px;
-      color: #8b0000;
-      /* Deep red wine color */
-      font-style: normal;
-    }
-
-    .sub-text {
-      font-size: 18px;
-      font-style: italic;
-      color: #4a2c00;
-      /* Warm brown tone */
-    }
-  </style>
+  <!-- Top Banner Image -->
   <div class="top-image">
-    <img src="https://i.ibb.co/FqHVXHBY/Screenshot-2568-06-08-at-01-29-04.png" alt="Centered Image">
+    <img src="https://i.ibb.co/FqHVXHBY/Screenshot-2568-06-08-at-01-29-04.png" alt="Centered Image" />
   </div>
 
+  <!-- Highlight Section -->
   <div class="highlight-frame">
-    <p class="sub-text">🫒Olive oil and honey 🐝 are the gold of nature—pure,
-      natural, and filled with life-enhancing
-      properties.</p>
-    <p class="highlight-text">Pure Organic Product ECO-System 100% (Healthy Living)</p>
-    <p class="sub-text">(Medical Food care yours)</p>
+    <p class="sub-text">
+      Olive oil and honey 🐝 are the gold of nature—pure, natural, and filled with life‑enhancing properties.
+    </p>
+    <p class="highlight-text">FAOS Premium Organic Collection</p>
   </div>
 
-  <style>
-    /* blackground colors header */
-    header {
-      background-color: #2B2B2B;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-      padding-top: 10px;
-      width: 100%;
-    }
+  <!-- Slider Header -->
+  <header>
+    <div class="slider">
+      <div class="slides">
+        <div class="slide"><img src="https://assets.unileversolutions.com/v1/104926992.png?im=Resize,width=1200,height=1200" alt="" /></div>
+        <div class="slide"><img src="https://honey.com/images/default/Celebrating-Beekeeping-Around-the-World-Apimondia.jpg" alt="" /></div>
+        <div class="slide"><img src="https://t4.ftcdn.net/jpg/08/68/30/15/360_F_868301596_MAFqCmk6bvdCGrKTuEOZDpV1JId6Jeac.jpg" alt="" /></div>
+        <div class="slide"><img src="https://assets.unileversolutions.com/v1/104926993.png?im=Resize,width=1200,height=1200" alt="" /></div>
+        <div class="slide"><img src="https://t4.ftcdn.net/jpg/14/05/14/93/360_F_1405149352_K4qhIYVahGLumUCry09QJaDyquDaXVrh.jpg" alt="" /></div>
+        <div class="slide"><img src="https://www.mygreekdish.com/wp-content/uploads/2014/03/Greek-Sesame-Bread-rings-recipe-Koulouri-Thessalonikis-1-1536x1152.jpg" alt="" /></div>
+        <div class="slide"><img src="https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/6/1/619nlRtOk5L._AC_SL1082_.jpg" alt="" /></div>
+        <div class="slide"><img src="https://img.freepik.com/premium-photo/black-metal-teapot-cup-tea-glass-cup_74095-2856.jpg" alt="" /></div>
+      </div>
 
-    nav {
-      background: #e2b007;
-      padding: 10px;
-      text-align: center;
-      /* Fallback for non-flex environments */
-      font-size: 18px;
-      display: flex;
-      justify-content: center;
-      /* Centers text horizontally */
-      align-items: center;
-      /* Centers items vertically */
-      height: 60px;
-      /* Optional: Adjust height for better alignment */
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-      background-color: #6e2c00;
-      /* Highlight on hover */
-    }
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 5px 10px;
-      display: flex;
-      text-align: center;
-      font-size: 18px;
-      justify-content: start;
-      /* Centers horizontally */
-    }
-    nav ul li {
-      position: relative;
-      /* Required for dropdown positioning */
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      padding: 3px 30px;
-      display: block;
-      font-size: 18px;
-      text-align: center;
-    }
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
 
-    nav ul li a:hover {
-      background-color: #575757;
-    }
-
-    /* Dropdown Menu Styling */
-    nav ul li ul {
-      display: none;
-      /* Hide dropdown by default */
-      position: absolute;
-      top: 100%;
-      /* Position below the parent menu item */
-      left: 0;
-      background-color: #444;
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      min-width: 150px;
-      z-index: 1000;
-
-    }
-
-    nav ul li ul li {
-      border-bottom: 1px solid #555;
-    }
-
-    nav ul li ul li a {
-      padding: 10px;
-    }
-
-    nav ul li ul li a:hover {
-      background-color: #575757;
-    }
-
-    /* Show dropdown on hover */
-    nav ul li:hover>ul {
-      display: block;
-    }
-
-    /* Catalog Container */
-    .hero {
-      background: url('wine-honey-hero.jpg') no-repeat center center/cover;
-      height: 200px;
-      color: black;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 5.5em;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    }
-
-    .section {
-      padding: 20px;
-    }
-
-    .products {
-      display: flex;
-      justify-content: center;
-      /* Center the items */
-      flex-direction: start;
-      gap: 10px;
-      /* Increase gap for better spacing */
-      color: #333;
-      border-color: burlywood;
-    }
-
-    .product {
-      background: #f8f1e1;
-      border: 1px solid #d4b483;
-      padding: 15px;
-      border-radius: 8px;
-      text-align: center;
-      flex: 1 1 calc(25% - 40px);
-      /* 4 items per row */
-      max-width: 300px;
-      box-sizing: border-box;
-    }
-
-    .product img {
-      width: 180px;
-      /* Ensures full width */
-      height: 150px;
-      /* Fixed height for equal sizing */
-      object-fit: cover;
-      /* Ensures images maintain aspect ratio */
-      border-radius: 10px;
-    }
-
-    main {
-      padding: 20px;
-    }
-
-    section {
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background-color: #f9f9f9;
-      justify-content: space-between;
-      width: fit-content;
-    }
-
-    /* Button */
-  </style>
-  </head>
-
-  <body>
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
     </div>
-  
-    </header>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li>
-            <a href="honeyproductlist.html">Honey</a>
-            <ul>
-              <li><a href="honey.html">Pine</a></li>
-              <li><a href="flower.html">Flower</a></li>
-              <li><a href="thyme.html">Thyme</a></li>
-              <li><a href="oak.html">Oak and Forest</a></li>
-              <li><a href="orange.html">Orange</a></li>
-              <li><a href="fir.html">Fir</a></li>
-              <li><a href="vanilla.html">Vanilla</a></li>
-            </ul>
-          </li>
+  </header>
 
-          <li>
-            <a href="Olive.html">Olive oil</a>
-            <ul>
-              <li><a href="skincare.html">Mountain Tea</a></li>
-            </ul>
-            <li>
-              <a href="wine.html">Organics skin care</a>
-              <ul>
-                <li><a href="buywine.html">Lotions</a></li>
-                <li><a href="wineclass.html">Face and Hair</a></li>
-              </ul>
-            </li>
-          <li>
-            <a href="ourshop.html">Our Shop</a>
-            <ul>
-              <li><a href="ourshop.html">Bangkok</a></li>
-              <li><a href="ourshop.html">Pattaya</a></li>
-              <li><a href="ourshop.html">Chaing Mai</a></li>
-              <li><a href="ourshop.html">Phuket</a></li>
-              <li><a href="ourshop.html">Krabi</a></li>
-              <li><a href="ourshop.html">Prachinburi</a></li>
-              <li><a href="ourshop.html">Hua Hin</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="aboutus.html">Contact</a>
-            <ul>
-              <li><a href="aboutus.html">About us</a></li>
-              <li><a href="ourshop.html">International Shipping</a></li>
-            </ul>
-      </nav>
-    </header>
-    <div>
-      <h1 style="font-size: 32px;">What are the benefits of olive oil for the skin?</h1>
-      <div style="text-align: center;">
+  <!-- Navigation Menu -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="honeyproductlist.html">Honey</a>
+          <ul>
+            <li><a href="honey.html">Pine</a></li>
+            <li><a href="flower.html">Flower</a></li>
+            <li><a href="thyme.html">Thyme</a></li>
+            <li><a href="oak.html">Oak and Forest</a></li>
+            <li><a href="orange.html">Orange</a></li>
+            <li><a href="fir.html">Fir</a></li>
+            <li><a href="vanilla.html">Vanilla</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="Olive.html">Olive oil</a>
+          <ul><li><a href="skincare.html">Mountain Tea</a></li></ul>
+        </li>
+        <li>
+          <a href="wine.html">Organics skin care</a>
+          <ul>
+            <li><a href="buywine.html">Lotions</a></li>
+            <li><a href="wineclass.html">Face and Hair</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="ourshop.html">Our Shop</a>
+          <ul>
+            <li><a href="ourshop.html">Bangkok</a></li>
+            <li><a href="ourshop.html">Pattaya</a></li>
+            <li><a href="ourshop.html">Chiang Mai</a></li>
+            <li><a href="ourshop.html">Phuket</a></li>
+            <li><a href="ourshop.html">Krabi</a></li>
+            <li><a href="ourshop.html">Prachinburi</a></li>
+            <li><a href="ourshop.html">Hua Hin</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="aboutus.html">About me</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="center-flex"><h2>FAOS Olive oil with Polyphenols Matter</h2></div>
+
+    <section class="container">
+  <h2>FAOS Olive Oil — Why Polyphenols Matter</h2>
+  <p>
+    FAOS Olive Oil is crafted with care to deliver not just delicious flavor but powerful health benefits. What makes our olive oil truly special is its <span class="highlight">high polyphenol content</span>, natural antioxidants that play a crucial role in supporting your well-being.
+  </p>
+  <p>
+    <strong>What Are Polyphenols?</strong><br />
+    Polyphenols are plant compounds found in olives that act as <span class="highlight">natural antioxidants</span>. They help protect your body from oxidative stress, which can lead to aging and chronic diseases such as heart disease, cancer, and Alzheimer’s.
+  </p>
+  <h3>Why Choose FAOS Olive Oil with High Polyphenols?</h3>
+  <ol>
+    <li>
+      <strong>Powerful Antioxidants:</strong> Our olive oil is rich in polyphenols, which neutralize harmful free radicals in the body. This antioxidant effect helps to slow the aging process and reduce the risk of many chronic illnesses.
+    </li>
+    <li>
+      <strong>Anti-Inflammatory Benefits:</strong> Polyphenols like oleocanthal in FAOS olive oil have been shown to reduce inflammation in the body, similar to the effect of ibuprofen, but naturally and gently.
+    </li>
+    <li>
+      <strong>Supports Heart Health:</strong> Regular consumption of FAOS olive oil can help lower blood pressure and improve cholesterol levels, promoting a healthy cardiovascular system.
+    </li>
+    <li>
+      <strong>Brain Protection:</strong> The antioxidants in our olive oil may protect brain cells and support cognitive function, potentially reducing the risk of neurodegenerative diseases.
+    </li>
+    <li>
+      <strong>Boosts Immunity:</strong> Polyphenols enhance the immune system's ability to fight infections and keep you healthy.
+    </li>
+  </ol>
+  <p>
+     <h2>How to Identify High-Polyphenol Olive Oil:</h2>
+    Look for FAOS Olive Oil labels highlighting <strong>“High Polyphenol Content”</strong> or specifying polyphenols above <strong>250 mg/kg</strong> to ensure you’re getting maximum health benefits.
+  </p>
+  <p>
+    FAOS combines traditional olive harvesting with modern quality controls to preserve the natural polyphenols and fresh flavor. Experience the best nature offers with every drop of FAOS Olive Oil.
+  </p>
+  <p>
+              <div style="display:flex; justify-content:center; gap:20px; align-items:center; flex-wrap:wrap;">
+            <iframe width="350" height="250"
+              src="https://www.youtube.com/embed/2BzpaCNt55I"
+              title="Olive Oil Benefits"
+              frameborder="0"
+              allowfullscreen>
+            </iframe>
+
+            <iframe width="350" height="250"
+              src="https://www.youtube.com/embed/xK8FmjKaJgc"
+              title="Olive Oil Polyphenols"
+              frameborder="0"
+              allowfullscreen>
+            </iframe>
+          </div>
+    </section>
+
+    <div class="center-flex"><h2>The Essence of Pure organics Products</h2></div>
+  </main>
+
+ <!-- Footer -->
+<footer>
+  <div class="footer-container">
+    
+    <!-- Left Column: Social Links -->
+    <div class="footer-column social-links">
+      <h3>Follow Us</h3>
+      <a href="https://facebook.com/" target="_blank">🌐 Facebook</a>
+      <a href="https://instagram.com/" target="_blank">📸 Instagram</a>
+      <a href="#" target="_blank">🐦 Twitter</a>
+      <a href="#" target="_blank">🎵 TikTok</a>
+      <a href="#" target="_blank">💬 LINE Official</a>
+    </div>
+    
+
+
+    <!-- Right Column: Research References with Scrollbar -->
+    <div class="footer-column references-scroll">
+      <h3>Research & References</h3>
+      <div class="scrollable">
+        <p><a href="https://www.news-medical.net/news/20230103/Olive-oil-is-beneficial-for-maternal-fetal-health.aspx" target="_blank">🧪 Olive oil is beneficial for maternal-fetal health</a></p>
+        <p><a href="https://nycancer.com/news/olive-oil-key-component-mediterranean-diet" target="_blank">🍯 Healthline: Benefits of Honey</a></p>
+        <p><a href="https://www.sciencedirect.com/science/article/pii/S0308814618310649" target="_blank">📘 Olive Oil~ A Key Component of the Mediterranean Diet</a></p>
+        <p><a href="https://greekreporter.com/2023/07/09/greek-honey-for-beautiful-skin-hair-and-anti-aging/" target="_blank">🌍 Using Greek Honey for Beautiful Skin, Hair, and Anti-Aging</a></p>
+        <p><a href="https://www.healthline.com/nutrition/benefits-of-honey#TOC_TITLE_HDR_3" target="_blank">🔍Everything to Know About the Health Benefits of Honey</a></p>
+        <!-- Add more links as needed -->
       </div>
-      <h3 style="font-size: 20px; color: green;">
-        Olive oil may be beneficial for the skin and face. This is because it contains antioxidants, vitamins, and antibacterial properties.Some of the potential benefits of olive oil for the skin include:
-      </h3>
-      <div style="text-align: center;">
-        <img src="https://i.ibb.co/v4Z9Nfrm/Siam10.png"/>
-      </div>
-</div>
-<h2>1. Antioxidant content</h2>
-
-<div style="display: flex; align-items: flex-start; gap: 20px;">
-  <img src="https://www.aboutoliveoil.org/hubfs/polyphenols-and-antioxidants.jpg" style="width: 400px; height: auto;" />
-
-  <div style="text-align: left; max-width: 600px;">
-    <p>
-      Olive oil acts as an antioxidant, which is a substance that prevents oxidation.
-      Oxidation is a process that can produce free radicals, which are chemicals that
-      can potentially damage cells and may contribute to cancer development.
-    </p>
-    <p>
-      When applied to the skin, antioxidants may prevent premature aging. Also,
-      some research suggests that putting olive oil on the skin after sun exposure
-      may fight off cancer-causing cells.
-    </p>
-    <p>
-      In the study, scientists applied the oil to the skin of mice that had been exposed
-      to potentially harmful ultraviolet (UV) rays. Tumor growth was significantly lower
-      in the mice that had olive oil on their skin compared with those who did not.
-    </p>
-    <p>
-      Scientists need to carry out more research in this area to understand the effects
-      of olive oil’s antioxidant properties on human skin.
-    </p>
+    </div>
+    
   </div>
-</div>
-<h2>2.Vitamin content</h2>
-<div style="display: flex; align-items: flex-start; gap: 20px;">
-  <img src="https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2019/05/different-types-of-olives-in-oil-in-wooden-bowl.jpg?w=1155&h=1541" style="width: 400px; height: auto;" />
 
-  <div style="text-align: left; max-width: 600px;">
-    <p>
-      Olive oil contains the fat-soluble vitamins A, D, E, and K. Some of these vitamins may be beneficial for the skin.
-    </p>
-    <p>
-      For example, people have used vitamin E oil topically throughout history to treat a variety of skin conditions, including psoriasis and eczema.
-    </p>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Premium Organic Collection | Crafted with Passion & Sustainability</p>
   </div>
-</div>
-<h2>3. Antibacterial effects</h2>
-
-<div style="display: flex; align-items: flex-start; gap: 20px;">
-  <img src="https://images-provider.frontiersin.org/api/ipx/w=1200&f=png/https://www.frontiersin.org/files/Articles/723040/fphar-12-723040-HTML/image_m/fphar-12-723040-g001.jpg" style="width: 400px; height: auto;" />
-
-  <div style="text-align: left; max-width: 600px;">
-    <p>
-      Olive oil has been shownTrusted Source to have antibacterial properties. However, there are very few studies on olive oil’s ability to control bacteria on the skin.
-    </p>
-    <p>
-      One small studyTrusted Source looked at the effects of using olive oil and coconut oil on Staphylococcus aureus bacteria on the skin. The results found that both oils exhibited antibacterial properties, but virgin coconut oil was more effective at eliminating the bacteria.
-    </p>
-    <p>
-      Nonetheless, olive oil may sometimes be used to treat bacterial infections of the skin. It may also improve healingTrusted Source in people with foot ulcers caused by type 2 diabetes.
-    </p>
-  </div>
-</div>
-<h2>4. Moisturizing effectst</h2>
-
-<div style="display: flex; align-items: flex-start; gap: 20px;">
-  <img src="https://cdn.shopify.com/s/files/1/0071/6197/0758/files/shutterstock_390196507_480x480.jpg?v=1584714939" style="width: 400px; height: auto;" />
-
-  <div style="text-align: left; max-width: 600px;">
-    <p>
-      Olive oil is a popular natural moisturizer that is often used to soften both skin and hair. However, there is very little research on its effectiveness.
-    </p>
-  </div>
-</div>
+</footer>
 
 
 
-      
 
-      <footer style="background-color: blue; color: white; font-size: 20px;text-align: center;height: fit-content;margin-top: 3%;
-  ">
-        FAOS located in Thailand place the Hub of Asia Pacific
-        Organics Product/ Tade Mark Copy Right@2025 from New York
-
-      </footer>"
-      <!--Start of Tawk.to Script-->
-
-      <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-
-        (function () {
-
-          var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-
-          s1.async = true;
-
-          s1.src = 'https://embed.tawk.to/5eb0fd1da1bad90e54a1bc86/default';
-
-          s1.charset = 'UTF-8';
-
-          s1.setAttribute('crossorigin', '*');
-
-          s0.parentNode.insertBefore(s1, s0);
-
-        })();
-
-      </script>
-
-      <!--End of Tawk.to Script-->
-
-  </body>
-
+</body>
 </html>

@@ -1,0 +1,59 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fffbee;
+  padding: 20px;
+  color: #333;
+}
+
+.product-container {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.image-row img {
+  width: 32%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #804000;
+}
+
+label {
+  font-weight: bold;
+}
+
+select, input {
+  padding: 6px;
+  margin: 10px 0;
+  width: 100%;
+  max-width: 200px;
+}
+
+.total {
+  font-size: 1.2rem;
+  color: green;
+  margin-top: 15px;
+}
+
+.description {
+  background: #f9f5e6;
+  padding: 15px;
+  margin-top: 20px;
+  border-left: 5px solid #cdaa4d;
+  border-radius: 8px;
+}
