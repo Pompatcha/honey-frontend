@@ -1,95 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Organic Honey Premium - Coming Soon</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="description" content="This is a premium honey collection website offering the finest quality honey.">
+<meta name="keywords" content="ไวน์พรีเมี่ยม, ขายไวน์, exclusive product, wine testing, ไวน์ออแกนนิกส์, wine cellar, wine bar, แอลกอฮอล์, ขายไวน์ออนไลน์, wine & beverage, ร้านขายไวน์, ร้านอาหาร, โรงแรม, สายไวน์, อาหาร, ไวน์กูรู, wineguru, wine event, wine pairing, wine pairing menu, จับคู่อาหารกับไวน์, ไวน์ราคาขายส่ง, ไวน์ขายส่ง, ไวน์ราคาพิเศษ, wine list, ไวน์สำหรับงานแต่งงาน, ไวน์สำหรับอีเวนต์, พิเศษในโรงแรม, wine connection, the wine merchant, scarlettwine, wine bar, the bar upstairs, wine beverage, mandarin oriental, capella, house wine, น้ำมันมะกอกปลอดสาร, ไวน์ปลอดสารเคมี, ไวน์แดง, ไวน์ขาว, ไวน์โรส, ไวน์สปาร์คกิ้ง",オーガニック・オレンジブロッサムローハニー>
+<meta name="keywords" content="Wellness">
+<meta name="author" content="Patcharin Chanaphukdee">
+<meta property="og:image" content="https://i.ibb.co/h14wZP5X/Screenshot-2568-04-03-at-23-00-10.png">
+
+  <!-- Open Graph Meta Tags (for social sharing) -->
+  <meta property="og:title" content="Premium Honey Collection">
+  <meta property="og:description" content="Explore our premium honey collection, made from nature's finest sources.">
+  <title> FAOS Premium Organic Collection|Premium Oive oil and Honey | Organics Olive oil | Organic Honey</title>
+  <!-- Google Fonts - Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/shared/general.css">
+  <link rel="stylesheet" href="css/dropdownmenu.css">
+  <link rel="stylesheet" href="css/index.css" />
+   <link rel="stylesheet" href="css/Productlist.css" />
+  <script src="js/index.js"></script>
+  <script src="js/product-list.js"></script>
 </head>
-<style>/* General styles */
-  * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-  }
-  
-  body, html {
-      height: 100%;
-      font-family: 'Montserrat', sans-serif; /* Elegant font */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #f8f4e3; /* Light golden background */
-      color: #4e4b46; /* Premium, dark color for text */
-  }
-  
-  /* Container and message box */
-  .container {
-      width: 100%;
-      height: 100vh;
-      background-image: url('your-background-image.jpg'); /* Replace with your premium honey-related image */
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  
-  .message {
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.6); /* Dark background for text readability */
-      padding: 40px;
-      border-radius: 12px;
-      max-width: 600px;
-      color: #fff;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  h1 {
-      font-size: 3.5em;
-      font-weight: bold;
-      margin-bottom: 20px;
-      letter-spacing: 2px;
-  }
-  
-  p {
-      font-size: 1.4em;
-      margin-bottom: 30px;
-  }
-  
-  .coming-soon {
-      font-weight: bold;
-      font-size: 1.6em;
-      color: #ffd700; /* Gold color for a premium touch */
-  }
-  
-  .footer {
-      margin-top: 40px;
-      font-size: 1.2em;
-      color: #ccc;
-  }
-  
-  .footer strong {
-      color: #fff;
-      font-style: italic;
-  }
-  
-  /* Adding subtle hover effects for interaction */
-  .footer strong:hover {
-      color: #ffd700; /* Hover effect */
-  }
-  </style>
 <body>
-    <div class="container">
-        <div class="message">
-            <h1>Organic Honey Premium</h1>
-            <p>We're crafting something sweet and natural. Stay tuned for the launch of our premium organic honey collection.</p>
-            <p class="coming-soon">Coming soon...</p>
-            <div class="footer">
-                <p>Website designed by <strong>FAOS (Thailand) Co.,Ltd.</strong></p>
-            </div>
+  <div class="head-body">
+    <!-- This is the verification box. When you successfully login, it will show your name, email, and shopping cart from cookies. -->
+    <div class="auth-box">
+      <div class="profile" id="profile-box">
+        <img class="avatar" src="https://i.ibb.co/p69WWMWY/Screenshot-2568-04-03-at-22-44-15.png">
+        <div class="info">
+          <p class="name" id="name-auth"></p>
+          <p class="role" id="email-auth"></p>
+          <span id="logout-text" class="logout-text">Logout</span>
         </div>
+
+        <div class="cart-container">
+          <i class="fa fa-shopping-cart" alt="Cart" id="cart" class="cart-icon"></i>
+          <span class="cart-count" id="cart-item">0</span>
+        </div>
+      </div>
+
+      <div class="p-slect-language">
+        <span>Select Language:</span>
+        <div id="google_translate_element"></div>
+      </div>
     </div>
+  </div>
+
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'en', includedLanguages: 'en,th,zh-CN,ja,fr,de,es,gk,it,pt,vi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </div>
+
+  <!-- Highlight Title -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+  </style>
+  <div class="top-image">
+    <img src="https://i.ibb.co/FqHVXHBY/Screenshot-2568-06-08-at-01-29-04.png" alt="Centered Image">
+  </div>
+
+  <div class="highlight-frame">
+    <p class="sub-text">🫒Olive oil and honey 🐝 are the gold of nature—pure,
+      natural, and filled with life-enhancing
+      properties.</p>
+    <p class="highlight-text">Pure Organic Product ECO-System 100% (Healthy Living)</p>
+    <p class="sub-text">(Medical Food care yours)</p>
+  </div>
+
+  </head>
+  <body>
+    <div class="slider">
+      <!-- Slides container -->
+      <div class="slides">
+        <div class="slide">
+          <img src="https://assets.unileversolutions.com/v1/104926992.png?im=Resize,width=1200,height=1200">
+        </div>
+        <div class="slide">
+          <img src="https://honey.com/images/default/Celebrating-Beekeeping-Around-the-World-Apimondia.jpg">
+        </div>
+        <div class="slide">
+          <img src="https://i.ibb.co/xqgpNc6q/Screenshot-2568-06-25-at-06-21-30.png">
+        </div>
+        <div class="slide">
+          <img src="https://assets.unileversolutions.com/v1/104926993.png?im=Resize,width=1200,height=1200">
+        </div>
+        <div class="slide">
+          <img
+            src="https://t4.ftcdn.net/jpg/14/05/14/93/360_F_1405149352_K4qhIYVahGLumUCry09QJaDyquDaXVrh.jpg">
+        </div>
+        <div class="slide">
+          <img src="https://www.scb.co.th/content/media/personal-banking/stories-tips/thai-food/thai-food10.jpg">
+        </div>
+        <div class="slide">
+          <img src="https://www.lucariscrystal.com/wp-content/uploads/2019/10/eve2.jpg">
+        </div>
+        <div class="slide">
+          <img src="https://i.ibb.co/Xx0mQ2F1/Screenshot-2568-06-25-at-06-07-44.png">
+        </div>
+      </div>
+      <!-- Navigation buttons -->
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+
+      <!-- Dots navigation -->
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+    <script>
+      const slides = document.querySelector('.slides');
+      const slide = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+      let currentIndex = 0;
+
+      // Update the slider
+      function updateSlider(index) {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+      }
+
+      // Navigate to the next slide
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slide.length;
+        updateSlider(currentIndex);
+      }
+
+      // Navigate to the previous slide
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + slide.length) % slide.length;
+        updateSlider(currentIndex);
+      }
+
+      // Automatic sliding
+      let autoSlide = setInterval(nextSlide, 3000);
+
+      // Pause auto sliding on user interaction
+      function resetAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(nextSlide, 3000);
+      }
+      // Event listeners for buttons
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoSlide();
+      });
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoSlide();
+      });
+
+      // Event listeners for dots
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          currentIndex = index;
+          updateSlider(index);
+          resetAutoSlide();
+        });
+      });
+      // Initialize
+      updateSlider(currentIndex);
+    </script>
+    </header>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="honeyproductlist.html">Honey</a>
+            <ul>
+              <li><a href="pine.html">Pine</a></li>
+              <li><a href="flower.html">Flower</a></li>
+              <li><a href="thyme.html">Thyme</a></li>
+              <li><a href="oak.html">Oak and Forest</a></li>
+              <li><a href="orange.html">Orange Blossom</a></li>
+              <li><a href="fir.html">Fir</a></li>
+              <li><a href="vanilla.html">Vanilla</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="Olive_benfefit.html">Olive oil</a>
+            <li>
+              <a href="wine.html">Organics skin care</a>
+              <ul>
+                <li><a href="buywine.html">Lotions</a></li>
+                <li><a href="wineclass.html">Face and Hair</a></li>
+              </ul>
+            </li>
+          <li>
+            <a href="ourshop.html">Our Shop</a>
+            <ul>
+              <li><a href="ourshop.html">Bangkok</a></li>
+              <li><a href="ourshop.html">Pattaya</a></li>
+              <li><a href="ourshop.html">Chaing Mai</a></li>
+              <li><a href="ourshop.html">Phuket</a></li>
+              <li><a href="ourshop.html">Krabi</a></li>
+              <li><a href="ourshop.html">Prachinburi</a></li>
+              <li><a href="ourshop.html">Hua Hin</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="aboutus.html">About me</a>
+      </nav>
+    </header>
+     <body>
+  
 </body>
+
+
+
+
+
+
+
+
+
+   <!-- Footer -->
+<footer>
+  <div class="footer-container">
+    
+    <!-- Left Column: Social Links -->
+    <div class="footer-column social-links">
+      <h3>Follow Us</h3>
+      <a href="https://facebook.com/" target="_blank">🌐 Facebook</a>
+      <a href="https://instagram.com/" target="_blank">📸 Instagram</a>
+      <a href="#" target="_blank">🐦 Twitter</a>
+      <a href="#" target="_blank">🎵 TikTok</a>
+      <a href="#" target="_blank">💬 LINE Official</a>
+    </div>
+
+    <!-- Right Column: Research References with Scrollbar -->
+    <div class="footer-column references-scroll">
+      <h3>Research & References</h3>
+      <div class="scrollable">
+        <p><a href="https://www.news-medical.net/news/20230103/Olive-oil-is-beneficial-for-maternal-fetal-health.aspx" target="_blank">🧪 Olive oil is beneficial for maternal-fetal health</a></p>
+        <p><a href="https://nycancer.com/news/olive-oil-key-component-mediterranean-diet" target="_blank">🍯 Healthline: Benefits of Honey</a></p>
+        <p><a href="https://www.sciencedirect.com/science/article/pii/S0308814618310649" target="_blank">📘 Olive Oil~ A Key Component of the Mediterranean Diet</a></p>
+        <p><a href="https://greekreporter.com/2023/07/09/greek-honey-for-beautiful-skin-hair-and-anti-aging/" target="_blank">🌍 Using Greek Honey for Beautiful Skin, Hair, and Anti-Aging</a></p>
+        <p><a href="https://www.healthline.com/nutrition/benefits-of-honey#TOC_TITLE_HDR_3" target="_blank">🔍Everything to Know About the Health Benefits of Honey</a></p>
+        <!-- Add more links as needed -->
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 Premium Organic Collection | Crafted with Passion & Sustainability</p>
+  </div>
+</footer>
+
+
+
+  </body>
+
+
+
+
 </html>

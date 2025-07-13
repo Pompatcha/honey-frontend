@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="description" content="This is a premium honey collection website offering the finest quality honey.">
-<meta name="keywords" content="ไวน์พรีเมี่ยม, ขายไวน์, exclusive product, wine testing, ไวน์ออแกนนิกส์, wine cellar, wine bar, แอลกอฮอล์, ขายไวน์ออนไลน์, wine & beverage, ร้านขายไวน์, ร้านอาหาร, โรงแรม, สายไวน์, อาหาร, ไวน์กูรู, wineguru, wine event, wine pairing, wine pairing menu, จับคู่อาหารกับไวน์, ไวน์ราคาขายส่ง, ไวน์ขายส่ง, ไวน์ราคาพิเศษ, wine list, ไวน์สำหรับงานแต่งงาน, ไวน์สำหรับอีเวนต์, พิเศษในโรงแรม, wine connection, the wine merchant, scarlettwine, wine bar, the bar upstairs, wine beverage, mandarin oriental, capella, house wine, น้ำมันมะกอกปลอดสาร, ไวน์ปลอดสารเคมี, ไวน์แดง, ไวน์ขาว, ไวน์โรส, ไวน์สปาร์คกิ้ง">
+<meta name="keywords" content="ไวน์พรีเมี่ยม, ขายไวน์, exclusive product, wine testing, ไวน์ออแกนนิกส์, wine cellar, wine bar, แอลกอฮอล์, ขายไวน์ออนไลน์, wine & beverage, ร้านขายไวน์, ร้านอาหาร, โรงแรม, สายไวน์, อาหาร, ไวน์กูรู, wineguru, wine event, wine pairing, wine pairing menu, จับคู่อาหารกับไวน์, ไวน์ราคาขายส่ง, ไวน์ขายส่ง, ไวน์ราคาพิเศษ, wine list, ไวน์สำหรับงานแต่งงาน, ไวน์สำหรับอีเวนต์, พิเศษในโรงแรม, wine connection, the wine merchant, scarlettwine, wine bar, the bar upstairs, wine beverage, mandarin oriental, capella, house wine, น้ำมันมะกอกปลอดสาร, ไวน์ปลอดสารเคมี, ไวน์แดง, ไวน์ขาว, ไวน์โรส, ไวน์สปาร์คกิ้ง",オーガニック・オレンジブロッサムローハニー>
 <meta name="keywords" content="Wellness">
 <meta name="author" content="Patcharin Chanaphukdee">
 <meta property="og:image" content="https://i.ibb.co/h14wZP5X/Screenshot-2568-04-03-at-23-00-10.png">
@@ -18,10 +18,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- External Stylesheets -->
-  <link rel="stylesheet" href="css/Pine.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/shared/general.css">
+  <link rel="stylesheet" href="olive.css">
+  <link rel="stylesheet" href="css/dropdownmenu.css">
   <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="style.css">
-
+  <script src="js/index.js"></script>
 </head>
 <body>
   <div class="head-body">
@@ -47,14 +49,15 @@
       </div>
     </div>
   </div>
-   <script>
+
+  <script>
     function googleTranslateElementInit() {
       new google.translate.TranslateElement(
         { pageLanguage: 'en', includedLanguages: 'en,th,zh-CN,ja,fr,de,es,gk,it,pt,vi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
         'google_translate_element'
       );
     }
-     </script>
+  </script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </div>
 
@@ -74,18 +77,119 @@
     <p class="highlight-text">Pure Organic Product ECO-System 100% (Healthy Living)</p>
     <p class="sub-text">(Medical Food care yours)</p>
   </div>
- <header>
+
+  </head>
+  <body>
+    <div class="slider">
+      <!-- Slides container -->
+      <div class="slides">
+        <div class="slide">
+          <img src="https://assets.unileversolutions.com/v1/104926992.png?im=Resize,width=1200,height=1200">
+        </div>
+        <div class="slide">
+          <img src="https://honey.com/images/default/Celebrating-Beekeeping-Around-the-World-Apimondia.jpg">
+        </div>
+        <div class="slide">
+          <img src="https://i.ibb.co/xqgpNc6q/Screenshot-2568-06-25-at-06-21-30.png">
+        </div>
+        <div class="slide">
+          <img src="https://assets.unileversolutions.com/v1/104926993.png?im=Resize,width=1200,height=1200">
+        </div>
+        <div class="slide">
+          <img
+            src="https://t4.ftcdn.net/jpg/14/05/14/93/360_F_1405149352_K4qhIYVahGLumUCry09QJaDyquDaXVrh.jpg">
+        </div>
+        <div class="slide">
+          <img src="https://www.scb.co.th/content/media/personal-banking/stories-tips/thai-food/thai-food10.jpg">
+        </div>
+        <div class="slide">
+          <img src="https://www.lucariscrystal.com/wp-content/uploads/2019/10/eve2.jpg">
+        </div>
+        <div class="slide">
+          <img src="https://i.ibb.co/Xx0mQ2F1/Screenshot-2568-06-25-at-06-07-44.png">
+        </div>
+      </div>
+      <!-- Navigation buttons -->
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+
+      <!-- Dots navigation -->
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+    <script>
+      const slides = document.querySelector('.slides');
+      const slide = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+      let currentIndex = 0;
+
+      // Update the slider
+      function updateSlider(index) {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+      }
+
+      // Navigate to the next slide
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slide.length;
+        updateSlider(currentIndex);
+      }
+
+      // Navigate to the previous slide
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + slide.length) % slide.length;
+        updateSlider(currentIndex);
+      }
+
+      // Automatic sliding
+      let autoSlide = setInterval(nextSlide, 3000);
+
+      // Pause auto sliding on user interaction
+      function resetAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(nextSlide, 3000);
+      }
+      // Event listeners for buttons
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoSlide();
+      });
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoSlide();
+      });
+
+      // Event listeners for dots
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          currentIndex = index;
+          updateSlider(index);
+          resetAutoSlide();
+        });
+      });
+      // Initialize
+      updateSlider(currentIndex);
+    </script>
+    </header>
+    <header>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li>
             <a href="honeyproductlist.html">Honey</a>
             <ul>
-              <li><a href="honey.html">Pine</a></li>
+              <li><a href="pine.html">Pine</a></li>
               <li><a href="flower.html">Flower</a></li>
               <li><a href="thyme.html">Thyme</a></li>
               <li><a href="oak.html">Oak and Forest</a></li>
-              <li><a href="orange.html">Orange</a></li>
+              <li><a href="orange.html">Orange Blossom</a></li>
               <li><a href="fir.html">Fir</a></li>
               <li><a href="vanilla.html">Vanilla</a></li>
             </ul>
@@ -116,51 +220,28 @@
             <a href="aboutus.html">About me</a>
       </nav>
     </header>
-<body>
- <div class="product-container">
-    <h2>Pine Honey</h2>
+    <main>
+      <div class="center-flex" style="background-color: white;">
+        <h3>
+          <marquee direction="left" style="color: #000000;">
+            Dear customer, we are acceptable an order via Line offcial and
+            What's app (add) me +6689 693 1668 ;Payment
+            Online development is on proces. acceptable by credit card.
+            <a href="https://lin.ee/RBnKOuz">Click Here</a>
+          </marquee>
+        </h3>
 
-    <div class="image-row">
-      <img src="https://example.com/image1.jpg" alt="Pine Honey 1">
-      <img src="https://example.com/image2.jpg" alt="Pine Honey 2">
-      <img src="https://example.com/image3.jpg" alt="Pine Honey 3">
-    </div>
-
-    <label for="size">Select Size:</label>
-    <select id="size">
-      <option value="250">250g – 250 THB</option>
-      <option value="500">500g – 500 THB</option>
-      <option value="950">950g – 950 THB</option>
-    </select>
-
-    <label for="quantity">Quantity:</label>
-        <select id="quantity">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        </select>
+      </div>
+     
 
 
-    <div class="total" id="totalPrice">Total: 250 THB</div>
 
-    <div class="description">
-      <p><strong>Description:</strong></p>
-      <p>Pine honey is a unique type of honey made from the sap of pine trees, not flower nectar. It has a deep amber color and rich, slightly woody taste. Known for its antioxidant properties and mineral richness, pine honey is a nutritious sweetener perfect for teas, toast, or spoonful enjoyment.</p>
-    </div>
-  </div>
 
-  <script src="script.js"></script>
 
-    </body>
 
-    <footer>
+      
+
+
    <!-- Footer -->
 <footer>
   <div class="footer-container">
@@ -193,9 +274,13 @@
   <div class="footer-bottom">
     <p>&copy; 2024 Premium Organic Collection | Crafted with Passion & Sustainability</p>
   </div>
-  </footer>
+</footer>
 
 
 
-</body>
+  </body>
+
+
+
+
 </html>
