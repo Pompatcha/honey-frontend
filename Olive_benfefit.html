@@ -20,9 +20,12 @@
   <link rel="stylesheet" href="styles/shared/general.css" />
   <link rel="stylesheet" href="olive.css" />
   <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/productcardoliveoil.css" />
+
   <script src="js/about.js"></script>
 
 </head>
+
 <body>
   <!-- Language Selector -->
   <div class="head-body">
@@ -81,6 +84,7 @@
       </div>
     </div>
   </header>
+ 
 
   <!-- Navigation Menu -->
   <header>
@@ -101,7 +105,6 @@
         </li>
         <li>
           <a href="Olive.html">Olive oil</a>
-          <ul><li><a href="skincare.html">Mountain Tea</a></li></ul>
         </li>
         <li>
           <a href="wine.html">Organics skin care</a>
@@ -131,6 +134,62 @@
 
   <!-- Main Content -->
   <main>
+ 
+    <div class="product-card">
+      <!-- Image Slider Section -->
+      <div class="image-slider">
+        <!-- Main Large Image -->
+        <div class="main-image">
+          <img id="mainImage" src="https://www.dineamic.com.au/cdn/shop/articles/557929332795.jpg?v=1704848912" alt="Main Olive Image">
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="thumbnail-row">
+          <img src="https://www.benmart.com.sg/wp-content/uploads/2022/08/Fragranz-Extra-Virgin-Olive-Oil-500ml-2@4x-100-600x600.jpg" alt="Side View" onclick="swapImage(this)">
+          <img src="https://www.greendna.in/cdn/shop/products/oliveoil_600x.jpg?v=1738823916" alt="Usage" onclick="swapImage(this)">
+          <img src="https://img-cdn.oliveoiltimes.com/cb:2sys.247e0/w:auto/h:auto/q:67/ig:avif/id:061e8605390038971877fafa8519f198/https://www.oliveoiltimes.com/olive.jpg" alt="Farm" onclick="swapImage(this)">
+        </div>
+      </div>
+
+      <!-- Product Info -->
+      <div class="product-info">
+        <h3>Organic Extra Virgin Olive Oil</h3>
+        <p>A premium single-varietal olive oil, crafted from the rare Manaki olives, grown in the historical in Greek. Cold-extracted within hours of harvest to preserve its gentle aroma, its natural harmony and its nutrients. Mildly fruity and delicately smooth, this oil is ideal for raw use and refined culinary creations.</p>
+
+        <label for="size">Size:</label>
+        <select id="size" onchange="updatePrice()">
+          <option value="110">110 ml</option>
+          <option value="250">250 ml</option>
+          <option value="500">500 ml</option>
+          <option value="1000">1000 ml</option>
+        </select>
+
+        <p class="price" id="price">Price: ฿250</p>
+
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+    <script>
+    function updatePrice() {
+      const size = document.getElementById("size").value;
+      const priceElement = document.getElementById("price");
+      const prices = {
+        110: 250,
+        250: 450,
+        500: 650,
+        1000: 1200
+      };
+      priceElement.textContent = `Price: ฿${prices[size]}`;
+    }
+
+    function swapImage(clickedImg) {
+      const mainImg = document.getElementById('mainImage');
+      const tempSrc = mainImg.src;
+      mainImg.src = clickedImg.src;
+      clickedImg.src = tempSrc;
+    }
+  </script>
+  
     <div class="center-flex"><h2>FAOS Olive oil with Polyphenols Matter</h2></div>
 
     <section class="container">
@@ -185,7 +244,14 @@
           </div>
     </section>
 
-    <div class="center-flex"><h2>The Essence of Pure organics Products</h2></div>
+    <div class="center-flex"><h2>FAOS Premium Olive Oil — The Essence of Excellence</h2></div>
+    <section>Crafted with dedication and refined through generations of expertise, FAOS Olive Oil is a single-varietal masterpiece derived from hand-selected olives known for their naturally rich polyphenol content. Cold-extracted within hours of harvest, this oil preserves the full harmony of its nutrients, flavor, and aroma.
+
+Elegant and gently fruity on the palate, FAOS Olive Oil is ideal for raw consumption and culinary artistry alike. Its luxurious smoothness enhances salads, pastas, and gourmet creations—bringing the taste of purity and sophistication to every dish.
+
+Choose FAOS, where every drop reflects a commitment to health, authenticity, and the gold standard of organic living.
+      <p class="note">* Polyphenol content may vary. Values ≥ 250 mg/kg qualify for antioxidant health claims (EU Reg. 432/2012).</p>
+</section>
   </main>
 
  <!-- Footer -->
