@@ -379,3 +379,20 @@ footer {
 .social-icons a:hover {
   color: #fff;
 }
+.footer-column.payment-methods {
+  max-width: 200px;
+}
+
+.payment-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.payment-icon {
+  width: 48px;
+  height: 32px;
+  object-fit: contain;
+}
+

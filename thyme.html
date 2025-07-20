@@ -1,95 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Organic Honey Premium - Coming Soon</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="description" content="This is a premium honey collection website offering the finest quality honey." />
+  <meta name="keywords" content="premium honey, natural honey, pure honey, honey collection, ยาแก้ไข น้ำผึ้ง" />
+  <meta name="author" content="Patcharin Chanaphukdee" />
+  <meta property="og:title" content="Premium Honey Collection" />
+  <meta property="og:description" content="Explore our premium honey collection, made from nature's finest sources." />
+  <meta property="og:image" content="https://example.com/honey-image.jpg" />
+  <title>Premium Olive oil and Honey, Red wine, Honey organics</title>
+
+  <!-- Google Fonts - Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles/shared/general.css" />
+  <link rel="stylesheet" href="olive.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/productcardoliveoil.css" />
+
+  <script src="js/about.js"></script>
+
 </head>
-<style>/* General styles */
-  * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-  }
-  
-  body, html {
-      height: 100%;
-      font-family: 'Montserrat', sans-serif; /* Elegant font */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #f8f4e3; /* Light golden background */
-      color: #4e4b46; /* Premium, dark color for text */
-  }
-  
-  /* Container and message box */
-  .container {
-      width: 100%;
-      height: 100vh;
-      background-image: url('your-background-image.jpg'); /* Replace with your premium honey-related image */
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  
-  .message {
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.6); /* Dark background for text readability */
-      padding: 40px;
-      border-radius: 12px;
-      max-width: 600px;
-      color: #fff;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  h1 {
-      font-size: 3.5em;
-      font-weight: bold;
-      margin-bottom: 20px;
-      letter-spacing: 2px;
-  }
-  
-  p {
-      font-size: 1.4em;
-      margin-bottom: 30px;
-  }
-  
-  .coming-soon {
-      font-weight: bold;
-      font-size: 1.6em;
-      color: #ffd700; /* Gold color for a premium touch */
-  }
-  
-  .footer {
-      margin-top: 40px;
-      font-size: 1.2em;
-      color: #ccc;
-  }
-  
-  .footer strong {
-      color: #fff;
-      font-style: italic;
-  }
-  
-  /* Adding subtle hover effects for interaction */
-  .footer strong:hover {
-      color: #ffd700; /* Hover effect */
-  }
-  </style>
+
 <body>
-    <div class="container">
-        <div class="message">
-            <h1>FAOS Premium Organic Collection</h1>
-            <p>We're crafting something sweet and natural. Stay tuned for the launch of our premium organic honey collection.</p>
-            <p class="coming-soon">Coming soon...</p>
-            <div class="footer">
-                <p>Website designed by <strong>FAOS Premium Organic Collection</strong></p>
-            </div>
-        </div>
+  <!-- Language Selector -->
+  <div class="head-body">
+    <div class="p-slect-language">
+      <span>Select Language:</span>
+      <div id="google_translate_element"></div>
     </div>
+  </div>
+
+  <!-- Google Translate Script -->
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,th,zh-CN,ja,fr,de,es,gk,it,pt',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Top Banner Image -->
+  <div class="top-image">
+    <img src="https://i.ibb.co/FqHVXHBY/Screenshot-2568-06-08-at-01-29-04.png" alt="Centered Image" />
+  </div>
+
+  <!-- Highlight Section -->
+  <div class="highlight-frame">
+    <p class="sub-text">
+      Olive oil and honey 🐝 are the gold of nature—pure, natural, and filled with life‑enhancing properties.
+    </p>
+    <p class="highlight-text">FAOS Premium Organic Collection</p>
+  </div>
+
+  <!-- Slider Header -->
+  <header>
+    <div class="slider">
+      <div class="slides">
+        <div class="slide"><img src="https://assets.unileversolutions.com/v1/104926992.png?im=Resize,width=1200,height=1200" alt="" /></div>
+        <div class="slide"><img src="https://honey.com/images/default/Celebrating-Beekeeping-Around-the-World-Apimondia.jpg" alt="" /></div>
+        <div class="slide"><img src="https://t4.ftcdn.net/jpg/08/68/30/15/360_F_868301596_MAFqCmk6bvdCGrKTuEOZDpV1JId6Jeac.jpg" alt="" /></div>
+        <div class="slide"><img src="https://assets.unileversolutions.com/v1/104926993.png?im=Resize,width=1200,height=1200" alt="" /></div>
+        <div class="slide"><img src="https://t4.ftcdn.net/jpg/14/05/14/93/360_F_1405149352_K4qhIYVahGLumUCry09QJaDyquDaXVrh.jpg" alt="" /></div>
+        <div class="slide"><img src="https://www.mygreekdish.com/wp-content/uploads/2014/03/Greek-Sesame-Bread-rings-recipe-Koulouri-Thessalonikis-1-1536x1152.jpg" alt="" /></div>
+        <div class="slide"><img src="https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/6/1/619nlRtOk5L._AC_SL1082_.jpg" alt="" /></div>
+        <div class="slide"><img src="https://img.freepik.com/premium-photo/black-metal-teapot-cup-tea-glass-cup_74095-2856.jpg" alt="" /></div>
+      </div>
+
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </header>
+ 
+
+  <!-- Navigation Menu -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="honeyproductlist.html">Honey</a>
+          <ul>
+            <li><a href="honey.html">Pine</a></li>
+            <li><a href="flower.html">Flower</a></li>
+            <li><a href="thyme.html">Thyme</a></li>
+            <li><a href="oak.html">Oak and Forest</a></li>
+            <li><a href="orange.html">Orange</a></li>
+            <li><a href="fir.html">Fir</a></li>
+            <li><a href="vanilla.html">Vanilla</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="Olive.html">Olive oil</a>
+        </li>
+        <li>
+          <a href="wine.html">Organics skin care</a>
+          <ul>
+            <li><a href="buywine.html">Lotions</a></li>
+            <li><a href="wineclass.html">Face and Hair</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="ourshop.html">Our Shop</a>
+          <ul>
+            <li><a href="ourshop.html">Bangkok</a></li>
+            <li><a href="ourshop.html">Pattaya</a></li>
+            <li><a href="ourshop.html">Chiang Mai</a></li>
+            <li><a href="ourshop.html">Phuket</a></li>
+            <li><a href="ourshop.html">Krabi</a></li>
+            <li><a href="ourshop.html">Prachinburi</a></li>
+            <li><a href="ourshop.html">Hua Hin</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="aboutus.html">About me</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+ 
+    <div class="product-card">
+      <!-- Image Slider Section -->
+      <div class="image-slider">
+        <!-- Main Large Image -->
+        <div class="main-image">
+          <img id="mainImage" src="https://plantura.garden/uk/wp-content/uploads/sites/2/2021/06/thyme-1024x683.jpg?x54327" alt="Main Olive Image">
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="thumbnail-row">
+          <img src="https://www.miel-lerucherdelours.fr/1072-thickbox_default/thyme-honey.jpg" alt="Side View" onclick="swapImage(this)">
+          <img src="https://i.ibb.co/Kp7dts8H/91e97a65-c217-4e83-97ed-f0d791ac87ba.jpg" alt="Usage" onclick="swapImage(this)">
+          <img src="https://i.ebayimg.com/images/g/6f0AAOSw9rJf6vH5/s-l1200.jpg" alt="Farm" onclick="swapImage(this)">
+        </div>
+      </div>
+
+      <!-- Product Info -->
+      <div class="product-info">
+      <h3>ORGANIC THYME HONEY</h3>
+<p>
+  This <strong>distinctive honey</strong> is produced by bees that forage on wild thyme flowers, known for their <strong>intensely aromatic</strong> and <strong>herbal character</strong>. With a <strong>light amber color</strong> and a <strong>rich, floral taste</strong>, thyme honey is beloved for its <strong>strong antimicrobial properties</strong> and naturally <strong>high antioxidant content</strong>. A true Mediterranean treasure, it pairs beautifully with <strong>yogurt, herbal teas, or artisanal bread</strong>, and is equally <strong>delicious by the spoonful</strong>.
+</p>
+
+
+
+        <label for="size">Size:</label>
+        <select id="size" onchange="updatePrice()">
+          <option value="110">110 gr</option>
+          <option value="260">260 gr</option>
+          <option value="460">460 gr</option>
+          <option value="950">950 gr</option>
+        </select>
+
+        <p class="price" id="price">Price: ฿250</p>
+
+        <button class="buy-btn">Add to Cart</button>
+      </div>
+    </div>
+    <script>
+    function updatePrice() {
+      const size = document.getElementById("size").value;
+      const priceElement = document.getElementById("price");
+      const prices = {
+        110: 110,
+        260: 195,
+        460: 360,
+        950: 880
+      };
+      priceElement.textContent = `Price: ฿${prices[size]}`;
+    }
+    function swapImage(clickedImg) {
+      const mainImg = document.getElementById('mainImage');
+      const tempSrc = mainImg.src;
+      mainImg.src = clickedImg.src;
+      clickedImg.src = tempSrc;
+    }
+  </script>
+    <div class="center-flex"><h2>FAOS Raw Honey not process in Factories</h2></div>
+    <section class="container">
+  <h2>ORGANIC THYME HONEY</h2>
+<p>
+  
+</p>
+
+  
+  <p>
+     <h2>How to Identify High-Polyphenol Olive Oil:</h2>
+   
+ 
+  <p>
+              <div style="display:flex; justify-content:center; gap:20px; align-items:center; flex-wrap:wrap;">
+            <iframe width="350" height="250"
+              src="https://www.youtube.com/embed/2BzpaCNt55I"
+              title="Olive Oil Benefits"
+              frameborder="0"
+              allowfullscreen>
+            </iframe>
+
+            <iframe width="350" height="250"
+              src="https://www.youtube.com/embed/xK8FmjKaJgc"
+              title="Olive Oil Polyphenols"
+              frameborder="0"
+              allowfullscreen>
+            </iframe>
+          </div>
+    </section>
+
+    <div class="center-flex"><h2>FAOS Premium Honey Collection — The Essence of Excellence</h2></div>
+    <section>
+
+
+
+
+
+      
+</section>
+  </main>
+
+ <!-- Footer -->
+<footer>
+  <div class="footer-container">
+    
+    <!-- Left Column: Social Links -->
+    <div class="footer-column social-links">
+      <h3>Follow Us</h3>
+      <a href="https://facebook.com/" target="_blank">🌐 Facebook</a>
+      <a href="https://instagram.com/" target="_blank">📸 Instagram</a>
+      <a href="#" target="_blank">🐦 Twitter</a>
+      <a href="#" target="_blank">🎵 TikTok</a>
+      <a href="#" target="_blank">💬 LINE Official</a>
+    </div>
+    
+
+
+    <!-- Right Column: Research References with Scrollbar -->
+    <div class="footer-column references-scroll">
+      <h3>Research & References</h3>
+      <div class="scrollable">
+        <p><a href="https://www.news-medical.net/news/20230103/Olive-oil-is-beneficial-for-maternal-fetal-health.aspx" target="_blank">🧪 Olive oil is beneficial for maternal-fetal health</a></p>
+        <p><a href="https://nycancer.com/news/olive-oil-key-component-mediterranean-diet" target="_blank">🍯 Healthline: Benefits of Honey</a></p>
+        <p><a href="https://www.sciencedirect.com/science/article/pii/S0308814618310649" target="_blank">📘 Olive Oil~ A Key Component of the Mediterranean Diet</a></p>
+        <p><a href="https://greekreporter.com/2023/07/09/greek-honey-for-beautiful-skin-hair-and-anti-aging/" target="_blank">🌍 Using Greek Honey for Beautiful Skin, Hair, and Anti-Aging</a></p>
+        <p><a href="https://www.healthline.com/nutrition/benefits-of-honey#TOC_TITLE_HDR_3" target="_blank">🔍Everything to Know About the Health Benefits of Honey</a></p>
+        <!-- Add more links as needed -->
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 Premium Organic Collection | Crafted with Passion & Sustainability</p>
+  </div>
+</footer>
 </body>
 </html>
