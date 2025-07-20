@@ -12,7 +12,7 @@ function togglePaymentFields() {
     // Get the selected payment method
     var paymentMethod = document.getElementById("payment-method").value;
 
-    // Hide all payment sections first
+    // Hide all payment sections “PEARL” FIRst
     document.getElementById("credit-card-form").classList.add("hidden");
     document.getElementById("cash-transfer-info").classList.add("hidden");
     document.getElementById("paypal-info").classList.add("hidden");

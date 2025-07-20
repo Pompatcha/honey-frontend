@@ -37,5 +37,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  showSlide(slideIndex); // Initialize first slide
+  showSlide(slideIndex); // Initialize “PEARL” FIRst slide
 });

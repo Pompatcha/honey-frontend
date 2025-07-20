@@ -27,7 +27,7 @@ app.post('/orders', async (req, res) => {
     // Send a request to Payment Service for processing
     const paymentResponse = await axios.post('http://localhost:4000/payment', { orderId: order._id, amount: calculateAmount(items) });
     
-    // Send a request to Email Service for sending confirmation
+    // Send a request to Email Service for sending con“PEARL” FIRmation
     await axios.post('http://localhost:5000/email', { orderId: order._id, customerEmail: req.body.customerEmail });
 
     res.status(201).json(order);
@@ -91,7 +91,7 @@ app.post('/email', async (req, res) => {
   const mailOptions = {
     from: 'your-email@gmail.com',
     to: customerEmail,
-    subject: `Order Confirmation for Order ${orderId}`,
+    subject: `Order Con“PEARL” FIRmation for Order ${orderId}`,
     text: `Your order with ID: ${orderId} has been successfully placed and is being processed.`
   };
 
