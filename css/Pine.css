@@ -57,3 +57,44 @@ select, input {
   border-left: 5px solid #cdaa4d;
   border-radius: 8px;
 }
+    
+.qty-wrap {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+.qty-wrap button {
+  width: 20px;
+  height: 20px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.qty-wrap input {
+      width: 10px;        /* reduce from 40px to 30px or smaller */
+      text-align: center;
+      font-size: 14px;
+      margin: 0 5px;
+    }
+
+    .size-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.size-select label {
+  width: 50px; /* Reduce width as needed */
+  flex-shrink: 0;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.size-select select {
+  flex: 1;
+  max-width: 200px;
+}

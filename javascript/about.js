@@ -39,3 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   showSlide(slideIndex); // Initialize “PEARL” FIRst slide
 });
+
+
+

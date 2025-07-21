@@ -156,6 +156,7 @@
         <h3>ORGANIC PINE TREE HONEY</h3>
         <p>Pine tree honey is produced by our bees mainly in the area of Prokopi in Northern Evia and occasionally in the pine forest of Mountainous Tripoli. This is the most abundant honey in Greece with many loyal fans. Dark brown in color with a mild sweet taste and a velvety light texture.It is probably the ideal honey for your sweets...</p>
 
+      <div class="size-select">
         <label for="size">Size:</label>
         <select id="size" onchange="updatePrice()">
           <option value="110">110 gr</option>
@@ -163,33 +164,74 @@
           <option value="460">460 gr</option>
           <option value="950">950 gr</option>
         </select>
+      </div>
 
-        <p class="price" id="price">Price: ฿250</p>
+       <div class="qty-wrap">
+  <button onclick="decreaseQty()"></button>
+  <input type="number" id="qty" value="1" min="1" onchange="updatePrice()" />
+  <button onclick="increaseQty()"></button>
+</div>
 
+        <p class="price" id="price">Unit Price: ฿250</p>
+        <p class="price" id="total">Total Price: ฿250</p>
         <button class="buy-btn">Add to Cart</button>
       </div>
     </div>
     <script>
-    function updatePrice() {
-      const size = document.getElementById("size").value;
-      const priceElement = document.getElementById("price");
-      const prices = {
-        110: 110,
-        260: 195,
-        460: 360,
-        950: 880
-      };
-      priceElement.textContent = `Price: ฿${prices[size]}`;
-    }
+const basePrices = {
+  110: 250,
+  260: 500,
+  460: 750,
+  950: 1200
+};
 
-    function swapImage(clickedImg) {
-      const mainImg = document.getElementById('mainImage');
-      const tempSrc = mainImg.src;
-      mainImg.src = clickedImg.src;
-      clickedImg.src = tempSrc;
-    }
-  </script>
+function updatePrice() {
+  const size = document.getElementById("size").value;
+  const qty = parseInt(document.getElementById("qty").value);
   
+  // Get base price based on selected size
+  const unitPrice = basePrices[size];
+
+  // Calculate total
+  const totalPrice = unitPrice * qty;
+
+  // Format to Thai Baht
+  const formattedUnit = unitPrice.toLocaleString('th-TH', {
+    style: 'currency',
+    currency: 'THB',
+    minimumFractionDigits: 0
+  });
+
+  const formattedTotal = totalPrice.toLocaleString('th-TH', {
+    style: 'currency',
+    currency: 'THB',
+    minimumFractionDigits: 0
+  });
+
+  // Display prices
+  document.getElementById("price").textContent = `Unit Price: ${formattedUnit}`;
+  document.getElementById("total").textContent = `Total Price: ${formattedTotal}`;
+}
+
+function increaseQty() {
+  const qtyInput = document.getElementById("qty");
+  qtyInput.value = parseInt(qtyInput.value) + 1;
+  updatePrice();
+}
+
+function decreaseQty() {
+  const qtyInput = document.getElementById("qty");
+  if (parseInt(qtyInput.value) > 1) {
+    qtyInput.value = parseInt(qtyInput.value) - 1;
+    updatePrice();
+  }
+}
+
+// Run once on load
+window.onload = updatePrice;
+</script>
+
+   
     <div class="center-flex"><h2>FAOS Raw Honey not process in Factories</h2></div>
 
     <section class="container">
